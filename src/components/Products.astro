@@ -1,0 +1,247 @@
+---
+import { Database, Users, Settings, Scissors, Briefcase, Cloud, Store, Car } from 'lucide-astro';
+
+const products = [
+  {
+    id: 'barbers',
+    title: 'Barbers',
+    badge: 'Barberia',
+    description: 'La mejor aplicación para la gestión eficiente de barberías, control de citas y ventas.',
+    icon: Scissors,
+    color: '#0066cc',
+    href: '/barbers'
+  },
+  {
+    id: 'efficient',
+    title: 'Efficient',
+    badge: 'Contabilidad',
+    description: 'Garantice la continuidad de su negocio con un software que incluye requisitos legales y fiscales de Honduras.',
+    icon: Briefcase,
+    color: '#00aaff',
+    href: '/efficient'
+  },
+  {
+    id: 'efficientplus',
+    title: 'Efficient+',
+    badge: 'Cloud ERP',
+    description: 'Lleva tu gestión empresarial al siguiente nivel con la potencia, seguridad y flexibilidad de la nube.',
+    icon: Cloud,
+    color: '#7bd3f9',
+    href: '/efficient-plus'
+  },
+  {
+    id: 'labitplus',
+    title: 'LABITPLUS',
+    badge: 'Laboratorio',
+    description: 'Software para la gestión de laboratorios de análisis clínicos desde el ingreso del paciente hasta los resultados.',
+    icon: Database,
+    color: '#0066cc',
+    href: '/labit-plus'
+  },
+  {
+    id: 'nomina',
+    title: 'Nomina+',
+    badge: 'RRHH',
+    description: 'La herramienta más completa para la gestión del talento en tu empresa y procesos de nómina.',
+    icon: Users,
+    color: '#00aaff',
+    href: '/nomina'
+  },
+  {
+    id: 'sicad',
+    title: 'SICAD',
+    badge: 'Administración',
+    description: 'Lleva tu empresa a otro nivel con nuestro sistema de control administrativo de alto rendimiento.',
+    icon: Settings,
+    color: '#bcff00',
+    href: '/sicad'
+  },
+  {
+    id: 'efficient-pos-dynamic',
+    title: 'Efficient POS Dynamic',
+    badge: 'Punto de Venta',
+    description: 'Maximiza tus ventas y controla tu inventario en tiempo real con nuestro sistema de punto de venta más ágil e intuitivo.',
+    icon: Store,
+    color: '#0066cc',
+    href: '/pos-dynamic'
+  },
+  {
+    id: 'carwashpro',
+    title: 'Carwash PRO',
+    badge: 'Carwash',
+    description: 'Optimiza la administración y operación de tu carwash moderno con facturación y control de servicios.',
+    icon: Car,
+    color: '#3b82f6',
+    href: '/carwashpro'
+  }
+];
+---
+
+<section id="productos" class="products">
+  <div class="container">
+    <div class="section-header">
+      <div class="badge-container">
+        <span class="subtitle">Software Especializado</span>
+      </div>
+      <h2>Productos que <span class="highlight">Transforman</span></h2>
+    </div>
+
+    <div class="products-grid">
+      {products.map(product => (
+        <div class="product-card" style={`--accent-color: ${product.color}`}>
+          <div class="product-header">
+            <span class="product-badge">{product.badge}</span>
+            <product.icon size={40} class="product-icon" />
+          </div>
+          <h3>{product.title}</h3>
+          <p>{product.description}</p>
+          <a href={product.href} target={product.href.startsWith('http') ? '_blank' : '_self'} rel={product.href.startsWith('http') ? 'noopener noreferrer' : ''} class="product-link">Saber más &rarr;</a>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .products {
+    padding: 6rem 0;
+    background: var(--bg-soft); /* Igualado con Services para evitar el corte */
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .badge-container {
+    background: #e1effe;
+    padding: 0.6rem 2.5rem;
+    border-radius: 9999px;
+    margin-bottom: 2rem;
+    display: inline-block;
+    border: 1px solid #bfdbfe;
+  }
+
+  .subtitle {
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 800;
+    color: var(--primary);
+    font-size: 0.9rem;
+  }
+
+  h2 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 800;
+    color: #111827;
+    line-height: 1.1;
+    margin-bottom: 2rem;
+  }
+
+  .highlight {
+    color: var(--primary);
+    position: relative;
+    display: inline-block;
+  }
+
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+  }
+
+  @media (max-width: 768px) {
+    .products {
+      padding: 4rem 0;
+    }
+    .section-header {
+      margin-bottom: 3rem;
+    }
+    .product-card {
+      padding: 2rem 1.5rem;
+    }
+    h2 {
+      margin-bottom: 1rem;
+    }
+  }
+
+  .product-card {
+    background: var(--bg);
+    padding: 3rem;
+    border-radius: 2rem;
+    position: relative;
+    overflow: hidden;
+    transition: var(--transition);
+    border: 1px solid rgba(0, 102, 204, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 102, 204, 0.05);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .product-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--accent-color);
+    opacity: 0;
+    transition: var(--transition);
+  }
+
+  .product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.08);
+  }
+
+  .product-card:hover::before {
+    opacity: 1;
+  }
+
+  .product-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+  }
+
+  .product-badge {
+    padding: 0.25rem 0.75rem;
+    background: var(--bg);
+    border-radius: 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--primary);
+  }
+
+  .product-icon {
+    color: var(--accent-color);
+  }
+
+  h3 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+  }
+
+  .product-link {
+    font-weight: 700;
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .product-link:hover {
+    gap: 1rem;
+  }
+</style>

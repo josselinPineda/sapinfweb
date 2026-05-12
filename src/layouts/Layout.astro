@@ -1,0 +1,175 @@
+---
+import '@fontsource/inter/400.css';
+import '@fontsource/inter/500.css';
+import '@fontsource/inter/600.css';
+import '../styles/global.css';
+
+interface Props {
+	title: string;
+    description?: string;
+}
+
+const { title, description = "SAPINF - Servicio de Aplicaciones Informáticas en Honduras" } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+        <meta name="description" content={description} />
+		<title>{title}</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
+	</head>
+	<body>
+		<slot />
+        <script type="module">
+            import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat@latest/dist/chat.bundle.es.js';
+
+            console.log('Iniciando Chat SAPINF...');
+
+            createChat({
+                webhookUrl: 'http://localhost:5678/webhook/a72ef4a5-7010-4ff9-a026-699dc2005d56/chat',
+                webhookConfig: {
+                    method: 'POST',
+                    headers: {}
+                },
+                mode: 'window',
+                chatInputKey: 'chatInput',
+                chatSessionKey: 'sessionId',
+                loadPreviousSession: true,
+                showWelcomeScreen: false,
+                defaultLanguage: 'es',
+                initialMessages: [
+                    '¡Hola! 👋',
+                    'Soy tu asistente virtual de SAPINF. ¿En qué puedo ayudarte hoy?'
+                ],
+                i18n: {
+                    es: {
+                        title: 'Asistente SAPINF 👋',
+                        subtitle: '¡Hola! Estamos aquí para ayudarte.',
+                        footer: '',
+                        getStarted: 'Nueva Conversación',
+                        inputPlaceholder: 'Escribe tu pregunta aquí...',
+                    },
+                    en: {
+                        title: 'Asistente SAPINF 👋',
+                        subtitle: '¡Hola! Estamos aquí para ayudarte.',
+                        footer: '',
+                        getStarted: 'Nueva Conversación',
+                        inputPlaceholder: 'Escribe tu pregunta aquí...',
+                    },
+                },
+                theme: {
+                    primaryColor: '#0066cc',
+                    buttonColor: '#0066cc',
+                    backgroundColor: '#ffffff',
+                    headerBackgroundColor: '#0066cc',
+                    headerTextColor: '#ffffff',
+                }
+            });
+
+            function forceChatStyles() {
+                const chatWidget = document.querySelector('n8n-chat');
+                if (chatWidget) {
+                    // Forzar variables de la marca directamente
+                    chatWidget.style.setProperty('--chat--color--primary', '#0066cc', 'important');
+                    chatWidget.style.setProperty('--chat--toggle--background', '#0066cc', 'important');
+                    chatWidget.style.setProperty('--chat--header--background', 'linear-gradient(135deg, #0066cc 0%, #003366 100%)', 'important');
+                    
+                    if (chatWidget.shadowRoot) {
+                        const shadow = chatWidget.shadowRoot;
+                        
+                        // Asegurar que el subtítulo esté en español
+                        const subtitle = shadow.querySelector('.chat-window-header-subtitle') || 
+                                       shadow.querySelector('[class*="subtitle"]') ||
+                                       shadow.querySelector('.header-description') ||
+                                       shadow.querySelector('p');
+                        
+                        if (subtitle && (subtitle.innerText.includes('Start a chat') || subtitle.innerText.includes('24/7'))) {
+                            subtitle.innerText = '¡Hola! Estamos aquí para ayudarte.';
+                            subtitle.style.color = 'white';
+                        }
+
+                        // Forzar estilo de botones
+                        const allButtons = shadow.querySelectorAll('button, .chat-button, [class*="button"]');
+                        allButtons.forEach(btn => {
+                            btn.style.setProperty('background-color', '#0066cc', 'important');
+                            btn.style.setProperty('border-radius', '9999px', 'important');
+                        });
+                    }
+                }
+            }
+            setInterval(forceChatStyles, 500);
+        </script>
+	</body>
+</html>
+
+<style is:global>
+	/* Diseño Premium para el Chat SAPINF - Alineado con global.css */
+    :root, body {
+        /* Colores extraídos de global.css */
+        --chat--color--primary: #0066cc;
+        --chat--color--primary-shade-50: #00aaff;
+        --chat--color--primary--shade-100: #003366;
+        --chat--color--secondary: #00b3ff;
+        --chat--color-white: #ffffff;
+        --chat--color-light: #f4f7fa;
+        --chat--color-light-shade-50: #e2e8f0;
+        --chat--color-dark: #0f172a;
+
+        /* Tipografía y Espaciado */
+        --chat--spacing: 1rem;
+        --chat--border-radius: 1.25rem;
+        --chat--font-family: 'Inter', sans-serif;
+
+        /* Ventana del Chat - Estilo Glassmorphism */
+        --chat--window--width: 330px;
+        --chat--window--height: 480px;
+        --chat--window--border-radius: 1.5rem;
+        --chat--window--box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        --chat--window--border: 1px solid rgba(255, 255, 255, 0.3);
+
+        /* Cabecera */
+        --chat--header--background: linear-gradient(135deg, #0066cc 0%, #003366 100%);
+        --chat--header--padding: 1.5rem 1rem;
+        --chat--heading--font-size: 1.25rem;
+        --chat--subtitle--font-size: 0.875rem;
+
+        /* Burbujas de Mensaje */
+        --chat--message--bot--background: #ffffff;
+        --chat--message--user--background: #0066cc;
+        --chat--message--user--color: #ffffff;
+        --chat--message--border-radius: 1rem;
+
+        /* Botón Flotante (Toggle) */
+        --chat--toggle--size: 64px;
+        --chat--toggle--background: #0066cc;
+        --chat--toggle--box-shadow: 0 10px 15px -3px rgba(0, 102, 204, 0.4);
+    }
+
+    /* Ajustes de fuente para que coincida con la página */
+    n8n-chat {
+        --chat--font-family: 'Inter', sans-serif !important;
+    }
+
+    /* Estilo para el título de la cabecera (Plus Jakarta Sans) */
+    n8n-chat::shadow .chat-window-header-title {
+        font-family: 'Plus Jakarta Sans', sans-serif !important;
+        font-weight: 800 !important;
+        letter-spacing: -0.02em !important;
+    }
+
+    /* Forzar que el widget use las variables correctas */
+    #n8n-chat {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 10000;
+    }
+</style>

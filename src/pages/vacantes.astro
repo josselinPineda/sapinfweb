@@ -1,0 +1,566 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import { Mail, CheckCircle2, FileCode2 } from 'lucide-astro';
+import vacantesHeader from '../assets/vacantes-header.png';
+---
+
+<Layout title="Vacantes - SAPINF">
+  <Navbar />
+  
+  <main class="vacantes-page">
+    
+    <!-- Hero Section -->
+    <section class="vacantes-hero">
+      <div class="container">
+        <div class="mockup-grid">
+          <div class="mockup-text">
+            <div class="mockup-badge">
+              <span class="mockup-subtitle">Únete a nuestro equipo</span>
+            </div>
+            <h1 class="mockup-title">Trabajar en <br/> <span class="mockup-blue">SAPINF</span></h1>
+            <p class="mockup-desc">
+              Proyecto tras proyecto, estamos redefiniendo el desarrollo de software de vanguardia.<br/><br/>
+              Somos una empresa innovadora especializada en el desarrollo de sistemas informáticos y aplicaciones móviles. En nuestro equipo, fomentamos la creatividad y la colaboración para impulsar el éxito de nuestros proyectos.
+            </p>
+          </div>
+          
+          <div class="mockup-media">
+             <img src={vacantesHeader.src} alt="Trabajando en SAPINF" class="mockup-img" />
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Listado de Vacantes -->
+    <section class="vacantes-content">
+      <div class="container">
+        
+        <div class="section-header text-center">
+           <div class="badge">
+             <span class="subtitle">Empleos Disponibles</span>
+           </div>
+           <h2>Nuestras <span class="highlight">Vacantes</span></h2>
+        </div>
+
+        <!-- Tarjeta de Trabajo (Blanca y muy limpia) -->
+        <div class="job-card">
+          <div class="job-header">
+            <div class="job-title-wrapper">
+              <div class="icon-wrapper">
+                <FileCode2 size={32} />
+              </div>
+              <div>
+                <h3>Analista Programador</h3>
+                <span class="job-type">Tiempo Completo</span>
+              </div>
+            </div>
+            <a href="#aplicar" class="btn-primary small-btn">Aplicar Ahora</a>
+          </div>
+          
+          <div class="job-body">
+            <div class="job-section">
+              <h4>Descripción del Puesto</h4>
+              <p>Buscamos un Analista Programador apasionado por la tecnología y la innovación. En este rol, participarás en el diseño y desarrollo de soluciones tecnológicas innovadoras, trabajando en estrecha colaboración con nuestro equipo para superar los límites de la tecnología y crear experiencias únicas para nuestros clientes.</p>
+            </div>
+            
+            <div class="job-split">
+              <div class="job-section">
+                <h4>Responsabilidades</h4>
+                <ul class="check-list">
+                  <li><CheckCircle2 size={24} class="check-icon"/> <span>Diseñar, implementar y mantener soluciones de software de alta calidad.</span></li>
+                  <li><CheckCircle2 size={24} class="check-icon"/> <span>Analizar requisitos del cliente y traducirlos en especificaciones técnicas.</span></li>
+                  <li><CheckCircle2 size={24} class="check-icon"/> <span>Desarrollar código limpio y eficiente utilizando las mejores prácticas de programación.</span></li>
+                  <li><CheckCircle2 size={24} class="check-icon"/> <span>Contribuir activamente en sesiones de lluvia de ideas y discusiones técnicas.</span></li>
+                </ul>
+              </div>
+              
+              <div class="job-section">
+                <h4>Requisitos</h4>
+                <ul class="check-list">
+                  <li><CheckCircle2 size={24} class="check-icon"/> <span>Experiencia en el desarrollo de aplicaciones web y móviles.</span></li>
+                  <li><CheckCircle2 size={24} class="check-icon"/> <span>Habilidades analíticas y capacidad de resolución de problemas.</span></li>
+                  <li><CheckCircle2 size={24} class="check-icon"/> <span>Pasión por la innovación y el aprendizaje continuo.</span></li>
+                  <li><CheckCircle2 size={24} class="check-icon"/> <span>Excelentes habilidades de comunicación y trabajo en equipo.</span></li>
+                  <li><CheckCircle2 size={24} class="check-icon"/> <span>Capacidad para trabajar de manera autónoma y gestionar múltiples tareas.</span></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="job-divider"></div>
+
+            <div class="job-section">
+              <h4>Beneficios</h4>
+              <ul class="check-list">
+                <li><CheckCircle2 size={24} class="check-icon"/> <span>Oportunidades de crecimiento profesional y carrera brillante.</span></li>
+                <li><CheckCircle2 size={24} class="check-icon"/> <span>Ambiente de trabajo verdaderamente dinámico y super colaborativo.</span></li>
+                <li><CheckCircle2 size={24} class="check-icon"/> <span>Flexibilidad horaria moderna y opciones de trabajo remoto (Home Office).</span></li>
+                <li><CheckCircle2 size={24} class="check-icon"/> <span>Acceso a tecnologías de última generación y formación continua.</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </section>
+
+    <!-- Llamado a la Acción (CTA) -->
+    <section id="aplicar" class="cta-section">
+      <div class="container text-center">
+        <div class="cta-card">
+          <h2>¿Interesado en unirte a nuestro equipo?</h2>
+          <p class="cta-desc">¡Envíanos tu solicitud hoy mismo y sé parte de nuestra misión de transformar el mundo a través de la innovación tecnológica!</p>
+          <a href="mailto:durlinortiz@sapinf.com" class="btn-primary-large">
+            <Mail size={24} />
+            Enviar mi CV 
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  
+  <Footer />
+</Layout>
+
+<style>
+  /* Base */
+  .vacantes-page {
+    padding-top: 100px; 
+    background: #f4f8fb; /* Este es el color suave de tu imagen que unifica todo el fondo */
+    min-height: 100vh;
+  }
+  
+  /* Hero Section */
+  .vacantes-hero {
+    padding: 6rem 0 2rem 0;
+  }
+
+  .mockup-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    align-items: center;
+    gap: 4rem;
+  }
+
+  @media (max-width: 991px) {
+    .vacantes-hero { padding: 4rem 0; }
+    .mockup-grid {
+      grid-template-columns: 1fr;
+      text-align: center;
+      gap: 3rem;
+    }
+    .mockup-text {
+      padding-right: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .mockup-title, .mockup-desc {
+      text-align: center;
+    }
+    .mockup-media {
+      justify-content: center;
+      order: -1;
+    }
+  }
+
+  .mockup-text {
+    padding-right: 2rem;
+  }
+
+  .mockup-badge {
+    background: #e0f2fe; 
+    padding: 0.5rem 1.5rem;
+    border-radius: 2rem;
+    margin-bottom: 1.5rem;
+    display: inline-block;
+  }
+
+  .mockup-subtitle {
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-weight: 800;
+    color: #0284c7;
+    font-size: 0.8rem;
+  }
+  
+  .mockup-title {
+    font-size: clamp(3rem, 5vw, 4.5rem);
+    font-weight: 900;
+    margin: 0 0 1.5rem 0;
+    color: #111827; 
+    line-height: 1.1;
+  }
+
+  .mockup-blue {
+    color: #0284c7; 
+  }
+
+  .mockup-desc {
+    color: #4b5563; 
+    font-size: 1.15rem;
+    line-height: 1.8;
+  }
+  
+  .mockup-media {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .mockup-img {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 550px; 
+    height: auto;
+    object-fit: contain;
+    border-radius: 1.5rem; 
+    border: 8px solid white; 
+    box-shadow: 0 25px 50px rgba(0, 102, 204, 0.1); 
+    transition: transform 0.4s ease;
+  }
+
+  .mockup-img:hover {
+    transform: translateY(-8px);
+  }
+
+  /* Títulos Generales */
+  .vacantes-content {
+    padding: 6rem 0;
+  }
+
+  .section-header {
+    margin-bottom: 5rem;
+  }
+
+  .badge {
+    background: rgba(0, 102, 204, 0.15); 
+    padding: 0.5rem 1.5rem;
+    border-radius: 2rem;
+    margin-bottom: 1.5rem;
+    display: inline-block;
+    border: 1px solid rgba(0, 102, 204, 0.3);
+  }
+
+  .subtitle {
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-weight: 800;
+    color: var(--primary);
+    font-size: 0.85rem;
+  }
+
+  .section-header h2 {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-weight: 800;
+    margin: 0;
+    color: var(--text);
+  }
+
+  .highlight {
+    color: var(--primary);
+    position: relative;
+    display: inline-block;
+  }
+
+  .highlight::after {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    width: 100%;
+    height: 30%;
+    background: var(--accent);
+    opacity: 0.8;
+    z-index: -1;
+    border-radius: 4px;
+    transform: skewX(-15deg);
+  }
+
+  /* Tarjeta de Trabajo (Blanca Limpia que Combina Hermoso) */
+  .job-card {
+    background: #ffffff; /* Blanco puro para contrastar perfecto con el fondo #f4f8fb */
+    border-radius: 1.5rem;
+    box-shadow: 0 20px 50px rgba(0, 102, 204, 0.05); /* Sombra clarita */
+    border: 1px solid rgba(0, 102, 204, 0.05); 
+    overflow: hidden;
+    max-width: 1000px;
+    margin: 0 auto;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+  }
+
+  .job-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 60px rgba(0, 102, 204, 0.1);
+  }
+
+  .job-header {
+    background: #ffffff; 
+    padding: 3rem 4rem; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(0,0,0,0.05); /* Divisor limpio */
+  }
+
+  .job-title-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .icon-wrapper {
+    width: 72px;
+    height: 72px;
+    background: var(--primary); /* Cubo iconico azul */
+    color: white; 
+    border-radius: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 25px rgba(0, 102, 204, 0.25);
+  }
+
+  .job-header h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: #111827; 
+  }
+
+  .job-type {
+    background: #e0f2fe; 
+    color: var(--primary);
+    padding: 0.5rem 1.25rem;
+    border-radius: 2rem;
+    font-weight: 700;
+    font-size: 0.95rem;
+    display: inline-block;
+  }
+
+  .small-btn {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    border-radius: 3rem;
+    background: var(--primary);
+    color: white; 
+    text-decoration: none;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 102, 204, 0.2);
+  }
+
+  .small-btn:hover {
+    background: var(--primary-dark); 
+    transform: translateY(-3px) scale(1.05); 
+    box-shadow: 0 10px 20px rgba(0, 102, 204, 0.3);
+  }
+
+  .job-body {
+    padding: 3.5rem 4rem; 
+  }
+
+  .job-section {
+    margin-bottom: 3.5rem;
+  }
+
+  .job-section h4 {
+    color: var(--primary-dark);
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .job-section h4::before {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 24px;
+    background: var(--primary);
+    border-radius: 4px;
+  }
+
+  .job-section p {
+    color: #4b5563;
+    font-size: 1.15rem;
+    line-height: 1.8;
+    margin: 0;
+  }
+
+  .job-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem; 
+  }
+
+  .job-divider {
+    height: 1px;
+    background: rgba(0,0,0,0.05);
+    margin: 4rem 0;
+  }
+
+  .check-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .check-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+    color: var(--text);
+    line-height: 1.6;
+    font-size: 1.1rem;
+    transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+  }
+
+  .check-list li:hover {
+    transform: translateX(8px);
+    color: var(--primary-dark);
+  }
+
+  .check-icon {
+    color: var(--primary); 
+    flex-shrink: 0;
+    margin-top: 0.15rem;
+  }
+
+  /* CTA Section Minimalista */
+  .cta-section {
+    padding: 2rem 2rem 8rem;
+  }
+
+  .cta-card {
+    background: #ffffff; /* Tarjeta blanca */
+    border-radius: 2rem;
+    padding: 5rem 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+    box-shadow: 0 20px 50px rgba(0, 102, 204, 0.05);
+  }
+
+  .cta-card h2 {
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    color: var(--text);
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+  }
+
+  .cta-desc {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    max-width: 650px;
+    margin: 0 auto 3rem auto;
+    line-height: 1.6;
+  }
+
+  .btn-primary-large {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    background: var(--primary);
+    color: white;
+    padding: 1.25rem 3rem;
+    border-radius: 4rem;
+    font-size: 1.2rem;
+    font-weight: 800;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 25px rgba(0, 102, 204, 0.2);
+  }
+
+  .btn-primary-large:hover {
+    background: var(--primary-dark);
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 102, 204, 0.3);
+  }
+
+  .text-center { text-align: center; }
+
+  /* Responsive */
+  @media (max-width: 991px) {
+    .mockup-grid {
+      grid-template-columns: 1fr;
+      text-align: center;
+      gap: 3rem;
+    }
+    
+    .mockup-text {
+      padding-top: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    
+    .mockup-media {
+      order: -1;
+      margin-bottom: 3rem;
+    }
+    
+    .mockup-title, .mockup-desc {
+      text-align: center;
+    }
+
+    .mockup-media {
+      justify-content: center;
+      order: -1; 
+    }
+
+    .job-split {
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+    }
+    
+    .job-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 2rem;
+    }
+
+    .job-title-wrapper {
+      flex-direction: column;
+      align-items: flex-start;
+      text-align: left;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .vacantes-hero {
+      padding: 4rem 1rem;
+    }
+    
+    .job-header {
+      padding: 2.5rem 1.5rem;
+    }
+    
+    .job-title-wrapper {
+      align-items: center;
+      text-align: center;
+    }
+
+    .icon-wrapper {
+      margin: 0 auto;
+    }
+
+    .job-body {
+      padding: 2.5rem 1.5rem;
+    }
+    
+    .btn-primary-large, .small-btn {
+      padding: 1rem;
+      font-size: 1rem;
+      width: 100%;
+      justify-content: center;
+    }
+  }
+</style>

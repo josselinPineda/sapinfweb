@@ -1,0 +1,492 @@
+---
+import { ChevronRight, ChevronLeft } from 'lucide-astro';
+import barbersFondo from '../assets/barbers-fondo.jpg';
+import efficientFondo from '../assets/efficient-fondo.jpg';
+import efficientplusFondo from '../assets/efficientplus-fondo.jpg';
+import labFondo from '../assets/lab-fondo.jpg';
+import nominaFondo from '../assets/nomina-fondo.jpg';
+import sicadFondo from '../assets/sicad-fondo.jpg';
+import logoSapinf from '../assets/logo.png'; 
+import efficient from '../assets/efficient.png'; 
+import barbers2 from '../assets/barbers2.png'; 
+import labitplus from '../assets/labitplus.png'; 
+import nomina from '../assets/nomina.png';
+import sicad from '../assets/sicad.png';
+import epdFondo from '../assets/epd.jpg';
+import epdLogo from '../assets/Efficient POS Dynamic-20.png';
+import carFondo from '../assets/car.jpg';
+import carwashLogo from '../assets/carwashpro.png';
+
+
+const backgroundImages = [
+  { 
+    src: barbersFondo.src, 
+    alt: 'Barbers',
+    title: 'Barbers',
+    description: 'La mejor aplicación para la gestión eficiente de barberías',
+    href: '/barbers',
+    icon: barbers2.src
+  },
+  { 
+    src: efficientFondo.src, 
+    alt: 'Efficient',
+    title: 'Efficient',
+    description: 'Garantice la continuidad de su negocio con un software que incluye los requisitos legales y fiscales de Honduras para simplificar el trabajo y aumentar la productividad de tu empresa.',
+    href: '/efficient',
+    icon: efficient.src
+  },
+  { 
+    src: efficientplusFondo.src, 
+    alt: 'Efficient Plus',
+    title: 'Efficient+ ',
+    description: 'Garantice la continuidad de su negocio con un software que incluye los requisitos legales y fiscales de Honduras para simplificar el trabajo y aumentar la productividad de tu empresa.',
+    href: '/efficient-plus',
+    icon: efficient.src
+  },
+  { 
+    src: labFondo.src, 
+    alt: 'Lab IT',
+    title: 'Transforma tu laboratorio con LABITPLUS',
+    description: 'Software para la gestión de laboratorios de análisis clínicos desde el ingreso del paciente hasta la entrega de resultados.',
+    href: '/labit-plus',
+    icon: labitplus.src
+  },
+  { 
+    src: nominaFondo.src, 
+    alt: 'Nomina',
+    title: 'Nomina+',
+    description: 'La herramienta más completa para la gestión del talento en tu empresa. Con Nomina+ podrás simplificar y automatizar todos los procesos relacionados con la gestión de tus empleados.',
+    href: '/nomina',
+    icon: nomina.src
+  },
+  { 
+    src: sicadFondo.src, 
+    alt: 'SICAD',
+    title: 'Sistema de Control Administrativo',
+    description: 'Lleva tu empresa a otro nivel con nuestro sistema de control administrativo.',
+    href: '/sicad',
+    icon: sicad.src
+  },
+  { 
+    src: epdFondo.src, 
+    alt: 'Efficient POS Dynamic',
+    title: 'Efficient POS Dynamic',
+    description: 'Maximiza tus ventas y controla tu inventario en tiempo real con nuestra solución móvil más ágil e intuitivo de toda Honduras.',
+    href: '/pos-dynamic',
+    icon: epdLogo.src
+  },
+  { 
+    src: carFondo.src, 
+    alt: 'Carwash PRO',
+    title: 'Carwash PRO',
+    description: 'Optimiza la administración y operación de tu carwash moderno. Facilita el control desde la recepción del vehículo hasta la facturación.',
+    href: '/carwashpro',
+    icon: carwashLogo.src
+  },
+];
+---
+
+<section class="hero">
+  <!-- Carousel Background -->
+  <div class="hero-carousel" id="hero-carousel">
+    {backgroundImages.map((img, index) => (
+      <div 
+        class={`carousel-slide ${index === 0 ? 'active' : ''}`} 
+        style={`background-image: url(${img.src})`}
+        role="img"
+        aria-label={img.alt}
+      >
+        <div class="overlay"></div>
+      </div>
+    ))}
+  </div>
+
+  <!-- Manual Controls -->
+  <button class="carousel-control prev" aria-label="Previous Slide">
+    <ChevronLeft size={32} />
+  </button>
+  <button class="carousel-control next" aria-label="Next Slide">
+    <ChevronRight size={32} />
+  </button>
+
+  <div class="container hero-content">
+    <div class="hero-visual">
+      <div class="blob-wrapper">
+        <div class="blob"></div>
+        <div class="glass-card" id="dynamic-card">
+          <div class="card-body">
+             {backgroundImages.map((img, index) => (
+               <div class={`card-info ${index === 0 ? 'active' : ''}`} data-index={index}>
+                 <img src={img.icon} alt={`${img.title} icon`} class="card-icon" />
+                 <h2 class="card-title">{img.title}</h2>
+                 <p class="card-desc">{img.description}</p>
+                 {img.href !== '#' && (
+                   <a href={img.href} class="btn btn-primary btn-sm">
+                     Más Información <ChevronRight size={16} />
+                   </a>
+                 )}
+               </div>
+             ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  const slides = document.querySelectorAll('.carousel-slide');
+  const cardInfos = document.querySelectorAll('.card-info');
+  const btnPrev = document.querySelector('.carousel-control.prev');
+  const btnNext = document.querySelector('.carousel-control.next');
+  let currentSlide = 0;
+  let slideInterval;
+
+  function goToSlide(index) {
+    slides[currentSlide].classList.remove('active');
+    cardInfos[currentSlide].classList.remove('active');
+    
+    currentSlide = index;
+    
+    slides[currentSlide].classList.add('active');
+    cardInfos[currentSlide].classList.add('active');
+  }
+
+  function nextSlide() {
+    goToSlide((currentSlide + 1) % slides.length);
+  }
+
+  function prevSlide() {
+    goToSlide((currentSlide - 1 + slides.length) % slides.length);
+  }
+
+  function resetInterval() {
+    clearInterval(slideInterval);
+    if (slides.length > 1) {
+      slideInterval = setInterval(nextSlide, 5000);
+    }
+  }
+
+  if (btnNext && btnPrev) {
+    btnNext.addEventListener('click', () => {
+      nextSlide();
+      resetInterval();
+    });
+
+    btnPrev.addEventListener('click', () => {
+      prevSlide();
+      resetInterval();
+    });
+  }
+
+  // Initial interval
+  resetInterval();
+</script>
+
+<style>
+  .hero {
+    padding: 10rem 0 6rem;
+    overflow: hidden;
+    position: relative;
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    background: #011748ff; 
+  }
+
+  .hero-carousel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+
+  .carousel-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+  }
+
+  .carousel-slide.active {
+    opacity: 1;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      to right, 
+      rgba(1, 23, 72, 0.85) 0%, 
+      rgba(1, 23, 72, 0.6) 50%, 
+      rgba(1, 23, 72, 0.4) 100%
+    );
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 10;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    align-items: center;
+    gap: 4rem;
+    width: 100%;
+  }
+
+  .badge {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: rgba(0, 102, 204, 0.1);
+    color: var(--primary);
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    border: 1px solid rgba(0, 102, 204, 0.2);
+  }
+
+  h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    margin-bottom: 1.5rem;
+    color: var(--text);
+  }
+
+  .highlight {
+    color: var(--primary);
+    position: relative;
+    display: inline-block;
+  }
+
+  .highlight::after {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background: var(--accent);
+    opacity: 0.3;
+    z-index: -1;
+  }
+
+  p {
+    font-size: 1.125rem;
+    color: var(--text-muted);
+    margin-bottom: 2.5rem;
+    max-width: 540px;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 1rem;
+  }
+
+  /* Visual Elements */
+  .hero-visual {
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+
+  .blob-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .blob {
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(45deg, var(--primary), var(--primary-light));
+    border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+    filter: blur(40px);
+    opacity: 0.2;
+    animation: blobMove 10s infinite alternate;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    justify-content: flex-start; /* Changed to left align */
+    align-items: center;
+    min-height: inherit;
+    width: 100%;
+  }
+
+  /* Manual Carousel Controls */
+  .carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 30;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .carousel-control:hover {
+    background: rgba(255, 255, 255, 0.3);
+    border-color: rgba(255, 255, 255, 0.5);
+  }
+
+  .carousel-control.prev {
+    left: 2rem;
+  }
+
+  .carousel-control.next {
+    right: 2rem;
+  }
+
+  /* Dynamic Card Styling */
+  .glass-card {
+    width: 100%;
+    max-width: 450px;
+    min-height: 320px; 
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 2rem;
+    padding: 2.5rem;
+    box-shadow: 0 40px 100px -20px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 20;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .card-info {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s ease;
+    display: none;
+  }
+
+  .card-info.active {
+    opacity: 1;
+    transform: translateY(0);
+    display: block;
+  }
+
+  .card-icon {
+    height: 100px; 
+    width: auto;
+    margin-bottom: 1rem;
+    object-fit: contain;
+  }
+
+  .card-title {
+    font-size: 2rem;
+    font-weight: 800;
+    color: white; 
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+
+  .card-desc {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 2rem;
+    line-height: 1.6;
+  }
+
+  .btn-sm {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+
+  @media (max-width: 968px) {
+    .hero {
+      padding: 8rem 0 4rem;
+      min-height: 100vh;
+    }
+    .hero-content {
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+    }
+    .glass-card {
+      max-width: 400px;
+      padding: 1.5rem;
+      margin-top: 2rem;
+    }
+    .card-icon {
+      height: 80px;
+    }
+    .carousel-control {
+      display: none;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .glass-card {
+      max-width: 100%;
+      border-radius: 1.5rem;
+      padding: 1.25rem;
+    }
+    .card-title {
+      font-size: 1.5rem;
+    }
+    .card-desc {
+      font-size: 1rem;
+    }
+  }
+
+  .line {
+    height: 10px;
+    background: var(--primary);
+    border-radius: 5px;
+    margin-bottom: 0.75rem;
+    opacity: 0.1;
+  }
+
+  .line.short { width: 40%; }
+  .line.medium { width: 60%; }
+  .line.long { width: 85%; }
+
+  @keyframes blobMove {
+    0% { border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%; }
+    100% { border-radius: 60% 40% 30% 70% / 60% 30% 50% 40%; }
+  }
+
+  @keyframes cardFloat {
+    0%, 100% { transform: translate(-50%, -55%); }
+    50% { transform: translate(-50%, -45%); }
+  }
+
+  @media (max-width: 968px) {
+    .hero-content {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+    .hero-text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .hero-visual {
+      margin-top: 4rem;
+    }
+    .hero-actions {
+      justify-content: center;
+    }
+  }
+</style>

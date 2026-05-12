@@ -1,0 +1,954 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import { 
+  Car,
+  Receipt,
+  BarChart3,
+  Settings,
+  Building2,
+  Bell,
+  Smartphone,
+  CreditCard,
+  MessageCircle,
+  CheckCircle2
+} from 'lucide-astro';
+
+import carFondo from '../assets/car.jpg';
+import carwashLogo from '../assets/carwashpro.png';
+import pan1 from '../assets/pan1.jpeg';
+import pan2 from '../assets/pan2.jpeg';
+
+const pageTitle = "Carwash PRO - Optimiza tu Carwash";
+---
+
+<Layout title={pageTitle}>
+  <Navbar />
+  
+  <main class="carwash-page">
+    <!-- Hero Section (Estilo POS Dynamic) -->
+    <section class="vacantes-hero">
+      <div class="container">
+        <div class="mockup-grid">
+          <div class="mockup-text">
+            <div class="mockup-badge">
+              <span class="mockup-subtitle">INNOVACIÓN PARA NEGOCIOS</span>
+            </div>
+            <div class="product-logo-container">
+              <img src={carwashLogo.src} alt="Carwash PRO Logo" class="product-logo" />
+            </div>
+            <h1 class="mockup-title">¡El futuro de tu negocio está en <span class="mockup-blue">tus manos!</span></h1>
+            <p class="mockup-desc">
+              CARWASHPRO es una aplicación móvil diseñada para optimizar la administración y operación de carwash modernos. Facilita el control de procesos desde la recepción del vehículo hasta la facturación, permitiendo una gestión eficiente, ágil y centralizada. Su diseño intuitivo reduce los tiempos de espera, mejora la experiencia del cliente y permite al personal adaptarse rápidamente al sistema.
+            </p>
+            <a href="https://wa.me/50494583355" target="_blank" rel="noopener noreferrer" class="btn-primary-large" style="margin-top: 2rem;">
+              <MessageCircle size={24} />
+              Solicitar cotización
+            </a>
+          </div>
+          
+          <div class="mockup-media hero-composition">
+             <img src={carFondo.src} alt="App Carwash PRO" class="epd-hero-image" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- ¿Por qué Carwash PRO? -->
+    <section class="features-section">
+      <div class="container">
+        <div class="section-header text-center" style="margin-bottom: 4rem;">
+            <div class="badge">
+                <span class="subtitle">Beneficios</span>
+            </div>
+            <h2 style="font-size: clamp(2rem, 4vw, 3rem); font-weight: 900; color: #111827; margin-bottom: 1rem;">¿Por qué <span style="color: var(--primary);">Carwash PRO?</span></h2>
+            <p style="font-size: 1.15rem; color: var(--text-muted); max-width: 600px; margin: 0 auto; line-height: 1.6;">Optimiza tu negocio con herramientas diseñadas para crecer</p>
+        </div>
+        
+        <div class="features-grid services-grid">
+            <div class="feature-card modern-card">
+                <div class="feature-icon-box"><Building2 size={32} /></div>
+                <h3>Control Centralizado</h3>
+                <p>Administra todas tus sedes desde una sola plataforma, con control centralizado de operaciones.</p>
+            </div>
+            
+            <div class="feature-card modern-card">
+                <div class="feature-icon-box"><Receipt size={32} /></div>
+                <h3>Facturación Inmediata</h3>
+                <p>Genera facturas al instante e incluye productos adicionales.</p>
+            </div>
+            
+            <div class="feature-card modern-card">
+                <div class="feature-icon-box"><CreditCard size={32} /></div>
+                <h3>Lleva el Control</h3>
+                <p>Lleva un seguimiento claro de pagos, créditos y saldos pendientes.</p>
+            </div>
+            
+            <div class="feature-card modern-card">
+                <div class="feature-icon-box"><Car size={32} /></div>
+                <h3>Recepción Rápida</h3>
+                <p>Registra clientes y vehículos de forma rápida, reduciendo tiempos de espera.</p>
+            </div>
+            
+            <div class="feature-card modern-card">
+                <div class="feature-icon-box"><Bell size={32} /></div>
+                <h3>Comunicación Eficiente</h3>
+                <p>Informa al cliente cuando su vehículo está listo, mejorando la comunicación.</p>
+            </div>
+            
+            <div class="feature-card modern-card">
+                <div class="feature-icon-box"><Settings size={32} /></div>
+                <h3>Servicios Flexibles</h3>
+                <p>Ofrece diferentes tipos de lavado y servicios adicionales, adaptados a cada cliente.</p>
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Center Title para Módulos -->
+    <section class="modules-title-section" style="padding: 5rem 0 0 0; text-align: center;">
+      <div class="container">
+        <div class="section-header text-center" style="display: flex; flex-direction: column; align-items: center; margin-bottom: 2rem;">
+            <div class="badge" style="margin-bottom: 2rem;">
+                <span class="subtitle">Componentes de Software</span>
+            </div>
+            <h2 style="font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 900; color: #111827; margin-bottom: 1rem;">Los <span style="color: var(--primary);">Módulos</span> del Sistema</h2>
+            <p style="font-size: 1.25rem; color: var(--text-muted); max-width: 600px; margin: 0 auto; line-height: 1.6;">Todo lo que necesitas, en un solo ecosistema integrado</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- App Preview Section -->
+    <section class="app-preview-section" style="padding-top: 3rem;">
+      <div class="container text-center">
+        <div class="phones-container">
+           <div class="phone-mockup">
+             <div class="phone-frame">
+                <img src={pan1.src} alt="App Carwash PRO Pantalla 1" class="phone-screen-img" />
+             </div>
+          </div>
+          <div class="phone-mockup">
+             <div class="phone-frame">
+                <img src={pan2.src} alt="App Carwash PRO Pantalla 2" class="phone-screen-img" />
+             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Content Modules (8 Items Originales) -->
+    <section class="modules-section" style="padding: 2rem 0 5rem 0;">
+      <div class="container">
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon-box"><Car size={32} /></div>
+                <h3>Recepción Rápida de Vehículos</h3>
+                <p>Permite registrar de forma ágil tanto a los clientes como a sus vehículos, agilizando el proceso de recepción.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon-box"><Building2 size={32} /></div>
+                <h3>Manejo de Múltiples Sucursales</h3>
+                <p>Permite gestionar múltiples sucursales desde una única plataforma, facilitando la supervisión y coordinación de las operaciones.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon-box"><Settings size={32} /></div>
+                <h3>Gestión de Servicios</h3>
+                <p>Ofrece a los clientes la opción de elegir entre una variedad de servicios, como el "Lavado Sencillo", lo que facilita la personalización de cada experiencia.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon-box"><Receipt size={32} /></div>
+                <h3>Facturación Simplificada con Productos Adicionales</h3>
+                <p>Genera facturas de manera automática al finalizar el servicio, permitiendo añadir productos complementarios.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon-box"><Bell size={32} /></div>
+                <h3>Notificación de Disponibilidad</h3>
+                <p>Envía automáticamente una notificación al cliente informándole que su vehículo ya está disponible para su retiro.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon-box"><CreditCard size={32} /></div>
+                <h3>Estado de Cuenta y Créditos</h3>
+                <p>Permite llevar un registro del estado de cuenta de cada cliente.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon-box"><BarChart3 size={32} /></div>
+                <h3>Control Financiero</h3>
+                <p>Monitorea tus ingresos y accede a estadísticas detalladas sobre los servicios prestados.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon-box"><Smartphone size={32} /></div>
+                <h3>Interfaz Amigable</h3>
+                <p>Diseñada para ser intuitiva y fácil de usar, CARWASHPRO reduce la curva de aprendizaje para el personal.</p>
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing-section">
+      <div class="container">
+        <div class="section-header text-center mb-5">
+           <div class="badge">
+             <span class="subtitle">Precios Transparentes</span>
+           </div>
+           <h2 style="font-size: clamp(2.5rem, 5vw, 3.8rem); font-weight: 900; color: #111827; letter-spacing: -0.02em; margin-bottom: 3rem;">Opciones de <span class="highlight">Inversión</span></h2>
+        </div>
+        <div class="pricing-grid">
+            <div class="price-table premium-border hover-scale">
+                <h3 class="price-title">Plan de Implementación</h3>
+                <div class="price-amount-box">
+                    <span class="price-label">Pago único:</span>
+                    <span class="price-value text-red">L. 6,999.99</span>
+                </div>
+                <p class="tax-note">Impuesto no incluido.</p>
+                
+                <div class="price-body">
+                    <p class="price-concept">Descripción del Servicio (Setup):</p>
+                    <ul class="check-list interactive-list">
+                        <li><CheckCircle2 size={24} class="check-icon" /> <span>Inversión Inicial de plataforma.</span></li>
+                        <li><CheckCircle2 size={24} class="check-icon" /> <span>Implementación y despliegue del software.</span></li>
+                        <li><CheckCircle2 size={24} class="check-icon" /> <span>Configuración de los servicios del carwash.</span></li>
+                        <li><CheckCircle2 size={24} class="check-icon" /> <span>Carga inicial del catálogo de su empresa.</span></li>
+                        <li><CheckCircle2 size={24} class="check-icon" /> <span>Capacitación completa del personal de caja y administración.</span></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="price-table premium-border hover-scale">
+                <h3 class="price-title">Licencia y Soporte</h3>
+                <div class="price-amount-box">
+                    <span class="price-label">Suscripción Mensual:</span>
+                    <span class="price-value text-red">$29.99 USD</span>
+                </div>
+                <p class="tax-note opacity-none">Espacio invisible</p>
+                
+                <div class="price-body">
+                    <p class="price-concept">Beneficios Mensuales Activos:</p>
+                    <ul class="check-list interactive-list">
+                        <li><CheckCircle2 size={24} class="check-icon" /> <span>Derecho total de uso comercial de la plataforma POS.</span></li>
+                        <li><CheckCircle2 size={24} class="check-icon" /> <span>Respaldo de la base de datos automatizado en la nube.</span></li>
+                        <li><CheckCircle2 size={24} class="check-icon" /> <span>Alojamiento en servidores robustos de alta disponibilidad.</span></li>
+                        <li><CheckCircle2 size={24} class="check-icon" /> <span>Actualizaciones del sistema inmediatas.</span></li>
+                        <li><CheckCircle2 size={24} class="check-icon" /> <span>Soporte técnico remoto continuo para su tranquilidad operativa.</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action Final -->
+    <section class="final-cta-section">
+      <div class="container">
+        <div class="cta-modern-box">
+          <h2>¡Empieza a <span style="color: var(--primary);">potencializar</span> tu empresa hoy!</h2>
+          <p>No lo pienses más y comienza a cambiar el futuro de tu negocio con la mejor solución del mercado.</p>
+          <a href="https://wa.me/50494583355?text=Hola,%20me%20interesa%20obtener%20más%20información%20sobre%20Carwash%20PRO" target="_blank" rel="noopener noreferrer" class="btn-whatsapp-solid">
+            <MessageCircle size={24} />
+            Contactar ahora
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  
+  <Footer />
+</Layout>
+
+<style>
+  .carwash-page {
+    padding-top: 64px;
+    background: #f4f7fb;
+  }
+
+  /* 1. HERO SECTION */
+  .vacantes-hero {
+    padding: 4rem 0 5rem 0; 
+    border-bottom: 1px solid rgba(0,0,0,0.02);
+  }
+
+  .vacantes-hero .container {
+    max-width: 1400px;
+  }
+
+  .product-logo-container {
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  @media (min-width: 992px) {
+    .product-logo-container {
+      justify-content: flex-start;
+    }
+  }
+
+  .product-logo {
+    max-width: 280px;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+  }
+
+  @media (min-width: 992px) {
+    .product-logo {
+      margin-left: 0;
+      margin-right: auto;
+    }
+  }
+
+  @media (max-width: 991px) {
+    .product-logo-container {
+      justify-content: center;
+    }
+  }
+
+  .mockup-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    align-items: center;
+    gap: 3rem;
+  }
+
+  @media (max-width: 991px) {
+    .vacantes-hero {
+      padding: 2rem 0 4rem;
+    }
+    .mockup-grid {
+      grid-template-columns: 1fr;
+      text-align: center;
+      gap: 2.5rem;
+    }
+    .mockup-text {
+      padding-top: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .hero-composition {
+      order: -1;
+      justify-content: center;
+    }
+    .epd-hero-image {
+      margin-top: 0;
+    }
+    .mockup-title, .mockup-desc {
+      text-align: center;
+    }
+  }
+
+  .section-header {
+    margin-bottom: 3rem;
+  }
+
+  .badge {
+    background: #e1effe;
+    padding: 0.5rem 1.5rem;
+    border-radius: 2rem;
+    margin-bottom: 1.5rem;
+    display: inline-block;
+  }
+
+  .subtitle {
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 800;
+    color: var(--primary);
+    font-size: 0.9rem;
+  }
+
+  .mockup-badge {
+    background: #e0f2fe; 
+    padding: 0.5rem 1.5rem;
+    border-radius: 2rem;
+    margin-bottom: 1.5rem;
+    display: inline-block;
+  }
+
+  .mockup-subtitle {
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-weight: 800;
+    color: var(--primary);
+    font-size: 0.8rem;
+  }
+  
+  .mockup-title {
+    font-size: clamp(1.6rem, 3.5vw, 2.8rem);
+    font-weight: 900;
+    margin: 0 0 1rem 0;
+    color: var(--text); 
+    line-height: 1.1;
+    text-align: left;
+  }
+
+  .mockup-blue {
+    color: #0066cc; 
+  }
+
+  .mockup-desc {
+    color: var(--text-muted); 
+    font-size: 0.95rem;
+    line-height: 1.5;
+    text-align: left;
+  }
+
+  /* Composición del Hero (Solo Imagen Limpia) */
+  .hero-composition {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+  }
+
+  .epd-hero-image {
+    width: 100%;
+    max-width: 820px;
+    height: auto;
+    aspect-ratio: 16/10;
+    object-fit: cover; 
+    border-radius: 2.5rem;
+    box-shadow: 0 35px 60px rgba(0, 102, 204, 0.15);
+    border: 8px solid white;
+    cursor: pointer;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
+  }
+
+  .epd-hero-image:hover {
+    transform: translateY(-8px) scale(1.02); 
+    box-shadow: 0 50px 80px rgba(0, 102, 204, 0.25);
+  }
+
+  .epd-hero-image:active {
+    transform: scale(0.95) translateY(0); 
+    box-shadow: 0 15px 30px rgba(0, 102, 204, 0.1);
+  }
+
+  /* BOTONES */
+  .btn-primary-large {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    background: #0066cc;
+    color: white;
+    padding: 1rem 2.5rem;
+    border-radius: 4rem;
+    font-size: 1.1rem;
+    font-weight: 800;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 25px rgba(0, 102, 204, 0.2);
+  }
+
+  .btn-primary-large:hover {
+    background: #0052a3;
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 102, 204, 0.3);
+  }
+
+  /* App Preview Section */
+  .app-preview-section {
+    padding: 3rem 0 7rem;
+    overflow: hidden;
+  }
+
+  .phones-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2rem;
+    gap: 4rem; /* Separados entre sí */
+  }
+
+  .phone-mockup {
+    width: 250px;
+    height: 500px;
+    padding: 10px;
+    background: #111827;
+    border-radius: 2.8rem;
+    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.15);
+    position: relative;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1;
+  }
+
+  .phone-mockup:hover {
+    transform: translateY(-15px) scale(1.02);
+    box-shadow: 0 50px 100px rgba(0, 102, 204, 0.25);
+    z-index: 2;
+  }
+
+  @media (max-width: 640px) {
+    .phones-container {
+      flex-direction: column;
+      align-items: center;
+      gap: 3rem;
+    }
+  }
+
+  .phone-frame {
+    width: 100%;
+    height: 100%;
+    background: white;
+    border-radius: 2.2rem;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .phone-screen-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+  }
+
+  .placeholder-screen {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #e1effe;
+    color: var(--primary);
+    font-weight: 700;
+    text-align: center;
+    padding: 2rem;
+  }
+
+  /* Highlight Banner */
+  .highlight-banner {
+    padding: 2rem 1rem 4rem;
+  }
+
+  .banner-content {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    border-radius: 2rem;
+    padding: 4rem 2rem;
+    text-align: center;
+    color: white;
+    max-width: 1000px;
+    margin: 0 auto;
+    box-shadow: 0 20px 40px rgba(37, 99, 235, 0.2);
+  }
+
+  .banner-content h2 {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    font-weight: 900;
+    margin: 0;
+  }
+
+  /* Features */
+  .features-section {
+    padding: 4rem 0;
+  }
+  
+  .text-center { text-align: center; }
+  .mb-5 { margin-bottom: 3rem; }
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+  }
+
+  @media (max-width: 480px) {
+    .features-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+  }
+
+  .feature-card {
+    background: white;
+    padding: 2.5rem 1.5rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+    transition: transform 0.3s ease;
+    border: 1px solid rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+
+  @media (max-width: 480px) {
+    .feature-card {
+      padding: 2rem 1.25rem;
+    }
+  }
+
+  .feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.06);
+    border-color: rgba(37, 99, 235, 0.2);
+  }
+
+  .feature-icon-box {
+    width: 60px;
+    height: 60px;
+    background: rgba(37, 99, 235, 0.1);
+    color: var(--primary);
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    transition: all 0.3s ease;
+  }
+
+  .feature-card:hover .feature-icon-box {
+    background: var(--primary);
+    color: white;
+    transform: rotate(5deg) scale(1.1);
+  }
+
+  .feature-card h3 {
+    font-size: 1.4rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    color: #111827;
+  }
+
+  .feature-card p {
+    color: var(--text-muted);
+    line-height: 1.6;
+  }
+
+  /* Pricing */
+  .pricing-section {
+    padding: 2rem 0 8rem;
+  }
+
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  @media (max-width: 1200px) {
+    .pricing-grid {
+      grid-template-columns: 1fr;
+      max-width: 650px;
+      margin: 0 auto;
+      gap: 3rem;
+    }
+    
+    .price-table {
+      padding: 3rem 2rem;
+    }
+    
+    .price-title {
+      font-size: 1.8rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .price-table {
+      padding: 2rem 1.5rem;
+    }
+    .price-title {
+      font-size: 1.75rem;
+    }
+  }
+
+  .price-table {
+    background: white;
+    border-radius: 2rem;
+    padding: 3.5rem 2rem;
+    box-shadow: 0 20px 50px rgba(0, 102, 204, 0.05);
+    border: 1px solid rgba(0, 102, 204, 0.1);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  @media (max-width: 480px) {
+    .price-table {
+      padding: 2.5rem 1.5rem;
+    }
+  }
+
+  .price-table::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background: linear-gradient(90deg, var(--primary) 0%, var(--accent) 100%);
+  }
+
+  .price-table.hover-scale:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 30px 60px rgba(0, 102, 204, 0.15);
+  }
+
+  .price-title {
+    font-size: clamp(1.8rem, 6vw, 2.2rem);
+    font-weight: 900;
+    margin-bottom: 2rem;
+    color: #0b2e59;
+    margin-top: 0;
+  }
+
+  .price-amount-box {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .price-label {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-muted);
+  }
+
+  .price-value {
+    font-size: 2.2rem;
+    font-weight: 900;
+    letter-spacing: -0.5px;
+    background: linear-gradient(45deg, #ef4444, #f97316); 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .tax-note {
+    font-size: 0.85rem;
+    color: #94a3b8;
+    margin-bottom: 2.5rem;
+    margin-top: 0;
+  }
+
+  .opacity-none {
+    opacity: 0; 
+  }
+
+  .price-concept {
+    font-size: 1.15rem;
+    color: var(--text);
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    margin-top: 0;
+  }
+
+  .check-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .interactive-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+
+  .interactive-list li:hover {
+    transform: translateX(8px);
+    color: #0b2e59;
+  }
+
+  .check-icon {
+    color: var(--primary);
+    flex-shrink: 0;
+    margin-top: 0.15rem;
+    filter: drop-shadow(0 2px 4px rgba(0, 102, 204, 0.2)); 
+    transition: all 0.3s ease;
+  }
+  
+  .interactive-list li:hover .check-icon {
+    color: #f97316;
+    transform: scale(1.15);
+  }
+
+  /* Footer Block */
+  .custom-carwash-footer {
+    background: #1f2937;
+    padding: 4rem 0;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+
+  .carwash-footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .b-logo {
+    max-width: 160px;
+    margin-bottom: 1rem;
+    filter: brightness(0) invert(1);
+  }
+
+  .pricing-features li::before {
+    content: '✓';
+    color: var(--primary);
+    font-weight: bold;
+  }
+
+  /* 7. FINAL CTA */
+  .final-cta-section {
+    padding: 2rem 1.5rem 8rem;
+  }
+
+  .cta-modern-box {
+    background: white;
+    border-radius: 2rem;
+    padding: 3.5rem 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.05);
+    text-align: left;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    width: 100%;
+  }
+
+  @media (max-width: 768px) {
+    .cta-modern-box {
+      padding: 3rem 1.5rem;
+      text-align: center;
+    }
+    .final-cta-section {
+        padding-bottom: 4rem;
+    }
+  }
+
+  .cta-modern-box h2 {
+    font-size: clamp(2.2rem, 4vw, 3.2rem);
+    font-weight: 900;
+    color: #111827;
+    margin-bottom: 1rem;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    max-width: 700px;
+    margin-top: 0;
+  }
+
+  .cta-modern-box p {
+    font-size: 1.25rem;
+    color: var(--text-muted);
+    margin-bottom: 2.5rem;
+    line-height: 1.6;
+    max-width: 750px;
+    margin-top: 0;
+  }
+
+  .btn-whatsapp-solid {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    background: #20d366; 
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 9999px;
+    font-size: 1.1rem;
+    font-weight: 800;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 10px 25px rgba(32, 211, 102, 0.3);
+    max-width: 100%;
+  }
+
+  @media (max-width: 480px) {
+    .btn-whatsapp-solid {
+      padding: 1rem 1.5rem;
+      font-size: 1rem;
+      width: 100%;
+    }
+  }
+
+  .btn-whatsapp-solid:hover {
+    background: #1cb556;
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(32, 211, 102, 0.4);
+    color: white;
+  }
+
+  .b-title {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+
+  @media (max-width: 991px) {
+    .mockup-grid {
+      grid-template-columns: 1fr;
+      text-align: center;
+      gap: 3rem;
+    }
+    
+    .mockup-text {
+      padding-top: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .mockup-media {
+      order: -1;
+      margin-bottom: 3rem;
+    }
+    
+    .mockup-title, .mockup-desc {
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .product-logo-container {
+      justify-content: center !important;
+    }
+    .product-logo {
+      margin: 0 auto !important;
+    }
+
+    .hero-composition {
+      justify-content: center;
+    }
+
+    .pricing-grid {
+      grid-template-columns: 1fr;
+      padding: 0 1rem;
+    }
+
+    .price-table {
+      padding: 2.5rem 1.5rem;
+    }
+
+    .cta-modern-box {
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+
+    .cta-modern-box h2 {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .cta-modern-box p {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+</style>

@@ -1,0 +1,848 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+
+import { 
+  TrendingUp, 
+  Globe, 
+  BarChart2, 
+  Box, 
+  Truck, 
+  ShieldCheck, 
+  ShoppingCart, 
+  CreditCard, 
+  Briefcase, 
+  Users,
+  Smartphone,
+  MapPin,
+  CheckCircle,
+  MessageCircle
+} from 'lucide-astro';
+import efficientplusFondo from '../assets/efficientplus-fondo.jpg';
+import pantalla3 from '../assets/E3.jpeg';
+import efficientlogo from '../assets/efficient.png';
+---
+
+<Layout title="Efficient+ | SAPINF">
+  <Navbar />
+  
+  <main class="product-page">
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-content">
+            <div class="badge">
+              <span class="subtitle">Efficient Plus</span>
+            </div>
+            
+            <div class="product-logo-container">
+              <img src={efficientlogo.src} alt="Efficient Logo" class="product-logo" />
+            </div>
+
+            <h1 class="hero-title">
+              ¡El futuro de tu negocio está en <span class="highlight">tus manos!</span>
+            </h1>
+            <p class="hero-description">
+              ¡Automatiza las compras, ventas, inventarios, facturación y la gestión de clientes con información actualizada para tomar decisiones adecuadas y aumentar la rentabilidad de tu compañía!
+            </p>
+            <div class="hero-btns">
+              <a href="https://wa.me/50494583355" target="_blank" class="btn btn-primary">Solicitar cotización</a>
+              <a href="#beneficios" class="btn btn-outline">Ver Beneficios</a>
+            </div>
+          </div>
+          <div class="hero-visual">
+            <div class="image-wrapper">
+              <img src={efficientplusFondo.src} alt="Efficient+ Dashboard" class="main-image" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Beneficios Section -->
+    <section id="beneficios" class="benefits-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="badge">
+            <span class="subtitle">Ventajas de Plus</span>
+          </div>
+          <h2>Beneficios de <span class="highlight">Efficient+</span></h2>
+        </div>
+
+        <div class="benefits-grid">
+          <div class="benefit-card">
+            <div class="icon-circle"><TrendingUp size={32} /></div>
+            <h3>Venta Flexible</h3>
+            <p>Comercializa múltiples productos y/o servicios de forma flexible con un preciso control sobre tus ventas.</p>
+          </div>
+          
+          <div class="benefit-card">
+            <div class="icon-circle"><Globe size={32} /></div>
+            <h3>Comercio Exterior</h3>
+            <p>Manejo de órdenes de compra y documentos de importación en múltiples monedas de forma simplificada.</p>
+          </div>
+          
+          <div class="benefit-card">
+            <div class="icon-circle"><BarChart2 size={32} /></div>
+            <h3>Reportes a Medida</h3>
+            <p>Reportes personalizados con el detalle que se desee para un análisis profundo de tu negocio.</p>
+          </div>
+          
+          <div class="benefit-card">
+            <div class="icon-circle"><Box size={32} /></div>
+            <h3>Control de Inventarios</h3>
+            <p>Manejo adecuado de los inventarios, múltiples bodegas, manejo de lotes y costeo del inventario.</p>
+          </div>
+          
+          <div class="benefit-card">
+            <div class="icon-circle"><Truck size={32} /></div>
+            <h3>Logística Eficiente</h3>
+            <p>Alisto y despacho de mercadería de forma eficiente, integrando toda la cadena de suministros.</p>
+          </div>
+
+          <div class="benefit-card">
+            <div class="icon-circle"><ShieldCheck size={32} /></div>
+            <h3>Cumplimiento Legal</h3>
+            <p>Software que incluye los requisitos legales y fiscales de Honduras para simplificar el cumplimiento.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mobile Section -->
+    <section class="mobile-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="badge">
+            <span class="subtitle">Movilidad Total</span>
+          </div>
+          <h2>Efficient+ en la <span class="highlight">palma de tu mano</span></h2>
+          <p class="section-desc">Gestiona tu empresa desde tu smartphone o tablet con total comodidad desde cualquier lugar.</p>
+        </div>
+
+        <div class="mobile-grid">
+          <div class="mobile-content-box">
+            <div class="feature-item">
+              <div class="feature-icon"><CheckCircle size={28} /></div>
+              <div class="feature-text">
+                <h3>¡Facturación en ruta!</h3>
+                <p>Realiza tus facturas desde cualquier lugar. Genera documentos profesionales mientras realizas tu ruta de trabajo o incluso desde casa.</p>
+              </div>
+            </div>
+            
+            <div class="feature-item">
+              <div class="feature-icon"><MapPin size={28} /></div>
+              <div class="feature-text">
+                <h3>Control de Entregas</h3>
+                <p>Realiza un seguimiento de cada entrega y conoce su estado en tiempo real. Optimiza procesos y aumenta la satisfacción del cliente.</p>
+              </div>
+            </div>
+
+            <div class="feature-item">
+              <div class="feature-icon"><Smartphone size={28} /></div>
+              <div class="feature-text">
+                <h3>Acceso 24/7</h3>
+                <p>Accede a todas las funcionalidades que necesitas para automatizar procesos de compras, ventas y gestión de clientes en todo momento.</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="mobile-visual">
+            <div class="phone-mockup">
+               <div class="phone-frame">
+                 <img src={pantalla3.src} alt="Mobile App" class="phone-screen-img" />
+               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Módulos Section -->
+    <section class="modules-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="badge">
+            <span class="subtitle">Funcionalidades</span>
+          </div>
+          <h2>Módulos <span class="highlight">Especializados</span></h2>
+          <p class="section-desc">Aprovecha al máximo las funcionalidades de Efficient+ con nuestros módulos optimizados</p>
+        </div>
+
+        <div class="modules-grid-complex">
+          <div class="module-item">
+            <div class="module-icon"><ShoppingCart size={32} /></div>
+            <div class="module-info">
+              <h4>Módulo de Compras</h4>
+              <p>Planificación de compras con motor configurable, seguimiento detallado desde la orden hasta la recepción y costeo.</p>
+            </div>
+          </div>
+
+          <div class="module-item">
+            <div class="module-icon"><Box size={32} /></div>
+            <div class="module-info">
+              <h4>Módulo de Inventario</h4>
+              <p>Control total de entradas y salidas en distintas bodegas. Información en tiempo real para una debida administración.</p>
+            </div>
+          </div>
+
+          <div class="module-item">
+            <div class="module-icon"><CreditCard size={32} /></div>
+            <div class="module-info">
+              <h4>Cuentas por Pagar</h4>
+              <p>Generación automática de cuentas por pagar para compras al crédito con proyecciones de vencimiento claras.</p>
+            </div>
+          </div>
+
+          <div class="module-item">
+            <div class="module-icon"><Briefcase size={32} /></div>
+            <div class="module-info">
+              <h4>Módulo de Caja</h4>
+              <p>Aperturas y cierres por turno, múltiples cajas simultáneas y registro seguro de ingresos y egresos de efectivo.</p>
+            </div>
+          </div>
+
+          <div class="module-item">
+            <div class="module-icon"><BarChart2 size={32} /></div>
+            <div class="module-info">
+              <h4>Módulo de Facturación</h4>
+              <p>Control preciso de ventas, listas de precios, descuentos y promociones con validación de márgenes en tiempo real.</p>
+            </div>
+          </div>
+
+          <div class="module-item">
+            <div class="module-icon"><Users size={32} /></div>
+            <div class="module-info">
+              <h4>Cuentas por Cobrar</h4>
+              <p>Control eficiente de cobranzas, manejo de documentos y envío electrónico de estados de cuenta automáticos.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Fiscal Honduras Note -->
+    <section class="legal-note-section">
+      <div class="container">
+        <div class="legal-card shadow-premium">
+          <div class="legal-content">
+            <div class="legal-icon">
+              <ShieldCheck size={48} />
+            </div>
+            <div class="legal-text">
+              <h3>Garantice la continuidad de su negocio</h3>
+              <p>Software que incluye los requisitos legales y fiscales de Honduras para simplificar el trabajo y aumentar la productividad.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section class="cta-section">
+      <div class="container text-center">
+        <div class="cta-box">
+          <h2>¿Listo para llevar tu empresa al siguiente nivel?</h2>
+          <p>Realice su cotización de forma sencilla, contáctenos por WhatsApp. Estamos a su disposición para asistirle en lo que necesite.</p>
+          <a href="https://wa.me/50494583355" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp-lg">
+            <MessageCircle size={32} />
+            Contactar ahora
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  .product-page {
+    padding-top: 80px;
+    background: var(--bg);
+  }
+
+  /* Hero */
+  .hero-section {
+    padding: 3rem 0 6rem 0;
+    background: linear-gradient(to bottom, #f8fafc 0%, #ffffff 100%);
+  }
+
+  .hero-section .container {
+    max-width: 1400px;
+  }
+
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+  }
+
+  @media (max-width: 991px) {
+    .hero-section {
+      padding: 1.5rem 1rem 3rem 1rem;
+    }
+    .hero-grid {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      gap: 3rem;
+    }
+    .hero-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      order: 2;
+    }
+    .hero-visual {
+      margin: 0 0 1.5rem 0;
+      order: 1;
+      width: 100%;
+      padding: 0;
+    }
+    .product-logo-container {
+      justify-content: center !important;
+    }
+    .product-logo {
+      margin: 0 auto !important;
+      max-width: 200px;
+    }
+    .hero-title, .hero-description {
+      text-align: center;
+    }
+  }
+
+  .product-logo-container {
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  @media (min-width: 992px) {
+    .product-logo-container {
+      justify-content: flex-start;
+    }
+  }
+
+  .product-logo {
+    max-width: 280px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
+  @media (min-width: 992px) {
+    .product-logo {
+      margin-left: 0;
+      margin-right: auto;
+    }
+  }
+
+  .hero-title {
+    font-size: clamp(1.6rem, 3.5vw, 2.8rem);
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 0.75rem;
+    color: var(--text);
+    text-align: left;
+  }
+
+  .hero-description {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+    text-align: left;
+  }
+
+  .hero-btns {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: flex-start;
+  }
+
+  .hero-visual {
+    position: relative;
+    padding: 0.5rem;
+    margin-top: 2rem;
+  }
+
+  .main-image {
+    width: 100%;
+    height: auto;
+    border-radius: 2.5rem;
+    box-shadow: 0 40px 80px rgba(0, 102, 204, 0.15);
+    border: 8px solid white;
+  }
+
+  .floating-card {
+    position: absolute;
+    background: white;
+    padding: 1.25rem 2rem;
+    border-radius: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    font-weight: 700;
+    z-index: 10;
+    animation: float 4s ease-in-out infinite;
+  }
+
+  .c1 { top: 10%; right: -5%; animation-delay: 0s; }
+  .c2 { bottom: 15%; left: -5%; animation-delay: 2s; }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+  }
+
+  /* Benefits */
+  .benefits-section {
+    padding: 5rem 0;
+    background: var(--bg-soft);
+  }
+
+  .benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+  }
+
+  @media (max-width: 480px) {
+    .benefits-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+  }
+
+  .benefit-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 2rem;
+    border: 1px solid rgba(0, 102, 204, 0.1);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+
+  @media (max-width: 480px) {
+    .benefit-card {
+      padding: 1.5rem;
+    }
+  }
+
+  .benefit-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 60px rgba(0, 102, 204, 0.12);
+    border-color: var(--primary);
+  }
+
+  .benefit-card:hover .icon-circle {
+    background: var(--primary);
+    color: white;
+    transform: rotate(10deg) scale(1.1);
+  }
+
+  .icon-circle {
+    width: 64px;
+    height: 64px;
+    background: rgba(0, 102, 204, 0.08);
+    color: var(--primary);
+    border-radius: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .benefit-card h3 {
+    font-size: 1.15rem;
+    margin-bottom: 0.4rem;
+    text-align: center;
+  }
+
+  .benefit-card p {
+    color: var(--text-muted);
+    line-height: 1.5;
+    text-align: center;
+    font-size: 0.9rem;
+  }
+
+  /* Mobile Section */
+  .mobile-section {
+    padding: 5rem 0;
+    background: white;
+  }
+
+  .mobile-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    margin-top: 4rem;
+  }
+
+  .feature-item {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .product-logo-container {
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .product-logo {
+    max-width: 200px;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .feature-icon {
+    flex-shrink: 0;
+    width: 56px;
+    height: 56px;
+    background: #eef2ff;
+    color: var(--primary);
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .feature-text h3 {
+    font-size: 1.15rem;
+    margin-bottom: 0.4rem;
+    color: var(--text);
+  }
+
+  .feature-text p {
+    color: var(--text-muted);
+    line-height: 1.5;
+    font-size: 0.9rem;
+  }
+
+  .phone-mockup {
+    width: 270px;
+    margin: 0 auto;
+    padding: 12px;
+    background: #1c1c1e;
+    border-radius: 3rem;
+    box-shadow: 0 50px 100px rgba(0,0,0,0.2);
+  }
+
+  .phone-frame {
+    width: 100%;
+    aspect-ratio: 9/19;
+    background: white;
+    border-radius: 2.2rem;
+    overflow: hidden;
+  }
+
+  .phone-screen-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* Modules */
+  .modules-section {
+    padding: 5rem 0;
+  }
+
+  .modules-grid-complex {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+
+  @media (max-width: 480px) {
+    .modules-grid-complex {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+  }
+
+  .module-item {
+    background: white;
+    padding: 2rem 1.5rem;
+    border-radius: 1.5rem;
+    border: 1px solid rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: all 0.3s ease;
+    width: 100%;
+  }
+
+  @media (min-width: 768px) {
+    .module-item {
+      padding: 1.5rem;
+    }
+  }
+
+  .module-item:hover {
+    border-color: var(--primary);
+    box-shadow: 0 10px 40px rgba(0, 102, 204, 0.08);
+  }
+
+  .module-icon {
+    width: 64px;
+    height: 64px;
+    background: var(--primary);
+    color: white;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 10px 20px rgba(0, 102, 204, 0.2);
+  }
+
+  .module-info h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0.4rem;
+    color: var(--primary-dark);
+    text-align: center;
+  }
+
+  .module-info p {
+    color: var(--text-muted);
+    line-height: 1.4;
+    font-size: 0.9rem;
+    text-align: center;
+  }
+
+  /* Legal Note */
+  .legal-note-section {
+    padding: 4rem 0;
+  }
+
+  .legal-card {
+    background: #011748;
+    color: white;
+    padding: 4rem;
+    border-radius: 2.5rem;
+    display: flex;
+  }
+
+  @media (max-width: 768px) {
+    .legal-card {
+      padding: 2rem 1.5rem;
+    }
+    .legal-content {
+      flex-direction: column;
+      text-align: center;
+      gap: 1.5rem;
+    }
+    .legal-icon {
+      width: 80px;
+      height: 80px;
+    }
+    .legal-text h3 {
+      font-size: 1.4rem;
+    }
+  }
+
+  .legal-content {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  .legal-icon {
+    width: 100px;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent);
+    flex-shrink: 0;
+  }
+
+  .legal-text h3 {
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+    color: white;
+  }
+
+  .legal-text p {
+    font-size: 1rem;
+    opacity: 0.9;
+    max-width: 800px;
+    line-height: 1.5;
+  }
+
+  /* CTA */
+  .cta-section {
+    padding: 5rem 0;
+  }
+
+  .cta-box {
+    background: white;
+    padding: 3rem 2rem;
+    border-radius: 3rem;
+    box-shadow: 0 30px 70px rgba(0, 102, 204, 0.1);
+    max-width: 900px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  @media (max-width: 480px) {
+    .cta-box {
+      padding: 2.5rem 1.25rem;
+      border-radius: 2rem;
+    }
+    .cta-box h2 {
+      font-size: 1.75rem;
+    }
+  }
+
+  .btn-whatsapp-lg {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    background: #25D366;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 4rem;
+    font-size: 1.1rem;
+    font-weight: 800;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    max-width: 100%;
+  }
+
+  @media (max-width: 480px) {
+    .btn-whatsapp-lg {
+      padding: 1rem 1.5rem;
+      font-size: 1rem;
+      width: 100%;
+    }
+  }
+
+  .btn-whatsapp-lg:hover {
+    transform: translateY(-5px);
+    background: #128C7E;
+    box-shadow: 0 15px 30px rgba(37, 211, 102, 0.3);
+  }
+
+  /* Standard UI Elements */
+  .badge {
+    background: #e1effe;
+    padding: 0.6rem 2.5rem;
+    border-radius: 9999px;
+    margin-bottom: 2rem;
+    display: inline-block;
+    border: 1px solid #bfdbfe;
+  }
+
+  .subtitle {
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 800;
+    color: var(--primary);
+    font-size: 0.9rem;
+  }
+
+  h2 {
+    font-size: clamp(1.6rem, 3.5vw, 2.8rem);
+    font-weight: 800;
+    color: #111827;
+    line-height: 1.1;
+    margin-bottom: 0.75rem;
+    text-align: center;
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .highlight {
+    color: var(--primary);
+    position: relative;
+    display: inline-block;
+  }
+
+  .section-desc {
+    color: #4b5563;
+    font-size: 0.95rem;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.5;
+  }
+
+  /* Responsive */
+  @media (max-width: 991px) {
+    .mockup-grid {
+      grid-template-columns: 1fr;
+      text-align: center;
+      gap: 3rem;
+    }
+    
+    .mockup-text {
+      padding-top: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    
+    .mockup-media {
+      order: -1;
+      margin-bottom: 3rem;
+    }
+    
+    .mockup-title, .mockup-desc {
+      text-align: center;
+    }
+
+    .hero-grid, .mobile-grid {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+    
+    .hero-btns {
+      justify-content: center;
+    }
+
+    .product-logo-container {
+      justify-content: center;
+    }
+
+    .hero-visual, .mobile-visual {
+      margin-top: 4rem;
+    }
+
+    .legal-content {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .feature-item {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+</style>

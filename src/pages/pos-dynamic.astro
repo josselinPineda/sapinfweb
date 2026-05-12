@@ -1,0 +1,1044 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import { 
+  Store, 
+  Box, 
+  BarChart2, 
+  CreditCard, 
+  Users, 
+  Building2, 
+  Truck, 
+  ArrowRight,
+  Smartphone,
+  ShoppingCart,
+  Receipt,
+  Layers,
+  CheckCircle2,
+  MessageCircle,
+  FileMinus
+} from 'lucide-astro';
+import efficientplusFondo from '../assets/efficientplus-fondo.jpg';
+import epdLogo from '../assets/Efficient POS Dynamic-20.png';
+import epdImage from '../assets/epd.jpg';
+import pantalla1 from '../assets/pantalla1.jpeg';
+import pantalla2 from '../assets/pantalla2.jpeg';
+---
+
+<Layout title="Efficient POS Dynamic - SAPINF">
+  <Navbar />
+  
+  <main class="pos-page">
+    
+    <!-- Hero Section (Estilo de la página principal / Vacantes) -->
+    <section class="vacantes-hero">
+      <div class="container">
+        <div class="mockup-grid">
+          <div class="mockup-text">
+            <div class="mockup-badge">
+              <span class="mockup-subtitle">Innovación para Negocios</span>
+            </div>
+            <div class="product-logo-container">
+              <img src={epdLogo.src} alt="Efficient POS Dynamic Logo" class="product-logo" />
+            </div>
+            <h1 class="mockup-title">¡El futuro de tu negocio está en <span class="mockup-blue"> tus manos!</span></h1>
+            <p class="mockup-desc">
+              Maximiza tus ventas y controla tu inventario en tiempo real con nuestro sistema de punto de venta más ágil e intuitivo de toda Honduras.
+            </p>
+            <a href="https://wa.me/50494583355?text=Hola,%20me%20interesa%20obtener%20más%20información%20sobre%20Efficient%20POS%20Dynamic" target="_blank" rel="noopener noreferrer" class="btn-primary-large" style="margin-top: 2rem;">
+              <MessageCircle size={24} />
+              Solicitar cotización
+            </a>
+          </div>
+          
+          <div class="mockup-media hero-composition">
+             <img src={epdImage.src} alt="Mujer trabajando" class="epd-hero-image" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ¿Qué es Efficient POS Dynamic? Section -->
+    <section class="about-section">
+      <div class="container">
+        <div class="about-grid" style="align-items: center;">
+          <div class="about-text">
+            <div class="badge">
+              <span class="subtitle">Solución Móvil</span>
+            </div>
+            <h2>¿Qué es <span class="highlight">Efficient POS Dynamic?</span></h2>
+            <p style="font-size: 1.15rem; color: var(--text-muted); line-height: 1.8; margin-top: 1.5rem;">
+              <strong>Efficient POS Dynamic</strong> es una aplicación móvil de punto de venta y gestión administrativa, construida para negocios que requieren velocidad en el mostrador y un control estricto de su inventario. 
+            </p>
+            <p style="font-size: 1.15rem; color: var(--text-muted); line-height: 1.8;">
+              Su diseño intuitivo permite que cualquier cajero la utilice con una curva de aprendizaje mínima, reduciendo los tiempos de espera del cliente.
+            </p>
+          </div>
+          
+          <div class="about-media">
+             <!-- Varios teléfonos donde poner imágenes -->
+             <div class="double-phone-placeholder">
+                
+                <div class="phone-placeholder mock1">
+                   <div class="phone-notch"></div>
+                   <div class="phone-screen">
+                      <img src={pantalla1.src} alt="Pantalla de App 1" class="app-screenshot" />
+                   </div>
+                </div>
+
+                <div class="phone-placeholder mock2">
+                   <div class="phone-notch"></div>
+                   <div class="phone-screen">
+                      <img src={pantalla2.src} alt="Pantalla de App 2" class="app-screenshot" />
+                   </div>
+                </div>
+
+             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Beneficios Grid (Estilo de Servicios) -->
+    <section class="services-section" style="background: var(--bg-soft);">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="badge">
+            <span class="subtitle">Principales Beneficios</span>
+          </div>
+          <h2>¿Por qué <span class="highlight">Elegirnos?</span></h2>
+        </div>
+        
+        <div class="services-grid">
+            <div class="service-card modern-card">
+              <div class="icon-box"><Box size={32} /></div>
+              <h3>Control Preciso</h3>
+              <p>Administra productos por unidad o por peso con total precisión y facilidad.</p>
+            </div>
+            <div class="service-card modern-card">
+              <div class="icon-box"><BarChart2 size={32} /></div>
+              <h3>Supervisión Total</h3>
+              <p>Supervisa existencias y registra mermas para mantener tu negocio bajo control.</p>
+            </div>
+            <div class="service-card modern-card">
+              <div class="icon-box"><CreditCard size={32} /></div>
+              <h3>Pagos Automáticos</h3>
+              <p>Administra pagos en efectivo y tarjeta con cálculo automático de cambio.</p>
+            </div>
+            <div class="service-card modern-card">
+              <div class="icon-box"><Users size={32} /></div>
+              <h3>Gestión de Clientes</h3>
+              <p>Registra clientes frecuentes y consulta su historial de compras fácilmente.</p>
+            </div>
+            <div class="service-card modern-card">
+              <div class="icon-box"><Building2 size={32} /></div>
+              <h3>Multi-Sucursal</h3>
+              <p>Administra varias sucursales desde una sola cuenta central.</p>
+            </div>
+            <div class="service-card modern-card">
+              <div class="icon-box"><Truck size={32} /></div>
+              <h3>Logística Óptima</h3>
+              <p>Optimiza el despacho y seguimiento de mercadería en toda la cadena.</p>
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MÓDULOS DEL SISTEMA (Cards de Alto Impacto Limpias) -->
+    <section class="modules-section">
+      <div class="container">
+        <div class="section-header text-center">
+           <div class="badge">
+             <span class="subtitle">Componentes de Software</span>
+           </div>
+           <h2>Los <span class="highlight">Módulos</span> del Sistema</h2>
+           <p style="color: var(--text-muted); font-size: 1.2rem; margin-top: 1.5rem;">Todo lo que necesitas, en un solo ecosistema integrado</p>
+        </div>
+
+        <div class="modern-grid-complex">
+           
+           <div class="premium-module-card">
+              <div class="module-icon-circle"><ShoppingCart size={32} strokeWidth={2} /></div>
+              <div class="module-text">
+                 <h4>Punto de venta</h4>
+                 <p>Es el módulo operativo para realizar ventas directas. Permite facturar, aplicar métodos de pago, generar facturas y descontar automáticamente productos del inventario.</p>
+              </div>
+           </div>
+           
+           <div class="premium-module-card">
+              <div class="module-icon-circle"><Box size={32} strokeWidth={2} /></div>
+              <div class="module-text">
+                 <h4>Inventario</h4>
+                 <p>Controla las existencias. Permite visualizar stock disponible, realizar ajustes, registrar entradas/salidas, y monitorear movimientos para evitar faltantes o sobreinventario.</p>
+              </div>
+           </div>
+
+           <div class="premium-module-card">
+              <div class="module-icon-circle"><BarChart2 size={32} strokeWidth={2} /></div>
+              <div class="module-text">
+                 <h4>Reportes</h4>
+                 <p>Genera análisis detallados de ventas por sucursal, periodo, producto o vendedor. Permite evaluar rendimiento, detectar tendencias y la toma inteligente de decisiones.</p>
+              </div>
+           </div>
+
+           <div class="premium-module-card">
+              <div class="module-icon-circle"><Receipt size={32} strokeWidth={2} /></div>
+              <div class="module-text">
+                 <h4>Sucursales</h4>
+                 <p>Permite crear sucursales, asignar productos y vendedores, supervisar operaciones específicas de cada establecimiento de forma centralizada.</p>
+              </div>
+           </div>
+
+           <div class="premium-module-card">
+              <div class="module-icon-circle"><FileMinus size={32} strokeWidth={2} /></div>
+              <div class="module-text">
+                 <h4>Desperdicios</h4>
+                 <p>Registra pérdidas. Ayuda a llevar control financiero y ajustar inventario correctamente para mantener datos reales y fiables en todo momento.</p>
+              </div>
+           </div>
+
+           <div class="premium-module-card">
+              <div class="module-icon-circle"><Layers size={32} strokeWidth={2} /></div>
+              <div class="module-text">
+                 <h4>Catálogo</h4>
+                 <p>Permite administrar todo lo relacionado con los productos, asignación de categorías, precios, imágenes y configuraciones como subproductos.</p>
+              </div>
+           </div>
+
+           <div class="premium-module-card full-width">
+              <div class="module-icon-circle"><Users size={32} strokeWidth={2} /></div>
+              <div class="module-text">
+                 <h4>Directorio de Clientes</h4>
+                 <p>Gestiona minuciosamente toda la información de clientes y usuarios. Facilita el control comercial y empodera por completo tu relación a un nivel CRM avanzado con los usuarios de todo el sistema.</p>
+              </div>
+           </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- PRECIOS Y PLANES (Integrado con el UI Global) -->
+    <section class="pricing-section" style="background: var(--bg-soft);">
+      <div class="container container-pricing">
+        <div class="section-header text-center">
+           <div class="badge">
+             <span class="subtitle">Precios Transparentes</span>
+           </div>
+           <h2>Opciones de <span class="highlight">Inversión</span></h2>
+        </div>
+
+        <div class="pricing-grid">
+           
+           <div class="price-table premium-border hover-scale">
+              <h3 class="price-title">Plan de Implementación</h3>
+              <div class="price-amount-box">
+                 <span class="price-label">Pago único:</span>
+                 <span class="price-value text-red">L. 4,999.99</span>
+              </div>
+              <p class="tax-note">Impuesto no incluido.</p>
+              
+              <div class="price-body">
+                 <p class="price-concept">Descripción del Servicio (Setup):</p>
+                 <ul class="check-list interactive-list">
+                    <li><CheckCircle2 size={24} class="check-icon" /> <span>Inversión Inicial de plataforma.</span></li>
+                    <li><CheckCircle2 size={24} class="check-icon" /> <span>Implementación y despliegue del software.</span></li>
+                    <li><CheckCircle2 size={24} class="check-icon" /> <span>Configuración de las categorías de abarrotería.</span></li>
+                    <li><CheckCircle2 size={24} class="check-icon" /> <span>Carga inicial del catálogo de su empresa.</span></li>
+                    <li><CheckCircle2 size={24} class="check-icon" /> <span>Capacitación completa del personal de caja y administración.</span></li>
+                 </ul>
+              </div>
+           </div>
+
+           <div class="price-table premium-border hover-scale">
+              <h3 class="price-title">Licencia y Soporte</h3>
+              <div class="price-amount-box">
+                 <span class="price-label">Suscripción Mensual:</span>
+                 <span class="price-value text-red">$29.99 USD</span>
+              </div>
+              <p class="tax-note opacity-none">Espacio invisible</p>
+              
+              <div class="price-body">
+                 <p class="price-concept">Beneficios Mensuales Activos:</p>
+                 <ul class="check-list interactive-list">
+                    <li><CheckCircle2 size={24} class="check-icon" /> <span>Derecho total de uso comercial de la plataforma POS.</span></li>
+                    <li><CheckCircle2 size={24} class="check-icon" /> <span>Respaldo de la base de datos automatizado en la nube.</span></li>
+                    <li><CheckCircle2 size={24} class="check-icon" /> <span>Alojamiento en servidores robustos de alta disponibilidad.</span></li>
+                    <li><CheckCircle2 size={24} class="check-icon" /> <span>Actualizaciones del sistema inmediatas.</span></li>
+                    <li><CheckCircle2 size={24} class="check-icon" /> <span>Soporte técnico remoto continuo para su tranquilidad operativa.</span></li>
+                 </ul>
+              </div>
+           </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action Final -->
+    <section id="contacto" class="cta-section">
+      <div class="container text-center">
+        <div class="cta-card glassmorphism-card">
+          <h2>¿Listo para revolucionar tu comercio?</h2>
+          <p class="cta-desc">Es momento de llevar tus ventas al siguiente nivel. Empieza a digitalizar tu inventario haciendo clic en el botón de abajo y hablemos directamente por WhatsApp.</p>
+          <a href="https://wa.me/50494583355?text=Hola,%20me%20interesa%20obtener%20más%20información%20sobre%20Efficient%20POS%20Dynamic" target="_blank" rel="noopener noreferrer" class="btn-whatsapp-large">
+            <MessageCircle size={32} />
+            <span>Contactar ahora</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  
+  <Footer />
+</Layout>
+
+<style>
+  /* --- ESTILOS COMUNES --- */
+  
+  .pos-page {
+    padding-top: 64px; 
+    background: var(--bg-soft);
+  }
+
+  /* 1. HERO SECTION */
+  .vacantes-hero {
+    padding: 4rem 0 5rem 0;
+    background: var(--bg-soft); 
+    border-bottom: 1px solid rgba(0,0,0,0.02);
+  }
+
+  .vacantes-hero .container {
+    max-width: 1400px;
+  }
+
+  .product-logo-container {
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  @media (min-width: 992px) {
+    .product-logo-container {
+      justify-content: flex-start;
+    }
+  }
+
+  .product-logo {
+    max-width: 280px;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+  }
+
+  @media (min-width: 992px) {
+    .product-logo {
+      margin-left: 0;
+      margin-right: auto;
+    }
+  }
+
+  @media (max-width: 991px) {
+    .product-logo-container {
+      justify-content: center;
+    }
+  }
+
+  .mockup-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    align-items: center;
+    gap: 3rem;
+  }
+
+  @media (max-width: 991px) {
+    .vacantes-hero {
+      padding: 2rem 0 4rem 0;
+    }
+    .mockup-grid {
+      grid-template-columns: 1fr;
+      text-align: center;
+      gap: 2.5rem;
+    }
+    .mockup-text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .mockup-title, .mockup-desc {
+      text-align: center;
+    }
+    .hero-composition {
+      justify-content: center;
+    }
+    .epd-hero-image {
+      margin-top: 0;
+    }
+  }
+
+  .mockup-badge {
+    background: #e0f2fe; 
+    padding: 0.5rem 1.5rem;
+    border-radius: 2rem;
+    margin-bottom: 1.5rem;
+    display: inline-block;
+  }
+
+  .mockup-subtitle {
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-weight: 800;
+    color: var(--primary);
+    font-size: 0.8rem;
+  }
+  
+  .mockup-title {
+    font-size: clamp(1.6rem, 3.5vw, 2.8rem);
+    font-weight: 900;
+    margin: 0 0 1rem 0;
+    color: var(--text); 
+    line-height: 1.1;
+    text-align: left;
+  }
+
+  .mockup-blue {
+    color: var(--primary); 
+  }
+
+  .mockup-desc {
+    color: var(--text-muted); 
+    font-size: 0.95rem;
+    line-height: 1.5;
+    text-align: left;
+  }
+
+  /* Composición del Hero (Solo Imagen Limpia) */
+  .hero-composition {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+  }
+
+  .epd-hero-image {
+    width: 100%;
+    max-width: 820px;
+    height: auto;
+    aspect-ratio: 16/10;
+    object-fit: cover; 
+    border-radius: 2.5rem;
+    box-shadow: 0 35px 60px rgba(0, 102, 204, 0.15);
+    border: 8px solid white;
+    cursor: pointer;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
+  }
+
+  .epd-hero-image:hover {
+    transform: translateY(-8px) scale(1.02); /* Flota ligeramente hacia arriba y se acerca */
+    box-shadow: 0 50px 80px rgba(0, 102, 204, 0.25);
+  }
+
+  .epd-hero-image:active {
+    transform: scale(0.95) translateY(0); /* Efecto de "compresión" física al apretar */
+    box-shadow: 0 15px 30px rgba(0, 102, 204, 0.1);
+  }
+
+  /* REDISEÑO DE TELEFONO REALISTA PARA IMAGENES */
+  .phone-placeholder {
+    flex-shrink: 0; /* BLOQUEA DE INMEDIATO CUALQUIER INTENTO DE APLASTARLO EN PANTALLAS PEQUEÑAS */
+    width: 240px;
+    min-width: 240px;
+    height: auto;
+    aspect-ratio: 9 / 19.5; /* Proporción PERFECTA y universal de los teléfonos modernos (elimina recortes feos) */
+    background: #000000; /* Marco 100% negro */
+    border: 8px solid #1c1c1e; /* Borde metálico muy oscuro */
+    border-radius: 2.5rem;
+    position: relative;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.25);
+    background-clip: padding-box;
+  }
+
+  /* El notch superior del iPhone */
+  .phone-notch {
+    position: absolute;
+    top: -1px; /* Pegado absolutamente al borde superior */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 110px;
+    height: 26px;
+    background: #000000; /* Coincide con el negro puro */
+    border-bottom-left-radius: 1.25rem;
+    border-bottom-right-radius: 1.25rem;
+    z-index: 20;
+  }
+
+  .phone-screen {
+    background: white; /* Color de fondo donde va la imagen */
+    width: 100%;
+    height: 100%;
+    border-radius: 2.2rem; /* Exacto al molde para bordes lindos */
+    overflow: hidden; 
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .placeholder-empty-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    color: #94a3b8;
+    font-weight: 700;
+  }
+
+  .app-screenshot {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Con la nueva proporción de 9/19.5 esto actuará maravillosamente sin recortes */
+    object-position: center top; /* Si la imagen es alta, enfócate en el header que es donde ocurre todo */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+  }
+
+  .double-phone-placeholder {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .mock2 {
+    transform: translateY(40px);
+  }
+
+  /* BOTONES */
+  .btn-primary-large {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    background: var(--primary);
+    color: white;
+    padding: 1rem 2.5rem;
+    border-radius: 4rem;
+    font-size: 1.1rem;
+    font-weight: 800;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 25px rgba(0, 102, 204, 0.2);
+  }
+
+  .btn-primary-large:hover {
+    background: var(--primary-dark);
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 102, 204, 0.3);
+  }
+
+  .btn-whatsapp-large {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    background: #25D366; /* WhatsApp Green */
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 4rem;
+    font-size: 1.1rem;
+    font-weight: 800;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3);
+    max-width: 100%;
+  }
+
+  @media (max-width: 480px) {
+    .btn-whatsapp-large {
+      padding: 1rem 1.5rem;
+      font-size: 1rem;
+      width: 100%;
+    }
+    .btn-whatsapp-large span {
+      text-align: center;
+    }
+  }
+
+  .btn-whatsapp-large:hover {
+    background: #128C7E;
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 45px rgba(37, 211, 102, 0.4);
+  }
+
+  /* 2. ABOUT/QUE ES SECTION */
+  .about-section {
+    padding: 5rem 0;
+    background: var(--bg);
+  }
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+
+  @media (max-width: 991px) {
+    .about-grid {
+      grid-template-columns: 1fr;
+      text-align: center;
+      gap: 3rem;
+    }
+    .about-text { order: 2; }
+    .about-media { 
+      order: 1; 
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
+    .double-phone-placeholder {
+      transform: scale(0.85);
+      width: 100%;
+      max-width: 500px;
+    }
+  }
+
+  @media (max-width: 500px) {
+    .double-phone-placeholder {
+      gap: 1rem;
+      transform: scale(0.7);
+    }
+    .phone-placeholder {
+      width: 200px;
+      min-width: 200px;
+    }
+  }
+
+  .badge {
+    background: #e1effe;
+    padding: 0.6rem 2.5rem;
+    border-radius: 9999px;
+    margin-bottom: 2rem;
+    display: inline-block;
+    border: 1px solid #bfdbfe;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .subtitle {
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 800;
+    color: var(--primary);
+    font-size: 0.9rem;
+  }
+
+  h2 {
+    font-size: clamp(1.6rem, 3.5vw, 2.8rem);
+    font-weight: 800;
+    color: #111827;
+    margin: 0;
+    line-height: 1.2;
+  }
+
+  .highlight {
+    color: var(--primary);
+    position: relative;
+    display: inline-block;
+  }
+
+  /* Removido el skew para coincidir con la imagen de referencia */
+
+  /* 3. SERVICIOS/BENEFICIOS GRID */
+  .services-section, .modules-section {
+    padding: 5rem 0;
+  }
+
+  .modules-section {
+    background: var(--bg);
+  }
+
+  .section-header {
+    margin-bottom: 4rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .text-center {
+    text-align: center;
+    align-items: center;
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+  }
+
+  @media (max-width: 480px) {
+    .services-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+  }
+
+  .modern-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 1.5rem;
+    border: 1px solid rgba(0, 102, 204, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 102, 204, 0.05);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+
+  @media (max-width: 768px) {
+    .modern-card {
+      padding: 1.5rem;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  }
+
+  .modern-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 50px rgba(0, 102, 204, 0.15);
+    border-color: var(--accent);
+  }
+
+  .icon-box {
+    background: rgba(0, 102, 204, 0.08); /* Fondo suavecito */
+    color: var(--primary);
+    width: 64px;
+    height: 64px;
+    border-radius: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    transition: all 0.3s ease;
+  }
+
+  .modern-card:hover .icon-box {
+    background: var(--primary);
+    color: white;
+    transform: rotate(5deg) scale(1.1);
+  }
+
+  .modern-card h3 {
+    font-size: 1.15rem;
+    margin-bottom: 0.5rem;
+    color: var(--text);
+  }
+
+  .modern-card p {
+    color: var(--text-muted);
+    line-height: 1.5;
+    font-size: 0.9rem;
+    margin: 0;
+  }
+
+  /* 4. MÓDULOS DE SISTEMA */
+  .modern-grid-complex {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+  }
+
+  @media (max-width: 850px) {
+    .modern-grid-complex {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    .premium-module-card {
+      padding: 1.5rem;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 1rem;
+    }
+  }
+
+  .premium-module-card {
+    background: white;
+    border-radius: 2rem;
+    padding: 2.5rem;
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    border: 1px solid rgba(0, 102, 204, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 102, 204, 0.05);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+
+  .premium-module-card.full-width {
+    grid-column: 1 / -1;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .premium-module-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 60px rgba(0, 102, 204, 0.15);
+    border-color: var(--accent);
+  }
+
+  .module-icon-circle {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    color: white;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    box-shadow: 0 10px 20px rgba(0, 102, 204, 0.2);
+  }
+
+  .module-text h4 {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--primary-dark);
+    margin-bottom: 0.75rem;
+    margin-top: 0;
+  }
+
+  .module-text p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin: 0;
+  }
+
+  /* 5. PRICING SECTION */
+  .pricing-section {
+    padding: 5rem 0;
+  }
+
+  .container-pricing {
+    max-width: 1100px;
+  }
+
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+  }
+
+  @media (max-width: 991px) {
+    .pricing-grid {
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+  }
+
+  .price-table {
+    background: white;
+    border-radius: 2rem;
+    padding: 3.5rem 2rem;
+    box-shadow: 0 20px 50px rgba(0, 102, 204, 0.05);
+    border: 1px solid rgba(0, 102, 204, 0.1);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+  }
+
+  .price-table::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background: linear-gradient(90deg, var(--primary) 0%, var(--accent) 100%);
+  }
+
+  .price-table.hover-scale:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 30px 60px rgba(0, 102, 204, 0.15);
+    border-color: rgba(0, 102, 204, 0.2);
+  }
+
+  .price-title {
+    font-size: clamp(1.8rem, 6vw, 2.2rem);
+    font-weight: 900;
+    margin-bottom: 2rem;
+    color: #0b2e59;
+    margin-top: 0;
+  }
+
+  .price-amount-box {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .price-label {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-muted);
+  }
+
+  .price-value {
+    font-size: 2.5rem;
+    font-weight: 900;
+    letter-spacing: -1px;
+    color: #ef4444; /* Fallback */
+    background: linear-gradient(45deg, #ef4444, #f97316); 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+  }
+
+  .tax-note {
+    font-size: 0.85rem;
+    color: #94a3b8;
+    margin-bottom: 2.5rem;
+    margin-top: 0;
+  }
+
+  .opacity-none {
+    opacity: 0; 
+  }
+
+  .price-concept {
+    font-size: 1.15rem;
+    color: var(--text);
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+  }
+
+  .check-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .interactive-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+
+  .interactive-list li:hover {
+    transform: translateX(8px);
+    color: var(--primary-dark);
+  }
+
+  .check-icon {
+    color: var(--primary);
+    flex-shrink: 0;
+    margin-top: 0.15rem;
+    filter: drop-shadow(0 2px 4px rgba(0, 102, 204, 0.2)); 
+  }
+
+  /* 6. CTA FINAL */
+  .cta-section {
+    padding: 2rem 2rem 8rem;
+    background: var(--bg-soft); 
+  }
+
+  .glassmorphism-card {
+    background: #ffffff;
+    border-radius: 2.5rem;
+    padding: 4rem 2.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+    box-shadow: 0 10px 30px rgba(0, 102, 204, 0.05);
+    border: 1px solid rgba(0, 102, 204, 0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .glassmorphism-card h2 {
+    font-size: clamp(2.5rem, 5vw, 3.2rem);
+    color: var(--text);
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+  }
+
+  .cta-desc {
+    font-size: 1.25rem;
+    color: var(--text-muted);
+    max-width: 700px;
+    margin: 0 auto 3rem auto;
+    line-height: 1.7;
+  }
+
+  /* RESPONSIVE AJUSTES GENERALES */
+  @media (max-width: 1200px) {
+    .pricing-grid {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 3rem;
+      max-width: 100%;
+      padding: 0 1.5rem;
+    }
+    
+    .price-table {
+      width: 100%;
+      max-width: 600px;
+      background: #ffffff !important;
+      padding: 3.5rem 2rem;
+      border-radius: 2.5rem;
+      box-shadow: 0 40px 80px rgba(0, 0, 0, 0.1) !important;
+      border: 1px solid rgba(0, 102, 204, 0.1);
+    }
+    
+    .price-title {
+      font-size: 1.8rem;
+    }
+    .premium-module-card.full-width { grid-column: auto; }
+  }
+
+  @media (max-width: 992px) {
+    .mockup-grid, .about-grid {
+      grid-template-columns: 1fr;
+      text-align: center;
+      gap: 3rem;
+    }
+    .mockup-text { padding-top: 2rem; display:flex; flex-direction:column; align-items:center; }
+    .mockup-media { order: -1; margin-bottom: 3rem; }
+    
+    .hero-composition { 
+      justify-content: center;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .epd-hero-image { aspect-ratio: auto; min-height: 250px; }
+    .premium-module-card {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 1.5rem;
+    }
+    .double-phone-placeholder {
+      flex-direction: column;
+    }
+    .mock2 { transform: translateY(0); }
+  }
+</style>

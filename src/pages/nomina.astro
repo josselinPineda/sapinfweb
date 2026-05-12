@@ -1,0 +1,620 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import { 
+  Users, 
+  Calendar, 
+  Zap, 
+  ShieldCheck, 
+  RefreshCw, 
+  Globe,
+  FileBadge,
+  Fingerprint,
+  Palmtree,
+  CreditCard,
+  Search,
+  Calculator,
+  MessageCircle,
+  CheckCircle2
+} from 'lucide-astro';
+import nominaFondo from '../assets/nomina-fondo.jpg';
+import nominaLogo from '../assets/nomina.png';
+---
+
+<Layout title="Nomina+ - SAPINF">
+  <Navbar />
+  
+  <main class="nomina-page">
+    
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <div class="badge">
+            <span class="subtitle">Gestión de Talento Humano</span>
+          </div>
+          <div class="product-logo-container">
+            <img src={nominaLogo.src} alt="Nomina+ Logo" class="product-logo" />
+          </div>
+          <h1>La herramienta más completa para la <span style="color: var(--primary);">gestión del talento</span> en tu empresa</h1>
+          <p class="hero-desc">
+            Con Nomina+ podrás simplificar y automatizar todos los procesos relacionados con la gestión de tus empleados de manera eficiente y segura.
+          </p>
+          <div class="hero-actions">
+            <a href="https://wa.me/50494583355?text=Hola,%20me%20interesa%20obtener%20más%20información%20sobre%20Nomina+" target="_blank" rel="noopener noreferrer" class="btn-primary-large">
+              <MessageCircle size={24} />
+              Solicitar cotización
+            </a>
+          </div>
+        </div>
+        
+        <div class="hero-visual">
+          <div class="image-wrapper">
+            <img src={nominaFondo.src} alt="Gestión de Nómina" class="main-hero-image" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Beneficios Section -->
+    <section class="benefits-section">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="badge">
+            <span class="subtitle">¿Por qué elegir Nomina+?</span>
+          </div>
+          <h2>Principales <span class="highlight">Beneficios</span></h2>
+        </div>
+        
+        <div class="benefits-grid">
+          <div class="benefit-card modern-card">
+            <div class="icon-box"><Calendar size={32} /></div>
+            <h3>Organización</h3>
+            <p>Visualizar los cambios en el proceso de nómina en un solo calendario centralizado.</p>
+          </div>
+          <div class="benefit-card modern-card">
+            <div class="icon-box"><Zap size={32} /></div>
+            <h3>Rapidez</h3>
+            <p>Profundizar en las diferentes fases de tu nómina y toma acciones inmediatas.</p>
+          </div>
+          <div class="benefit-card modern-card">
+            <div class="icon-box"><ShieldCheck size={32} /></div>
+            <h3>Confianza</h3>
+            <p>Validar las reglas del sistema para protegerte de posibles errores humanos.</p>
+          </div>
+          <div class="benefit-card modern-card">
+            <div class="icon-box"><RefreshCw size={32} /></div>
+            <h3>Actualizado</h3>
+            <p>Monitorear cambios fiscales para cada país y actualizar el sistema automáticamente.</p>
+          </div>
+          <div class="benefit-card modern-card">
+            <div class="icon-box"><Globe size={32} /></div>
+            <h3>Globalidad</h3>
+            <p>Compatibilizar con múltiples bases de usuarios de diversos países simultáneamente.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Módulos Especializados -->
+    <section class="modules-section" style="background: var(--bg-soft);">
+      <div class="container">
+        <div class="section-header text-center">
+           <div class="badge">
+             <span class="subtitle">Funcionalidades Avanzadas</span>
+           </div>
+           <h2>Conoce más acerca de nuestros <span class="highlight">Módulos</span></h2>
+           <p style="color: var(--text-muted); font-size: 1.1rem; margin-top: 1.5rem; max-width: 800px; margin-left: auto; margin-right: auto;">
+             Aprovecha al máximo las funcionalidades de Nomina+ con nuestros módulos especializados diseñados para cubrir cada necesidad de RRHH.
+           </p>
+        </div>
+
+        <div class="modules-grid">
+           
+           <div class="module-card">
+              <div class="module-icon"><FileBadge size={32} /></div>
+              <div class="module-info">
+                 <h4>Ficha del Empleado</h4>
+                 <p>Gestión completa de datos, contratos, dependientes y beneficiarios. Control total de acciones de personal como días libres, permisos, suspensiones y aumentos.</p>
+              </div>
+           </div>
+           
+           <div class="module-card">
+              <div class="module-icon"><Fingerprint size={32} /></div>
+              <div class="module-info">
+                 <h4>Integración Biométrica</h4>
+                 <p>Conexión directa con dispositivos biométricos para el control de asistencia. Generación automática del pago de horas extras basado en datos reales.</p>
+              </div>
+           </div>
+
+           <div class="module-card">
+              <div class="module-icon"><Palmtree size={32} /></div>
+              <div class="module-info">
+                 <h4>Control de Vacaciones</h4>
+                 <p>Gestión automatizada para empleados permanentes. Alertas diarias a RRHH sobre aniversarios laborales y generación automática de días según la ley.</p>
+              </div>
+           </div>
+
+           <div class="module-card">
+              <div class="module-icon"><CreditCard size={32} /></div>
+              <div class="module-info">
+                 <h4>Generación de Planillas</h4>
+                 <p>Calendarización de pagos, creación de conceptos y deducciones. Procesamiento integral de ISR, impuesto vecinal, incapacidades y cierres de nómina.</p>
+              </div>
+           </div>
+
+           <div class="module-card">
+              <div class="module-icon"><Search size={32} /></div>
+              <div class="module-info">
+                 <h4>Auditoría y Cierre</h4>
+                 <p>Informes detallados para revisar la precisión de los pagos. Garantiza transparencia y evita errores u omisiones antes de la presentación final al personal.</p>
+              </div>
+           </div>
+
+           <div class="module-card">
+              <div class="module-icon"><Calculator size={32} /></div>
+              <div class="module-info">
+                 <h4>Liquidaciones Precisas</h4>
+                 <p>Cálculos exactos basados en el tipo de planilla (producción o fijos) y regulaciones del Ministerio de Trabajo, asegurando pagos justos y legales.</p>
+              </div>
+           </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta">
+      <div class="container text-center">
+        <div class="cta-card glass-card">
+          <h2>La solución ideal para gestionar tu talento humano</h2>
+          <p>No pierdas más tiempo y solicita tu cotización ahora mismo para descubrir por qué Nomina+ es la mejor opción para tu empresa.</p>
+          <a href="https://wa.me/50494583355?text=Hola,%20me%20interesa%20obtener%20una%20cotización%20de%20Nomina+" target="_blank" rel="noopener noreferrer" class="btn-whatsapp" style="margin-top: 2rem;">
+            <MessageCircle size={24} />
+            Contactar ahora
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  
+  <Footer />
+</Layout>
+
+<style>
+  .nomina-page {
+    padding-top: 64px;
+    background: #f1f5f9;
+  }
+
+  /* Hero Section */
+  .hero-section {
+    padding: 2.5rem 0 5rem 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-section .container {
+    max-width: 1400px;
+  }
+
+  .hero-visual {
+    margin-top: -3rem;
+    position: relative;
+    z-index: 10;
+  }
+
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  @media (max-width: 991px) {
+    .hero-section {
+      padding: 3rem 0;
+    }
+    .hero-grid {
+      grid-template-columns: 1fr;
+      text-align: center;
+      gap: 3rem;
+    }
+    .hero-text {
+      padding-top: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .hero-visual {
+      order: -1;
+      margin-top: 0;
+    }
+    .product-logo-container {
+      justify-content: center !important;
+      margin-bottom: 0.5rem;
+    }
+    .product-logo {
+      display: block;
+      margin: 0 auto;
+    }
+    h1, .hero-desc {
+      text-align: center;
+    }
+  }
+
+  .product-logo-container {
+    margin-bottom: -2rem;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  @media (min-width: 992px) {
+    .product-logo-container {
+      justify-content: flex-start;
+    }
+  }
+
+  .product-logo {
+    max-width: 240px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
+  @media (min-width: 992px) {
+    .product-logo {
+      margin-left: 0;
+      margin-right: auto;
+    }
+  }
+
+  h1 {
+    font-size: clamp(1.2rem, 3.5vw, 2.2rem);
+    font-weight: 800;
+    color: var(--text);
+    margin-bottom: 0.75rem;
+    line-height: 1.2;
+    max-width: 600px;
+  }
+
+  .hero-desc {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 2.5rem;
+  }
+
+  .btn-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    background: #25D366;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 3rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 20px rgba(37, 211, 102, 0.2);
+    max-width: 100%;
+  }
+
+  @media (max-width: 480px) {
+    .btn-whatsapp {
+      padding: 1rem 1.5rem;
+      width: 100%;
+    }
+  }
+
+  .btn-whatsapp:hover {
+    background: #128C7E;
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(37, 211, 102, 0.3);
+  }
+
+  .image-wrapper {
+    position: relative;
+    border-radius: 2.5rem;
+    overflow: hidden;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.1);
+    border: 8px solid white;
+  }
+
+  .main-hero-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease;
+  }
+
+  .image-wrapper:hover .main-hero-image {
+    transform: scale(1.03);
+  }
+
+  /* Benefits */
+  .benefits-section {
+    padding: 5rem 0;
+    background: white;
+  }
+
+  .section-header {
+    margin-bottom: 4rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .text-center {
+    text-align: center;
+    align-items: center;
+  }
+
+  .badge {
+    background: #e1effe;
+    padding: 0.5rem 1.5rem;
+    border-radius: 2rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    display: inline-block;
+    border: 1px solid #bfdbfe;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .subtitle {
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 800;
+    color: var(--primary);
+    font-size: 0.8rem;
+  }
+
+  h2 {
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    font-weight: 800;
+    color: var(--text);
+  }
+
+  .highlight {
+    color: var(--primary);
+  }
+
+  .benefits-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .benefit-card {
+    flex: 0 1 calc(33.333% - 1.34rem);
+    min-width: 280px;
+  }
+
+  .modern-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 1.5rem;
+    border: 1px solid rgba(0,0,0,0.05);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+    transition: all 0.3s ease;
+    text-align: center;
+    height: 100%;
+  }
+
+  .modern-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--primary-light);
+    box-shadow: 0 20px 40px rgba(0, 102, 204, 0.08);
+  }
+
+  .icon-box {
+    width: 60px;
+    height: 60px;
+    background: rgba(0, 102, 204, 0.05);
+    color: var(--primary);
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    transition: all 0.3s ease;
+  }
+
+  .modern-card:hover .icon-box,
+  .modern-card:active .icon-box {
+    background: var(--primary);
+    color: white;
+    transform: scale(1.1);
+  }
+
+  .modern-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+
+  .modern-card p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+  }
+
+  /* Modules */
+  .modules-section {
+    padding: 6rem 0;
+  }
+
+  .modules-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+  }
+
+  @media (max-width: 480px) {
+    .modules-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+  }
+
+  .module-card {
+    background: white;
+    padding: 2.5rem 1.5rem;
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+    border: 1px solid rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+    width: 100%;
+  }
+
+  @media (min-width: 768px) {
+    .module-card {
+      flex-direction: row;
+      text-align: left;
+      align-items: flex-start;
+      padding: 2.5rem;
+    }
+  }
+  }
+
+  .module-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+  }
+
+  .module-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--primary);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .module-info h4 {
+    font-size: 1.3rem;
+    font-weight: 800;
+    margin-bottom: 0.75rem;
+    color: var(--primary-dark);
+  }
+
+  .module-info p {
+    font-size: 1rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+  }
+
+  /* Final CTA */
+  .final-cta {
+    padding: 2rem 2rem 8rem;
+    background: #f1f5f9;
+  }
+
+  .glass-card {
+    background: #ffffff;
+    padding: 4rem 2.5rem;
+    border-radius: 2.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+    box-shadow: 0 40px 100px -20px rgba(0,0,0,0.08);
+    border: 1px solid rgba(0,0,0,0.05);
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+  }
+
+  @media (max-width: 768px) {
+    .glass-card {
+      padding: 2rem 1.5rem;
+      text-align: center;
+      align-items: center;
+    }
+    .final-cta h2 {
+      font-size: 1.75rem;
+    }
+    .final-cta p {
+      font-size: 1.1rem;
+    }
+  }
+
+  .glass-card .btn-whatsapp {
+    align-self: flex-start;
+    margin-top: 2rem;
+  }
+
+  .final-cta h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: 800;
+  }
+
+  .final-cta p {
+    font-size: 1.25rem;
+    margin: 0 0 1rem 0;
+    color: var(--text-muted);
+    max-width: 700px;
+  }
+
+  .btn-primary-large {
+    display: inline-block;
+    background: var(--primary);
+    color: white;
+    padding: 1.25rem 3rem;
+    border-radius: 4rem;
+    font-weight: 800;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 20px rgba(0, 102, 204, 0.2);
+  }
+
+  .btn-primary-large:hover {
+    background: var(--primary-dark);
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(0, 102, 204, 0.3);
+  }
+
+  @media (max-width: 991px) {
+    .hero-grid {
+      grid-template-columns: 1fr;
+      text-align: center;
+      gap: 3rem;
+    }
+    
+    .hero-text {
+      padding-top: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    
+    .hero-visual {
+      order: -1;
+      margin-bottom: 3rem;
+    }
+    
+    h1, .hero-desc {
+      text-align: center;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .benefit-card {
+      flex: 0 1 100%;
+    }
+  }
+</style>

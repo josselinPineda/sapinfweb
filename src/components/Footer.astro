@@ -1,0 +1,292 @@
+---
+import { Mail, Phone, MapPin, Linkedin, Facebook, Instagram, MessageCircle } from 'lucide-astro';
+import logoSapinf from '../assets/logo.png';
+---
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo-wrapper">
+          <img src={logoSapinf.src} alt="SAPINF Logo" class="footer-logo" />
+        </div>
+        <p class="brand-title">Servicio de Aplicaciones Informáticas</p>
+        <p class="brand-description">Innovación y experiencia en soluciones informáticas para potenciar tu negocio en la era digital.</p>
+        <div class="social-links">
+          <a href="https://www.linkedin.com/company/sapinf/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><Linkedin size={20} /></a>
+          <a href="https://www.facebook.com/p/Sapinf-100067136866788/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><Facebook size={20} /></a>
+          <a href="https://www.instagram.com/sapinf_07/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><Instagram size={20} /></a>
+        </div>
+      </div>
+      
+      <div class="footer-section">
+        <h4 class="section-title">Contacto</h4>
+        <ul class="contact-list">
+          <li>
+            <Phone size={18} class="icon" /> 
+            <span>
+              <a href="tel:+50494583355">+504 9458 - 3355</a><br/>
+              <a href="tel:+50494504051">+504 9450 - 4051</a>
+            </span>
+          </li>
+          <li>
+            <Mail size={18} class="icon" /> 
+            <span>
+              <a href="mailto:durlinortiz@sapinf.com">durlinortiz@sapinf.com</a><br/>
+              <a href="mailto:durlinortiz@gmail.com">durlinortiz@gmail.com</a>
+            </span>
+          </li>
+          <li><MapPin size={18} class="icon" /> <span>Barrio valle, salida a San Marcos de Colón, antiguo local de Bonillantas segundo nivel, frente a plantas tropicales.</span></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4 class="section-title">Productos</h4>
+        <ul class="link-list">
+          <li><a href="/efficient-plus">Efficient+</a></li>
+          <li><a href="/efficient">Efficient</a></li>
+          <li><a href="/pos-dynamic">Efficient POS Dynamic</a></li>
+          <li><a href="/labit-plus">LABITPLUS</a></li>
+          <li><a href="/nomina">Nomina+</a></li>
+          <li><a href="/sicad">SICAD</a></li>
+          <li><a href="/barbers">Barber's</a></li>
+          <li><a href="/carwashpro">Carwash PRO</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4 class="section-title">Servicios</h4>
+        <ul class="link-list">
+          <li><a href="/#servicios">Auditoría de sistemas</a></li>
+          <li><a href="/#servicios">Consultoría Informática</a></li>
+          <li><a href="/#servicios">Desarrollo a Medida</a></li>
+          <li><a href="/#servicios">Diseño WEB</a></li>
+          <li><a href="/#servicios">Capacitaciones</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="quote-cta">
+      <div class="quote-content">
+        <h3>Obtenga una cotización ahora</h3>
+        <p>¡Obtén tu cotización ahora mismo! Presiona el botón de abajo y en breve recibirás una cotización personalizada de nuestros productos y servicios. No pierdas más tiempo, ¡obtén la mejor oferta para tus necesidades hoy mismo!</p>
+      </div>
+      <a href="https://wa.me/50494583355" target="_blank" rel="noopener noreferrer" class="btn-whatsapp">
+        <MessageCircle size={20} />
+        Cotizar
+      </a>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; {new Date().getFullYear()} SAPINF. Todos los derechos reservados.</p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    background: #0f172a;
+    color: #f8fafc;
+    padding: 4rem 0 2rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--primary, #3b82f6), transparent);
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1.2fr 1fr 1fr;
+    gap: 3rem;
+    margin-bottom: 4rem;
+  }
+
+  @media (max-width: 1024px) {
+    .footer-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 640px) {
+    .footer-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .logo-wrapper {
+    margin-bottom: 0rem;
+  }
+
+  .footer-logo {
+    height: 50px;
+    width: auto;
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));
+  }
+
+  .brand-title {
+    font-weight: 700;
+    font-size: 0.8rem;
+    color: #fff;
+    margin-bottom: 0.5rem;
+  }
+
+  .brand-description {
+    margin-top: 0.5rem;
+    color: #ffffffff;
+    line-height: 1.6;
+    max-width: 320px;
+  }
+
+  .social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+
+  .social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.05);
+    color: #94a3b8;
+    transition: all 0.3s ease;
+  }
+
+  .social-links a:hover {
+    background: var(--primary, #3b82f6);
+    color: #fff;
+    transform: translateY(-3px);
+  }
+
+  .section-title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 0.75rem;
+  }
+
+  .section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 30px;
+    height: 2px;
+    background: var(--primary, #3b82f6);
+  }
+
+  .contact-list, .link-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .contact-list li {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    color: #ffffffff;
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .contact-list .icon {
+    color: var(--primary, #3b82f6);
+    flex-shrink: 0;
+    margin-top: 0.25rem;
+  }
+
+  .link-list li {
+    margin-bottom: 0.75rem;
+  }
+
+  .link-list li a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.2s ease, padding-left 0.2s ease;
+    display: inline-block;
+  }
+
+  .link-list li a:hover {
+    color: var(--primary, #3b82f6);
+    padding-left: 5px;
+  }
+
+  .quote-cta {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 1.5rem;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-bottom: 4rem;
+  }
+
+  @media (max-width: 768px) {
+    .quote-cta {
+      flex-direction: column;
+      text-align: center;
+      padding: 2rem;
+    }
+  }
+
+  .quote-content h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+
+  .quote-content p {
+    color: #ffffffff;
+    max-width: 600px;
+    font-size: 0.95rem;
+  }
+
+  .btn-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: #25d366;
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 9999px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    box-shadow: 0 10px 15px -3px rgba(37, 211, 102, 0.3);
+  }
+
+  .btn-whatsapp:hover {
+    background: #22c35e;
+    transform: translateY(-2px);
+    box-shadow: 0 20px 25px -5px rgba(37, 211, 102, 0.4);
+  }
+
+  .footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 2rem;
+    text-align: center;
+    color: #64748b;
+    font-size: 0.875rem;
+  }
+</style>

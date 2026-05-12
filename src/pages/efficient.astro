@@ -1,0 +1,862 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import { 
+  ShoppingCart, 
+  Box, 
+  CreditCard, 
+  Users, 
+  BarChart2, 
+  Briefcase, 
+  ShieldCheck,
+  CheckCircle2,
+  ArrowRight,
+  MessageCircle,
+  Truck,
+  TrendingUp,
+  Globe
+} from 'lucide-astro';
+import efficientFondo from '../assets/efficient-fondo.jpg';
+import efficientLogo from '../assets/efficient.png';
+import pantalla3 from '../assets/E1.jpeg';
+import pantalla1 from '../assets/E2.jpeg';
+---
+
+<Layout title="Efficient - Gestión Empresarial Inteligente | SAPINF">
+  <Navbar />
+  
+  <main class="product-page">
+    
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="container hero-container">
+        <div class="hero-grid">
+          <div class="hero-text">
+            <div class="badge">
+              <span class="subtitle">Software de Gestión</span>
+            </div>
+            <div class="product-logo-container">
+              <img src={efficientLogo.src} alt="Efficient Logo" class="product-logo" />
+            </div>
+            <h1 class="hero-title">¡El futuro de tu negocio está en tus manos con <span class="highlight">Efficient</span>!</h1>
+            <p class="hero-description">
+              Automatiza las compras, ventas, inventarios, facturación y la gestión de clientes con información actualizada para tomar decisiones adecuadas y aumentar la rentabilidad de tu compañía.
+            </p>
+            <div class="hero-btns">
+              <a href="https://wa.me/50494583355?text=Hola,%20me%20interesa%20obtener%20más%20información%20sobre%20Efficient" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg">
+                <MessageCircle size={24} />
+                Solicitar Cotización
+              </a>
+            </div>
+          </div>
+          
+          <div class="hero-visual">
+            <div class="image-wrapper">
+              <img src={efficientFondo.src} alt="Gestión Empresarial con Efficient" class="main-image" />
+              <div class="floating-card c1">
+                <TrendingUp size={24} class="icon-blue" />
+                <span>+40% Rentabilidad</span>
+              </div>
+              <div class="floating-card c2">
+                <ShieldCheck size={24} class="icon-green" />
+                <span>Legal & Fiscal</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ¿Qué es Efficient? Section (Mockup de Teléfono) -->
+    <section class="about-section">
+      <div class="container">
+        <div class="about-grid" style="align-items: center;">
+          <div class="about-text">
+            <div class="badge">
+              <span class="subtitle">Gestión Integral</span>
+            </div>
+            <h2>¿Qué es <span class="highlight">Efficient?</span></h2>
+            <p style="font-size: 1.15rem; color: var(--text-muted); line-height: 1.8; margin-top: 1.5rem;">
+              <strong>Efficient</strong> es nuestra plataforma líder de gestión empresarial diseñada para integrar todos los procesos operativos de tu negocio en una sola herramienta robusta y escalable.
+            </p>
+            <p style="font-size: 1.15rem; color: var(--text-muted); line-height: 1.8;">
+              Desde la palma de tu mano, mantén el control absoluto de tus inventarios, ventas y finanzas con una interfaz optimizada para dispositivos móviles y escritorio.
+            </p>
+          </div>
+          
+          <div class="about-media">
+             <div class="double-phone-placeholder">
+                
+                <div class="phone-placeholder mock1">
+                   <div class="phone-notch"></div>
+                   <div class="phone-screen">
+                      <img src={pantalla3.src} alt="Pantalla de App Efficient 1" class="app-screenshot" />
+                   </div>
+                </div>
+
+                <div class="phone-placeholder mock2">
+                   <div class="phone-notch"></div>
+                   <div class="phone-screen">
+                      <img src={pantalla1.src} alt="Pantalla de App Efficient 2" class="app-screenshot" />
+                   </div>
+                </div>
+
+             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Beneficios Section -->
+    <section class="benefits-section">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="badge">
+            <span class="subtitle">Ventajas Competitivas</span>
+          </div>
+          <h2>Beneficios de <span class="highlight">Efficient</span></h2>
+        </div>
+
+        <div class="benefits-grid">
+          <div class="benefit-card">
+            <div class="icon-circle"><TrendingUp size={32} /></div>
+            <h3>Venta Flexible</h3>
+            <p>Comercializa múltiples productos y/o servicios de forma flexible con un preciso control sobre tus ventas.</p>
+          </div>
+          
+          <div class="benefit-card">
+            <div class="icon-circle"><Globe size={32} /></div>
+            <h3>Comercio Exterior</h3>
+            <p>Manejo de órdenes de compra y documentos de importación en múltiples monedas de forma simplificada.</p>
+          </div>
+          
+          <div class="benefit-card">
+            <div class="icon-circle"><BarChart2 size={32} /></div>
+            <h3>Reportes a Medida</h3>
+            <p>Reportes personalizados con el detalle que se desee para un análisis profundo de tu negocio.</p>
+          </div>
+          
+          <div class="benefit-card">
+            <div class="icon-circle"><Box size={32} /></div>
+            <h3>Control de Inventarios</h3>
+            <p>Manejo adecuado de los inventarios, múltiples bodegas, manejo de lotes y costeo del inventario.</p>
+          </div>
+          
+          <div class="benefit-card">
+            <div class="icon-circle"><Truck size={32} /></div>
+            <h3>Logística Eficiente</h3>
+            <p>Alisto y despacho de mercadería de forma eficiente, integrando toda la cadena de suministros.</p>
+          </div>
+
+          <div class="benefit-card">
+            <div class="icon-circle"><ShieldCheck size={32} /></div>
+            <h3>Cumplimiento Legal</h3>
+            <p>Software que incluye los requisitos legales y fiscales de Honduras para simplificar el cumplimiento.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Módulos Section -->
+    <section class="modules-section">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="badge">
+            <span class="subtitle">Funcionalidades</span>
+          </div>
+          <h2>Conoce más acerca de nuestros <span class="highlight">Módulos</span></h2>
+          <p class="section-desc">Aprovecha al máximo las funcionalidades de Efficient con nuestros módulos especializados</p>
+        </div>
+
+        <div class="modules-grid-complex">
+          <div class="module-item">
+            <div class="module-icon"><ShoppingCart size={32} /></div>
+            <div class="module-info">
+              <h4>Módulo de Compras</h4>
+              <p>Planificación de las compras con un motor configurable que considera distintas variables como consumos y ventas históricas o proyección de ventas. Registro y seguimiento detallado hasta la recepción y costeo.</p>
+            </div>
+          </div>
+
+          <div class="module-item">
+            <div class="module-icon"><Box size={32} /></div>
+            <div class="module-info">
+              <h4>Módulo de Inventario</h4>
+              <p>Propicia el control de las entradas y salidas de mercadería en distintas bodegas. Maneja adecuadamente los niveles de inventario y facilita la administración de múltiples ubicaciones.</p>
+            </div>
+          </div>
+
+          <div class="module-item">
+            <div class="module-icon"><CreditCard size={32} /></div>
+            <div class="module-info">
+              <h4>Módulo de Cuentas por Pagar</h4>
+              <p>Genera las cuentas por pagar automáticamente para compras al crédito. Realiza proyecciones de vencimiento, estados de cuenta y reportes detallados para un control financiero total.</p>
+            </div>
+          </div>
+
+          <div class="module-item">
+            <div class="module-icon"><Briefcase size={32} /></div>
+            <div class="module-info">
+              <h4>Módulo de Caja</h4>
+              <p>Permite realizar aperturas y cierres de caja por turno. Soporta múltiples cajas simultáneas y permite registrar movimientos de ingresos y egresos de efectivo de forma segura.</p>
+            </div>
+          </div>
+
+          <div class="module-item">
+            <div class="module-icon"><BarChart2 size={32} strokeWidth={2.5} /></div>
+            <div class="module-info">
+              <h4>Módulo de Facturación</h4>
+              <p>Lleva un preciso control de ventas, listas de precios en moneda local, gestión de descuentos, promociones, reservaciones y validación de márgenes de ganancia en tiempo real.</p>
+            </div>
+          </div>
+
+          <div class="module-item">
+            <div class="module-icon"><Users size={32} /></div>
+            <div class="module-info">
+              <h4>Módulo de Cuentas por Cobrar</h4>
+              <p>Facilita el control de cobranzas, manejo de documentos por cobrar y envío electrónico de estados de cuenta para mantener un flujo de caja saludable.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Fiscal Honduras Note -->
+    <section class="legal-note-section">
+      <div class="container">
+        <div class="legal-card glass">
+          <div class="legal-content">
+            <div class="legal-icon">
+              <ShieldCheck size={48} />
+            </div>
+            <div class="legal-text">
+              <h3>Garantice la continuidad de su negocio</h3>
+              <p>Nuestro software incluye todos los requisitos legales y fiscales de Honduras para simplificar el trabajo y aumentar la productividad de tu empresa de forma segura.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section class="cta-section">
+      <div class="container text-center">
+        <div class="cta-box">
+          <h2>¿Listo para optimizar tu empresa?</h2>
+          <p>Realice su cotización de forma sencilla, contáctenos por WhatsApp. Estamos a su disposición para asistirle en lo que necesite.</p>
+          <a href="https://wa.me/50494583355" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp-lg">
+            <MessageCircle size={32} />
+            Contactar ahora
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  .product-page {
+    padding-top: 80px;
+    background: var(--bg);
+  }
+
+  /* Hero */
+  .hero-section {
+    padding: 3rem 0 8rem 0;
+    background: linear-gradient(to bottom, #f8fafc 0%, #ffffff 100%);
+    overflow: hidden;
+  }
+
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+
+  @media (max-width: 991px) {
+    .hero-section {
+      padding: 2rem 0 4rem 0;
+    }
+    .hero-grid {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      gap: 3rem;
+    }
+    .hero-text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0 1rem;
+      order: 2;
+    }
+    .hero-btns {
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .hero-section {
+      padding: 8rem 1rem 3rem 1rem;
+    }
+    .hero-visual {
+      margin: 4rem 0 2rem 0;
+      order: 1;
+      width: 100%;
+      padding: 0;
+      display: block;
+    }
+    .main-image {
+      border-radius: 1.5rem;
+      border: 6px solid white;
+      box-shadow: 0 20px 40px rgba(0, 102, 204, 0.1);
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .hero-text {
+      order: 2;
+      padding: 1rem;
+    }
+    .hero-title {
+      font-size: 1.8rem;
+    }
+    .product-logo {
+      max-width: 120px;
+    }
+  }
+
+  .hero-title {
+    font-size: clamp(1.6rem, 3.5vw, 2.8rem);
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 0.75rem;
+    color: var(--text);
+  }
+
+  .product-logo-container {
+    margin-bottom: 0.75rem;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .product-logo {
+    max-width: 200px;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .hero-description {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-btns {
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  .hero-visual {
+    position: relative;
+    padding: 0.5rem;
+    margin-top: -6rem;
+  }
+
+  .image-wrapper {
+    position: relative;
+    z-index: 5;
+  }
+
+  .main-image {
+    width: 100%;
+    height: auto;
+    border-radius: 2.5rem;
+    box-shadow: 0 40px 80px rgba(0, 102, 204, 0.15);
+    border: 8px solid white;
+  }
+
+  .floating-card {
+    position: absolute;
+    background: white;
+    padding: 1.25rem 2rem;
+    border-radius: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    font-weight: 700;
+    z-index: 10;
+    animation: float 4s ease-in-out infinite;
+  }
+
+  .c1 { top: 10%; right: -5%; animation-delay: 0s; }
+  .c2 { bottom: 15%; left: -5%; animation-delay: 2s; }
+
+  @media (max-width: 991px) {
+    .floating-card {
+      display: none;
+    }
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+  }
+
+  /* Benefits */
+  .benefits-section {
+    padding: 5rem 0;
+    background: var(--bg-soft);
+  }
+
+  .benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+  }
+
+  @media (max-width: 768px) {
+    .benefits-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+  }
+
+  .benefit-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 2rem;
+    border: 1px solid rgba(0, 102, 204, 0.1);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+
+  @media (max-width: 768px) {
+    .benefit-card {
+      padding: 1.5rem;
+    }
+  }
+
+  .benefit-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 60px rgba(0, 102, 204, 0.12);
+    border-color: var(--primary);
+  }
+
+  .benefit-card:hover .icon-circle {
+    background: var(--primary);
+    color: white;
+    transform: rotate(10deg) scale(1.1);
+  }
+
+  .icon-circle {
+    width: 64px;
+    height: 64px;
+    background: rgba(0, 102, 204, 0.08);
+    color: var(--primary);
+    border-radius: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .benefit-card h3 {
+    font-size: 1.15rem;
+    margin-bottom: 0.4rem;
+    text-align: center;
+    width: 100%;
+  }
+
+  .benefit-card p {
+    color: var(--text-muted);
+    line-height: 1.5;
+    font-size: 0.9rem;
+    text-align: center;
+  }
+
+  /* Modules */
+  .modules-section {
+    padding: 5rem 0;
+  }
+
+  .modules-grid-complex {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+
+  @media (max-width: 600px) {
+    .modules-grid-complex {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .module-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+    padding: 2rem 1.5rem;
+    background: white;
+    border-radius: 1.5rem;
+    border: 1px solid rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+    width: 100%;
+  }
+
+  @media (min-width: 768px) {
+    .module-item {
+      flex-direction: row;
+      text-align: left;
+    }
+  }
+
+  .module-item:hover {
+    border-color: var(--primary);
+    box-shadow: 0 10px 40px rgba(0, 102, 204, 0.08);
+  }
+
+  .module-icon {
+    flex-shrink: 0;
+    width: 64px;
+    height: 64px;
+    background: var(--primary);
+    color: white;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 20px rgba(0, 102, 204, 0.2);
+  }
+
+  .module-info h4 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary-dark);
+    text-align: center;
+    width: 100%;
+  }
+
+  .module-info p {
+    color: var(--text-muted);
+    line-height: 1.5;
+    font-size: 0.95rem;
+  }
+
+  /* Legal Note */
+  .legal-note-section {
+    padding: 4rem 0;
+  }
+
+  .legal-card {
+    background: #011748;
+    color: white;
+    padding: 4rem;
+    border-radius: 2.5rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  @media (max-width: 768px) {
+    .legal-card {
+      padding: 2rem 1.5rem;
+      border-radius: 1.5rem;
+    }
+  }
+
+  .legal-content {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    position: relative;
+    z-index: 5;
+  }
+
+  @media (max-width: 768px) {
+    .legal-content {
+      flex-direction: column;
+      text-align: center;
+      gap: 1.5rem;
+    }
+  }
+
+  .legal-icon {
+    width: 100px;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent);
+  }
+
+  .legal-text h3 {
+    font-size: 1.75rem;
+    margin-bottom: 0.75rem;
+    color: white;
+  }
+
+  .legal-text p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    max-width: 800px;
+    line-height: 1.6;
+  }
+
+  /* CTA */
+  .cta-section {
+    padding: 5rem 0;
+  }
+
+  .cta-box {
+    background: white;
+    padding: 3rem 2rem;
+    border-radius: 3rem;
+    box-shadow: 0 30px 70px rgba(0, 102, 204, 0.1);
+    max-width: 900px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  @media (max-width: 768px) {
+    .cta-box {
+      padding: 2rem 1.25rem;
+      border-radius: 1.5rem;
+    }
+    .cta-box h2 {
+      font-size: 1.6rem;
+    }
+    .cta-box p {
+      font-size: 1rem;
+    }
+  }
+
+  .btn-whatsapp-lg {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    background: #25D366;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 4rem;
+    font-size: 1.1rem;
+    font-weight: 800;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    max-width: 100%;
+  }
+
+  @media (max-width: 768px) {
+    .btn-whatsapp-lg {
+      padding: 1rem 1.5rem;
+      font-size: 1rem;
+      width: 100%;
+      max-width: 320px;
+    }
+  }
+
+  .btn-whatsapp-lg:hover {
+    transform: translateY(-5px);
+    background: #128C7E;
+    box-shadow: 0 15px 30px rgba(37, 211, 102, 0.3);
+  }
+
+  /* 2. ABOUT/QUE ES SECTION (Teléfonos) */
+  .about-section {
+    padding: 5rem 0;
+    background: var(--bg);
+  }
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+
+  /* REDISEÑO DE TELEFONO REALISTA PARA IMAGENES */
+  .phone-placeholder {
+    flex-shrink: 0; 
+    width: 240px;
+    min-width: 240px;
+    height: auto;
+    aspect-ratio: 9 / 19.5; 
+    background: #000000; 
+    border: 8px solid #1c1c1e; 
+    border-radius: 2.5rem;
+    position: relative;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.25);
+    background-clip: padding-box;
+  }
+
+  .phone-notch {
+    position: absolute;
+    top: -1px; 
+    left: 50%;
+    transform: translateX(-50%);
+    width: 110px;
+    height: 26px;
+    background: #000000; 
+    border-bottom-left-radius: 1.25rem;
+    border-bottom-right-radius: 1.25rem;
+    z-index: 20;
+  }
+
+  .phone-screen {
+    background: white; 
+    width: 100%;
+    height: 100%;
+    border-radius: 2.2rem; 
+    overflow: hidden; 
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .app-screenshot {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    object-position: center top; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+  }
+
+  .double-phone-placeholder {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .mock2 {
+    transform: translateY(40px);
+  }
+
+  /* Responsive */
+  @media (max-width: 991px) {
+    .about-grid {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      gap: 3rem;
+    }
+
+    .about-text {
+        order: 2;
+    }
+
+    .about-media {
+        order: 1;
+        margin-bottom: 2rem;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .double-phone-placeholder {
+        transform: scale(0.85);
+        width: 100%;
+        max-width: 500px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .double-phone-placeholder {
+        gap: 1rem;
+        transform: scale(0.75);
+        flex-direction: row; /* Keep them side by side but smaller */
+        width: 100%;
+    }
+    .phone-placeholder {
+        width: 180px;
+        min-width: 180px;
+    }
+    .mock2 {
+        transform: translateY(20px);
+    }
+  }
+
+  @media (max-width: 480px) {
+    .double-phone-placeholder {
+        transform: scale(0.65);
+        gap: 0.5rem;
+    }
+    .phone-placeholder {
+        width: 160px;
+        min-width: 160px;
+    }
+  }
+
+  .hero-container {
+    max-width: 1400px;
+  }
+
+  .badge {
+    background: #e1effe; /* Celeste suave */
+    padding: 0.6rem 2.5rem;
+    border-radius: 9999px; /* Pill shape */
+    margin-bottom: 2rem;
+    display: inline-block;
+    border: 1px solid #bfdbfe;
+  }
+
+  .subtitle {
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 800;
+    color: var(--primary);
+    font-size: 0.9rem;
+  }
+
+  h2 {
+    font-size: clamp(1.6rem, 3.5vw, 2.8rem);
+    font-weight: 800;
+    color: #111827; /* Darker, almost black */
+    line-height: 1.1;
+    margin-bottom: 1rem;
+    text-align: center; /* Asegurado centrado */
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .highlight {
+    color: var(--primary);
+    position: relative;
+    display: inline-block;
+  }
+
+  /* Removido el skew para coincidir con la imagen de referencia */
+
+  .section-desc {
+    color: #4b5563; /* Gray-600 */
+    font-size: 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+</style>

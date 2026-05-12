@@ -1,0 +1,468 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+import { 
+  ShieldCheck,
+  FileText,
+  Lock,
+  Eye,
+  CheckCircle2,
+  Facebook,
+  Instagram
+} from 'lucide-astro';
+
+const pageTitle = "Política de Privacidad - Barber's";
+---
+
+<Layout title={pageTitle}>
+  <Navbar />
+  
+  <main class="privacidad-page">
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <div class="badge">
+            <span class="subtitle">Privacidad y Seguridad</span>
+          </div>
+          <h1 class="premium-title">Política de <span class="highlight">Privacidad</span></h1>
+          <p class="hero-desc">
+            En SAPINF nos tomamos muy en serio la protección de tus datos. Conoce cómo gestionamos tu información en Barber's.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="policy-content">
+      <div class="container">
+        <div class="content-wrapper shadow-premium">
+          <div class="intro-block">
+            <p>
+              SAPINF, como desarrolladora de la aplicación Barber's, respeta y protege la privacidad de los usuarios (los "Usuarios") que utilicen la aplicación. A continuación, se describen las finalidades, medidas y procedimientos para el tratamiento de los datos personales.
+            </p>
+          </div>
+
+          <div class="policy-grid">
+            <div class="policy-item">
+              <div class="item-header">
+                <span class="step-num">01</span>
+                <h3>Responsable del Tratamiento</h3>
+              </div>
+              <p>El responsable del tratamiento de los datos personales proporcionados por los Usuarios será SAPINF, quien se compromete a tratar esta información de manera confidencial y segura.</p>
+            </div>
+
+            <div class="policy-item">
+              <div class="item-header">
+                <span class="step-num">02</span>
+                <h3>Finalidad de la Recolección</h3>
+              </div>
+              <p>Los datos serán utilizados para:</p>
+              <ul class="nested-list">
+                <li><CheckCircle2 size={14} /> Gestión y administración de la barbería.</li>
+                <li><CheckCircle2 size={14} /> Análisis estadísticos y operativos.</li>
+                <li><CheckCircle2 size={14} /> Estrategias comerciales y de mercadeo.</li>
+                <li><CheckCircle2 size={14} /> Brindar un mejor servicio a los Usuarios.</li>
+                <li><CheckCircle2 size={14} /> Optimización del funcionamiento de la app.</li>
+              </ul>
+            </div>
+
+            <div class="policy-item">
+              <div class="item-header">
+                <span class="step-num">03</span>
+                <h3>Datos Recolectados</h3>
+              </div>
+              <p>Recopilamos datos necesarios para el funcionamiento incluyendo: nombre completo, número de teléfono, correo electrónico, historial de servicios y reservaciones.</p>
+            </div>
+
+            <div class="policy-item">
+              <div class="item-header">
+                <span class="step-num">04</span>
+                <h3>Tratamiento de Datos</h3>
+              </div>
+              <p>Los datos se tratarán exclusivamente para las finalidades indicadas. SAPINF no comparte ni alquila información a terceros sin consentimiento, salvo por obligación legal.</p>
+            </div>
+
+            <div class="policy-item">
+              <div class="item-header">
+                <span class="step-num">05</span>
+                <h3>Medidas de Seguridad</h3>
+              </div>
+              <p>Implementamos medidas administrativas, técnicas y físicas para evitar pérdida, mal uso, acceso no autorizado o alteración de tus datos.</p>
+            </div>
+
+            <div class="policy-item">
+              <div class="item-header">
+                <span class="step-num">06</span>
+                <h3>Derechos de los Usuarios</h3>
+              </div>
+              <p>Los usuarios pueden:</p>
+              <ul class="nested-list">
+                <li><CheckCircle2 size={14} /> Conocer, actualizar y rectificar sus datos.</li>
+                <li><CheckCircle2 size={14} /> Solicitar eliminación de información.</li>
+                <li><CheckCircle2 size={14} /> Revocar consentimientos otorgados.</li>
+              </ul>
+            </div>
+
+            <div class="policy-item">
+              <div class="item-header">
+                <span class="step-num">07</span>
+                <h3>Almacenamiento</h3>
+              </div>
+              <p>Los datos se guardan el tiempo necesario para cumplir las finalidades establecidas. Luego se procedará a su eliminación o anonimización.</p>
+            </div>
+
+            <div class="policy-item">
+              <div class="item-header">
+                <span class="step-num">08</span>
+                <h3>Cambios en la Política</h3>
+              </div>
+              <p>SAPINF se reserva el derecho de modificar esta política. Cualquier cambio será notificado a través de la aplicación.</p>
+            </div>
+          </div>
+
+          <div class="contact-block">
+            <div class="contact-header">
+              <Lock size={24} class="accent-icon" />
+              <h3>Contacto y Soporte</h3>
+            </div>
+            <p>Para dudas o solicitudes relacionadas con tus datos, contáctanos:</p>
+            <a href="mailto:soporte@sapinf.com" class="btn-email">
+              soporte@sapinf.com
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Submenu Section -->
+    <nav class="barbers-utility-bar">
+      <div class="utility-social-left">
+        <a href="https://www.facebook.com/people/Barbers-HN/61567177681618/?mibextid=ZbWKwL" target="_blank" rel="noopener noreferrer" class="social-icon">
+          <Facebook size={20} />
+        </a>
+        <a href="https://www.instagram.com/barbershn_?igsh=MWNmaXFhZGxhcXE3dA%3D%3D" target="_blank" rel="noopener noreferrer" class="social-icon">
+          <Instagram size={20} />
+        </a>
+      </div>
+      <div class="utility-links-right">
+        <a href="/barbers/acerca" class="util-btn">Acerca</a>
+        <a href="/barbers/privacidad" class="util-btn">Política de Privacidad</a>
+        <a href="/barbers/terminos" class="util-btn">Términos de uso</a>
+        <a href="/barbers/contacto" class="util-btn">Contacto</a>
+        <a href="/barbers/ayuda" class="util-btn">Ayuda</a>
+      </div>
+    </nav>
+  </main>
+  
+  <Footer />
+</Layout>
+
+<style>
+  .privacidad-page {
+    padding-top: 80px;
+    background: #f1f5f9;
+    min-height: 100vh;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  /* Badge Style */
+  .badge {
+    background: #e1effe;
+    padding: 0.5rem 1.5rem;
+    border-radius: 9999px;
+    margin-bottom: 2rem;
+    display: inline-block;
+    border: 1px solid #bfdbfe;
+    color: var(--primary);
+    font-weight: 800;
+  }
+
+  .subtitle {
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 800;
+    color: var(--primary);
+    font-size: 0.75rem;
+  }
+
+  /* Hero Section */
+  .hero-section {
+    padding: 4rem 0 2rem 0;
+    text-align: center;
+  }
+
+  .premium-title {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    font-weight: 900;
+    color: var(--text);
+    margin-bottom: 1.25rem;
+    line-height: 1.1;
+  }
+
+  .highlight {
+    color: var(--primary);
+  }
+
+  .hero-desc {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  /* Content Section */
+  .policy-content {
+    padding: 3rem 0 6rem 0;
+  }
+
+  .content-wrapper {
+    background: white;
+    padding: 4rem;
+    border-radius: 2.5rem;
+    border: 1px solid rgba(0, 102, 204, 0.08);
+    max-width: 1000px;
+    margin: 0 auto;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.05);
+  }
+
+  .intro-block {
+    margin-bottom: 4rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #eee;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: var(--text-muted);
+  }
+
+  .policy-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 3rem;
+  }
+
+  .policy-item {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .item-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .step-num {
+    font-size: 0.8rem;
+    background: #f1f5fa;
+    color: var(--primary);
+    padding: 0.25rem 0.6rem;
+    border-radius: 6px;
+    font-weight: 800;
+  }
+
+  .item-header h3 {
+    font-size: 1.25rem;
+    color: var(--text);
+    margin: 0;
+  }
+
+  .policy-item p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .nested-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .nested-list li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+  }
+
+  .nested-list li :global(svg) {
+    color: var(--primary);
+  }
+
+  .contact-block {
+    margin-top: 5rem;
+    background: #f8fafc;
+    padding: 2.5rem;
+    border-radius: 1.5rem;
+    text-align: center;
+  }
+
+  .contact-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .contact-header h3 {
+    margin: 0;
+    font-size: 1.2rem;
+  }
+
+  .contact-block p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+  }
+
+  .btn-email {
+    display: inline-block;
+    background: var(--primary);
+    color: white;
+    padding: 0.8rem 2rem;
+    border-radius: 9999px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+  }
+
+  .btn-email:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 102, 204, 0.2);
+    background: var(--primary-dark);
+    color: white;
+  }
+
+  .accent-icon {
+    color: var(--primary);
+  }
+
+  /* Barber's Utility Bar */
+  .barbers-utility-bar {
+    background: #f1f5f9;
+    padding: 3rem 4rem;
+    border-top: 1px solid rgba(0,0,0,0.05);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .utility-social-left {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+  }
+
+  .social-icon {
+    color: #666666;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+  }
+
+  .social-icon:hover {
+    color: var(--primary);
+    transform: translateY(-2px);
+  }
+
+  .utility-links-right {
+    display: flex;
+    gap: 2.5rem;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    text-align: right;
+  }
+
+  .util-btn {
+    display: inline-block;
+    color: #666666;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    padding-bottom: 4px;
+    border-bottom: 2px solid transparent;
+  }
+
+  .util-btn:hover {
+    color: var(--primary) !important;
+    text-decoration: underline !important;
+    text-underline-offset: 6px;
+  }
+
+  @media (max-width: 768px) {
+    .privacidad-page {
+      padding-top: 60px;
+    }
+    .hero-section {
+      padding: 3rem 0 1rem 0;
+    }
+    .content-wrapper {
+      padding: 2.5rem 1.5rem;
+      border-radius: 1.5rem;
+    }
+    .policy-grid {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+    .item-header {
+      justify-content: center;
+      text-align: center;
+    }
+    .policy-item p {
+      text-align: center;
+    }
+    .nested-list li {
+      justify-content: center;
+    }
+    .intro-block {
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+    .barbers-utility-bar {
+      flex-direction: column;
+      gap: 2.5rem;
+      padding: 4rem 1.5rem;
+      text-align: center;
+    }
+    .utility-links-right {
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+      width: 100%;
+      text-align: center;
+    }
+    .util-btn {
+      font-size: 1rem;
+      margin: 0 !important;
+      padding: 0.5rem 0;
+      width: 100%;
+      border-bottom: 1px solid rgba(0,0,0,0.05);
+    }
+    .util-btn:last-child {
+      border-bottom: none;
+    }
+    .utility-social-left {
+      justify-content: center;
+      width: 100%;
+      order: 2; /* Social icons at the bottom on mobile */
+    }
+  }
+</style>

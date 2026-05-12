@@ -1,0 +1,1308 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import { 
+  Scissors,
+  TrendingUp,
+  CalendarCheck,
+  CheckCircle2,
+  Download,
+  Smartphone,
+  MessageCircle,
+  Facebook,
+  Instagram,
+  Star,
+  HelpCircle,
+  ShieldCheck,
+  FileText,
+  Mail,
+  Info
+} from 'lucide-astro';
+
+import barbersFondo from '../assets/barbers-fondo.jpg';
+import barbersLogo from '../assets/barbers.png';
+import barbers2 from '../assets/barbers2.png';
+import pantallab from '../assets/pantallab.jpeg';
+import pantallab1 from '../assets/pantallab1.jpeg';
+import pantallab2 from '../assets/pantallab2.jpeg';
+
+const pageTitle = "Barber's - Sistema de Gestión de Barberías";
+---
+
+<Layout title={pageTitle}>
+  <Navbar />
+  
+  <main class="barbers-page">
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="badge">
+            <span class="subtitle">Barbería</span>
+          </div>
+          <div class="product-logo-container">
+            <img src={barbersLogo.src} alt="Barber's App Logo" class="product-logo" />
+          </div>
+          <h1>La mejor aplicación para la gestión <span style="color: var(--primary);">eficiente</span> de barberías</h1>
+          <p class="hero-desc">
+            Barber's te permite almacenar y organizar los datos de tus clientes, manejar facturas, y controlar cada corte de cabello fácilmente. Además, gestiona productos y servicios, lleva un balance detallado y visualiza gráficos interactivos para tomar decisiones informadas. Todo en una plataforma integral y fácil de usar.
+          </p>
+          <div class="hero-actions store-buttons">
+            <a href="https://play.google.com/store/apps/details?id=com.sapinf.barber_hn&pcampaignid=web_share" target="_blank" rel="noopener noreferrer" class="btn-store btn-playstore">
+              <Download size={24} />
+              <div class="store-text">
+                <span class="top-store">Consíguelo en</span>
+                <span class="bottom-store">Google Play</span>
+              </div>
+            </a>
+            <a href="#" class="btn-store btn-appstore">
+              <Smartphone size={24} />
+              <div class="store-text">
+                <span class="top-store">Descárgalo en la</span>
+                <span class="bottom-store">App Store</span>
+              </div>
+            </a>
+          </div>
+        </div>
+        
+        <div class="hero-visual">
+          <div class="image-wrapper">
+             <img src={barbersFondo.src} alt="App Barber's en Tablet" class="main-hero-image" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Center Banner CTA -->
+    <section class="highlight-banner">
+      <div class="container">
+        <div class="banner-content shadow-premium">
+          <h2>¡Lleva la administración de tu barbería al siguiente nivel!</h2>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- Features Section -->
+    <section class="features-section">
+      <div class="container">
+        
+        <!-- Feature 1 -->
+        <div class="feature-row">
+          <div class="feature-text">
+            <div class="feature-info-card">
+              <span class="mini-badge">Operatividad</span>
+              <div class="feature-icon-box"><CalendarCheck size={32} /></div>
+              <h3>Simplifica la gestión diaria de tu barbería y maximiza tus ganancias</h3>
+              <p>
+                Barber's es una herramienta indispensable para organizar tus finanzas, controlar tus ingresos y mantener un registro detallado de cada cliente.
+              </p>
+              <ul class="benefit-list">
+                <li><CheckCircle2 size={18} class="check-icon" /> Registro detallado de clientes y sus historiales.</li>
+                <li><CheckCircle2 size={18} class="check-icon" /> Automatización de procesos para ahorrar tiempo.</li>
+                <li><CheckCircle2 size={18} class="check-icon" /> Mejora de la eficiencia operativa del negocio.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="feature-image">
+             <div class="phone-mockup">
+                <div class="phone-frame">
+                   <img src={pantallab.src} alt="Gestión Diaria" class="phone-screen-img" />
+                </div>
+             </div>
+          </div>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="feature-row reverse">
+          <div class="feature-text">
+            <div class="feature-info-card">
+              <span class="mini-badge">Control total</span>
+              <div class="feature-icon-box"><Scissors size={32} /></div>
+              <h3>Control total de cada corte en la palma de tu mano</h3>
+              <p>
+                Gestionar cada servicio directamente desde tu móvil nunca ha sido tan sencillo. Cada detalle se guarda al instante para un acceso rápido.
+              </p>
+              <ul class="benefit-list">
+                <li><CheckCircle2 size={18} class="check-icon" /> Gestión de servicios y preferencias del cliente.</li>
+                <li><CheckCircle2 size={18} class="check-icon" /> Facturación rápida y sencilla desde el móvil.</li>
+                <li><CheckCircle2 size={18} class="check-icon" /> Historial completo accesible en cualquier momento.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="feature-image">
+             <div class="phone-mockup shadow-blue">
+                <div class="phone-frame">
+                   <img src={pantallab1.src} alt="Control de Corte" class="phone-screen-img" />
+                </div>
+             </div>
+          </div>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="feature-row">
+          <div class="feature-text">
+            <div class="feature-info-card">
+              <span class="mini-badge">Analítica</span>
+              <div class="feature-icon-box"><TrendingUp size={32} /></div>
+              <h3>Monitorea el rendimiento completo de tu barbería al instante</h3>
+              <p>
+                Analiza el balance de ingresos, identifica servicios populares y monitorea el rendimiento de tu equipo desde un solo lugar.
+              </p>
+              <ul class="benefit-list">
+                <li><CheckCircle2 size={18} class="check-icon" /> Gráficos interactivos de balance y rendimiento.</li>
+                <li><CheckCircle2 size={18} class="check-icon" /> Identificación de horas pico y servicios estrella.</li>
+                <li><CheckCircle2 size={18} class="check-icon" /> Toma de decisiones informadas basadas en datos.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="feature-image">
+             <div class="phone-mockup">
+                <div class="phone-frame">
+                   <img src={pantallab2.src} alt="Balance y Rendimiento" class="phone-screen-img" />
+                </div>
+             </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing-section">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="badge">
+            <span class="subtitle">Tarifas Transparentes</span>
+          </div>
+          <h2 class="pricing-title">Planes y precios <span class="highlight">flexibles</span></h2>
+          <p class="section-desc">Selecciona el plan que mejor se adapte a tus necesidades y simplifica tu trabajo diario.</p>
+        </div>
+
+        <div class="pricing-grid">
+          <!-- Plan Básico -->
+          <div class="pricing-card">
+            <div class="card-header">
+              <h3>Plan Básico</h3>
+              <p>Ideal para barberías pequeñas o emprendedores.</p>
+              <div class="price">
+                <span class="currency">$</span>
+                <span class="amount">30</span>
+                <span class="period">/Mes</span>
+              </div>
+              <p class="promo-text">Contrata el plan anual y obtén un mes gratis</p>
+            </div>
+            <div class="card-body">
+              <ul class="feature-list">
+                <li><CheckCircle2 size={18} /> Registro de cortes</li>
+                <li><CheckCircle2 size={18} /> Gestión de barberos</li>
+                <li><CheckCircle2 size={18} /> Gestión de clientes</li>
+                <li><CheckCircle2 size={18} /> Gestión de servicios</li>
+                <li><CheckCircle2 size={18} /> Registro de ingresos y egresos</li>
+                <li><CheckCircle2 size={18} /> Personalización de la barbería</li>
+                <li><CheckCircle2 size={18} /> Reportes detallados</li>
+                <li><CheckCircle2 size={18} /> Facturación profesional</li>
+                <li><CheckCircle2 size={18} /> Perfiles invitados</li>
+                <li><CheckCircle2 size={18} /> Acceso desde la web</li>
+                <li><CheckCircle2 size={18} /> Enlaces de reservaciones</li>
+                <li><CheckCircle2 size={18} /> Soporte técnico prioritario</li>
+              </ul>
+            </div>
+            <div class="card-footer">
+              <a href="https://wa.me/50494583355?text=Hola,%20me%20interesa%20contratar%20el%20Plan%20Básico%20de%20Barber%27s" target="_blank" rel="noopener noreferrer" class="btn-outline-full">Solicitar este plan</a>
+            </div>
+          </div>
+
+          <!-- Plan Pro (Popular) -->
+          <div class="pricing-card popular">
+            <div class="popular-badge"><Star size={14} fill="white" /> POPULAR</div>
+            <div class="card-header">
+              <h3>Plan Pro</h3>
+              <p>Mejora la administración sin perder el control.</p>
+              <div class="price">
+                <span class="currency">$</span>
+                <span class="amount">35</span>
+                <span class="period">/Mes</span>
+              </div>
+              <p class="promo-text">Contrata el plan anual y obtén un mes gratis</p>
+            </div>
+            <div class="card-body">
+              <ul class="feature-list">
+                <li><CheckCircle2 size={18} /> Registro de cortes</li>
+                <li><CheckCircle2 size={18} /> Gestión de barberos</li>
+                <li><CheckCircle2 size={18} /> Gestión de clientes</li>
+                <li><CheckCircle2 size={18} /> Gestión de servicios</li>
+                <li><CheckCircle2 size={18} /> Registro de ingresos y egresos</li>
+                <li><CheckCircle2 size={18} /> Personalización de la barbería</li>
+                <li><CheckCircle2 size={18} /> Reportes detallados</li>
+                <li><CheckCircle2 size={18} /> Facturación profesional</li>
+                <li><CheckCircle2 size={18} /> Perfiles invitados</li>
+                <li><CheckCircle2 size={18} /> Acceso desde la web</li>
+                <li><CheckCircle2 size={18} /> Enlaces de reservaciones</li>
+                <li><CheckCircle2 size={18} /> Soporte técnico prioritario</li>
+              </ul>
+            </div>
+            <div class="card-footer">
+              <a href="https://wa.me/50494583355?text=Hola,%20me%20interesa%20contratar%20el%20Plan%20Pro%20de%20Barber%27s" target="_blank" rel="noopener noreferrer" class="btn-primary-full">Solicitar este plan</a>
+            </div>
+          </div>
+
+          <!-- Plan Premium -->
+          <div class="pricing-card">
+            <div class="card-header">
+              <h3>Plan Premium</h3>
+              <p>Para profesionales que requieren acceso total.</p>
+              <div class="price">
+                <span class="currency">$</span>
+                <span class="amount">40</span>
+                <span class="period">/Mes</span>
+              </div>
+              <p class="promo-text">Contrata el plan anual y obtén un mes gratis</p>
+            </div>
+            <div class="card-body">
+              <ul class="feature-list">
+                <li><CheckCircle2 size={18} /> Registro de cortes</li>
+                <li><CheckCircle2 size={18} /> Gestión de barberos</li>
+                <li><CheckCircle2 size={18} /> Gestión de clientes</li>
+                <li><CheckCircle2 size={18} /> Gestión de servicios</li>
+                <li><CheckCircle2 size={18} /> Registro de ingresos y egresos</li>
+                <li><CheckCircle2 size={18} /> Personalización de la barbería</li>
+                <li><CheckCircle2 size={18} /> Reportes detallados</li>
+                <li><CheckCircle2 size={18} /> Facturación profesional</li>
+                <li><CheckCircle2 size={18} /> Perfiles invitados</li>
+                <li><CheckCircle2 size={18} /> Acceso desde la web</li>
+                <li><CheckCircle2 size={18} /> Enlaces de reservaciones</li>
+                <li><CheckCircle2 size={18} /> Soporte técnico prioritario</li>
+              </ul>
+            </div>
+            <div class="card-footer">
+              <a href="https://wa.me/50494583355?text=Hola,%20me%20interesa%20contratar%20el%20Plan%20Premium%20de%20Barber%27s" target="_blank" rel="noopener noreferrer" class="btn-outline-full">Solicitar este plan</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Video Section -->
+    <section class="video-section" id="video">
+      <div class="container video-container">
+         <div class="badge">
+            <span class="subtitle">Demostración en Vivo</span>
+         </div>
+         <h2 class="video-title">Mira a <span style="color: var(--primary);">Barber's</span> en funcionamiento</h2>
+         <p class="video-desc">Descubre en pocos minutos cómo nuestra aplicación hace más fácil organizar tu tiempo, tus clientes y tus ganancias con un funcionamiento ágil y poderoso.</p>
+         
+         <div class="video-wrapper">
+            <iframe 
+              src="https://www.youtube.com/embed/_AK7OxYex6Y?si=uI31c1l" 
+              title="Barber's App Video Demostrativo"
+              frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+              allowfullscreen>
+            </iframe>
+         </div>
+      </div>
+    </section>
+
+    <!-- Final Conversion Section -->
+    <section class="final-conversion">
+      <div class="container">
+        <div class="conversion-card">
+          <div class="conversion-content">
+            <span class="conversion-badge">Pruébala hoy</span>
+            <h2>¿Listo para transformar tu barbería?</h2>
+            <p>Únete a los profesionales que ya están optimizando su tiempo y aumentando sus ingresos con Barber's. Todo el control que necesitas, en una sola app.</p>
+            
+            <div class="social-links-cta">
+              <a href="https://www.facebook.com/people/Barbers-HN/61567177681618/?mibextid=ZbWKwL" target="_blank" rel="noopener noreferrer" class="social-icon-link">
+                <Facebook size={24} />
+              </a>
+              <a href="https://www.instagram.com/barbershn_?igsh=MWNmaXFhZGxhcXE3dA%3D%3D" target="_blank" rel="noopener noreferrer" class="social-icon-link">
+                <Instagram size={24} />
+              </a>
+            </div>
+
+            <a href="https://wa.me/50494583355?text=Hola,%20me%20interesa%20una%20demostración%20de%20Barber%27s" target="_blank" rel="noopener noreferrer" class="btn-cta-main">
+              <MessageCircle size={22} />
+              Hablar con un experto
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <nav class="barbers-utility-bar">
+      <div class="utility-social-left">
+        <a href="https://www.facebook.com/people/Barbers-HN/61567177681618/?mibextid=ZbWKwL" target="_blank" rel="noopener noreferrer" class="social-icon">
+          <Facebook size={20} />
+        </a>
+        <a href="https://www.instagram.com/barbershn_?igsh=MWNmaXFhZGxhcXE3dA%3D%3D" target="_blank" rel="noopener noreferrer" class="social-icon">
+          <Instagram size={20} />
+        </a>
+      </div>
+      <div class="utility-links-right">
+        <a href="/barbers/acerca" class="util-btn">Acerca</a>
+        <a href="/barbers/privacidad" class="util-btn">Política de Privacidad</a>
+        <a href="/barbers/terminos" class="util-btn">Términos de uso</a>
+        <a href="/barbers/contacto" class="util-btn">Contacto</a>
+        <a href="/barbers/ayuda" class="util-btn">Ayuda</a>
+      </div>
+    </nav>
+  </main>
+  
+  <Footer />
+</Layout>
+
+<style>
+  .barbers-page {
+    padding-top: 64px;
+    background: #f1f5f9;
+  }
+
+  .text-center {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Hero Section */
+  .hero-section {
+    padding: 2.5rem 0 5rem 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-section .container {
+    max-width: 1400px;
+  }
+
+  .hero-visual {
+    margin-top: -3rem;
+    position: relative;
+    z-index: 10;
+  }
+
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  @media (max-width: 968px) {
+    .hero-grid {
+      grid-template-columns: 1fr;
+      text-align: center;
+      gap: 2rem;
+    }
+    .hero-content {
+      align-items: center;
+      text-align: center;
+    }
+    .product-logo-container {
+      justify-content: center !important;
+    }
+    .product-logo {
+      margin: 0 auto !important;
+    }
+    h1 {
+      text-align: center;
+    }
+    .hero-desc {
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .store-buttons {
+      justify-content: center;
+    }
+    .hero-visual {
+      margin-top: 0;
+    }
+  }
+
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .product-logo-container {
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: flex-start !important;
+    text-align: left;
+    width: 100%;
+  }
+
+  .product-logo {
+    max-width: 240px;
+    height: auto;
+    margin-left: 0 !important;
+    margin-right: auto;
+  }
+
+  h1 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 900;
+    color: var(--text);
+    margin-bottom: 1.5rem;
+    line-height: 1.15;
+    max-width: 800px;
+    text-align: left;
+  }
+
+  .badge {
+    background: #e1effe;
+    padding: 0.6rem 2.5rem;
+    border-radius: 9999px;
+    margin-bottom: 2rem;
+    display: inline-block;
+    border: 1px solid #bfdbfe;
+    color: var(--primary);
+    font-weight: 800;
+  }
+
+  .subtitle {
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 800;
+    color: var(--primary);
+    font-size: 0.85rem;
+  }
+
+  .hero-desc {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 2.5rem;
+    text-align: left;
+    max-width: 600px;
+  }
+
+  /* Store Buttons */
+  .store-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .btn-store {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: #111827;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 1rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  .btn-store:hover {
+    background: #000000;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+  }
+
+  .store-text {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+  }
+
+  .top-store {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    opacity: 0.8;
+    line-height: 1;
+    margin-bottom: 0.2rem;
+  }
+
+  .bottom-store {
+    font-size: 1.1rem;
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  .image-wrapper {
+    position: relative;
+    border-radius: 2.5rem;
+    overflow: hidden;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.1);
+    border: 8px solid white;
+  }
+
+  .main-hero-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease;
+  }
+
+  /* Highlight Banner */
+  .highlight-banner {
+    padding: 4rem 1rem;
+  }
+
+  .banner-content {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    border-radius: 2rem;
+    padding: 4rem 2rem;
+    text-align: center;
+    color: white;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .banner-content h2 {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    font-weight: 900;
+    margin: 0;
+  }
+
+  .pricing-title {
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
+    font-weight: 900;
+    color: var(--text);
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+    text-align: center;
+  }
+
+  .section-desc {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .highlight {
+    color: var(--primary);
+    position: relative;
+    display: inline-block;
+  }
+
+  /* Pricing Section */
+  .pricing-section {
+    padding: 6rem 0;
+    background: #f1f5f9;
+  }
+
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+    margin-top: 4rem;
+  }
+
+  .pricing-card {
+    background: white;
+    padding: 3.5rem 2.25rem;
+    border-radius: 2.5rem;
+    border: 1px solid rgba(0, 102, 204, 0.08);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    overflow: hidden;
+  }
+
+  .pricing-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background: rgba(0, 102, 204, 0.1);
+  }
+
+  .pricing-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 40px 100px -20px rgba(0, 0, 0, 0.12);
+    border-color: rgba(0, 102, 204, 0.2);
+  }
+
+  .pricing-card.popular {
+    border: 2px solid var(--primary);
+    box-shadow: 0 40px 100px -20px rgba(0, 102, 204, 0.15);
+    background: #ffffff;
+    transform: scale(1.05);
+    z-index: 10;
+  }
+
+  .pricing-card.popular::after {
+    background: linear-gradient(to right, var(--primary), var(--primary-dark));
+    height: 8px;
+  }
+
+  .pricing-card.popular:hover {
+    transform: scale(1.05) translateY(-15px);
+    box-shadow: 0 50px 120px -20px rgba(0, 102, 204, 0.25);
+  }
+
+  .popular-badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    color: white;
+    padding: 0.5rem 1.25rem;
+    border-radius: 2rem;
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    box-shadow: 0 4px 12px rgba(0, 102, 204, 0.3);
+  }
+
+  .card-header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .card-header h3 {
+    font-size: 1.75rem;
+    margin-bottom: 0.5rem;
+    color: var(--text);
+  }
+
+  .card-header p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .price {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 0.25rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .currency {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text);
+  }
+
+  .amount {
+    font-size: 4rem;
+    font-weight: 900;
+    color: var(--text);
+    line-height: 1;
+    background: linear-gradient(135deg, var(--text) 0%, #4b5563 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .period {
+    color: var(--text-muted);
+    font-weight: 600;
+  }
+
+  .promo-text {
+    font-size: 0.85rem;
+    color: var(--primary);
+    font-weight: 700;
+  }
+
+  .card-body {
+    margin-bottom: 2.5rem;
+    flex-grow: 1;
+  }
+
+  .feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .feature-list li {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 0.95rem;
+    color: var(--text);
+  }
+
+  .feature-list li :global(svg) {
+    color: #10b981;
+    flex-shrink: 0;
+  }
+
+  .btn-primary-full, .btn-outline-full {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    border-radius: 1rem;
+    text-align: center;
+    font-weight: 700;
+    transition: all 0.3s ease;
+  }
+
+  .btn-primary-full {
+    background: var(--primary);
+    color: white;
+  }
+
+  .btn-primary-full:hover {
+    background: var(--primary-dark);
+    transform: translateY(-3px);
+  }
+
+  .btn-outline-full {
+    background: transparent;
+    border: 2px solid var(--primary);
+    color: var(--primary);
+  }
+
+  .btn-outline-full:hover {
+    background: var(--primary);
+    color: white;
+    transform: translateY(-3px);
+  }
+
+  @media (max-width: 991px) {
+    .pricing-grid {
+      grid-template-columns: 1fr;
+      max-width: 450px;
+      margin: 4rem auto 0;
+      gap: 3rem;
+    }
+
+    .pricing-card.popular {
+      transform: scale(1);
+    }
+    
+    .pricing-card.popular:hover {
+      transform: translateY(-10px);
+    }
+  }
+
+  /* Video Section */
+  .video-section {
+    padding: 8rem 0;
+    background: #f1f5f9; /* Fondo azul claro del resto de la página */
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Contenedor flex para forzar el centro */
+  .video-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .video-title {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-weight: 900;
+    color: var(--text);
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+    text-align: center;
+  }
+
+  .video-desc {
+    font-size: 1.25rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin: 0 auto 4rem auto;
+    max-width: 800px;
+    text-align: center;
+  }
+
+  .video-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 1200px; /* Video mucho más grande */
+    margin: 0 auto;
+    aspect-ratio: 16/9;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    box-shadow: 0 0 100px rgba(37, 99, 235, 0.2), 0 0 30px rgba(59, 130, 246, 0.4); /* Resplandor épico */
+    border: 1px solid rgba(255,255,255,0.1);
+    background: #000;
+    transition: transform 0.5s ease-out, box-shadow 0.5s ease-out;
+  }
+
+  .video-wrapper:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 0 120px rgba(37, 99, 235, 0.3), 0 0 50px rgba(59, 130, 246, 0.6);
+  }
+
+  .video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+
+  /* Features Section */
+  .features-section {
+    padding: 4rem 0 6rem;
+  }
+
+  .feature-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    margin-bottom: 6rem;
+  }
+
+  .feature-row.reverse {
+    grid-template-columns: 1.1fr 0.9fr;
+  }
+
+  .feature-row.reverse .feature-text {
+    order: 2;
+  }
+
+  .feature-row.reverse .feature-image {
+    order: 1;
+  }
+
+  .feature-text {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .feature-info-card {
+    background: white;
+    padding: 3rem;
+    border-radius: 2.5rem;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.03);
+    border: 1px solid rgba(0, 102, 204, 0.05);
+    transition: transform 0.3s ease;
+  }
+
+  @media (max-width: 768px) {
+    .feature-info-card {
+      padding: 1.5rem;
+      border-radius: 1.5rem;
+    }
+  }
+
+  .feature-info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 30px 60px rgba(0, 102, 204, 0.08);
+  }
+
+  .feature-text h3 {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--text);
+    margin-bottom: 1.5rem;
+    line-height: 1.25;
+  }
+
+  .feature-text p {
+    font-size: 1.15rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+  }
+
+  .feature-icon-box {
+    width: 64px;
+    height: 64px;
+    background: linear-gradient(135deg, rgba(0, 102, 204, 0.1) 0%, rgba(0, 102, 204, 0.05) 100%);
+    color: var(--primary);
+    border-radius: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+    border: 1px solid rgba(0, 102, 204, 0.1);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+  }
+
+  .mini-badge {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--primary);
+    background: rgba(0, 102, 204, 0.08);
+    padding: 0.4rem 1.25rem;
+    border-radius: 2rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .benefit-list {
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .benefit-list li {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 1.05rem;
+    color: var(--text);
+    font-weight: 500;
+  }
+
+  .check-icon {
+    color: #10b981;
+    flex-shrink: 0;
+  }
+
+  .placeholder-image {
+    border-radius: 2rem;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+    aspect-ratio: 4/3;
+  }
+
+  .rounded-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .contain-img {
+    object-fit: contain;
+    padding: 2rem;
+    background: white;
+  }
+
+  /* Phone Mockup Proporcional (Con Altura Fija) */
+  .phone-mockup {
+    width: 280px;
+    height: 560px;
+    margin: 0 auto;
+    padding: 10px;
+    background: #000;
+    border-radius: 3.2rem;
+    box-shadow: 0 50px 100px -20px rgba(0,0,0,0.25), 
+                0 30px 60px -30px rgba(0,0,0,0.3);
+    position: relative;
+    border: 1px solid rgba(255,255,255,0.1);
+  }
+
+  @media (max-width: 480px) {
+    .phone-mockup {
+      width: 240px;
+      height: 480px;
+      border-radius: 2.5rem;
+    }
+    .phone-frame {
+      border-radius: 2rem;
+    }
+  }
+
+  .phone-mockup.shadow-blue {
+    box-shadow: 0 50px 100px -20px rgba(0, 102, 204, 0.15), 
+                0 30px 60px -30px rgba(0, 0, 0, 0.3);
+  }
+
+  .phone-frame {
+    width: 100%;
+    height: 100%;
+    background: white;
+    border-radius: 2.6rem;
+    overflow: hidden;
+    position: relative;
+    mask-image: linear-gradient(to bottom, black 0%, black 100%); /* Forzar redondeado en Safari */
+  }
+
+  .phone-screen-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    transition: transform 0.5s ease;
+  }
+
+  .phone-mockup:hover .phone-screen-img {
+    transform: scale(1.05);
+  }
+
+  /* Custom Barbers Footer */
+  /* Final Conversion Section */
+  .final-conversion {
+    padding: 6rem 0 10rem;
+    background: #f1f5f9;
+  }
+
+  .conversion-card {
+    background: linear-gradient(135deg, var(--primary-dark) 0%, #001f3f 100%);
+    border-radius: 3rem;
+    padding: 5rem 2rem;
+    text-align: center;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 40px 100px -20px rgba(0, 102, 204, 0.3);
+  }
+
+  .conversion-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .conversion-content {
+    max-width: 700px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+  }
+
+  .conversion-badge {
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 2rem;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    margin-bottom: 2rem;
+  }
+
+  .conversion-card h2 {
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
+    font-weight: 900;
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+    color: white;
+  }
+
+  .conversion-card p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    margin-bottom: 3rem;
+    line-height: 1.6;
+  }
+
+  .social-links-cta {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .social-icon-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    color: white;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+  }
+
+  .social-icon-link:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-5px);
+    border-color: white;
+    color: var(--primary-light);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  }
+
+  .btn-cta-main {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: white;
+    color: var(--primary-dark);
+    padding: 1.25rem 3rem;
+    border-radius: 4rem;
+    font-weight: 800;
+    font-size: 1.1rem;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+  }
+
+  .btn-cta-main:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    background: var(--bg-soft);
+  }
+
+  @media (max-width: 991px) {
+    .feature-row, .feature-row.reverse {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+      text-align: center;
+    }
+    
+    .feature-row.reverse .feature-text { order: 1; }
+    .feature-row.reverse .feature-image { order: 2; }
+    
+    .feature-icon-box {
+      margin: 0 auto 2rem;
+    }
+    
+    .hero-grid {
+      grid-template-columns: 1fr;
+      text-align: center;
+      gap: 4rem;
+    }
+    
+    .hero-content {
+      padding-top: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    
+    .hero-visual {
+      order: -1;
+      margin-bottom: 2rem;
+    }
+    
+    .product-logo-container {
+      justify-content: center !important;
+    }
+    
+    .product-logo {
+      margin: 0 auto !important;
+    }
+    
+    h1, .hero-desc {
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .store-buttons {
+      justify-content: center;
+    }
+
+    .footer-links {
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    
+    .conversion-card {
+      padding: 4rem 1.5rem;
+      border-radius: 2rem;
+    }
+  }
+
+  /* Barber's Utility Bar (Submenu Minimalist) */
+  .barbers-utility-bar {
+    background: #f1f5f9;
+    padding: 3rem 4rem;
+    border-top: 1px solid rgba(0,0,0,0.05);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .utility-social-left {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+  }
+
+  .social-icon {
+    color: #666666;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+  }
+
+  .social-icon:hover {
+    color: var(--primary);
+    transform: translateY(-2px);
+  }
+
+  .utility-links-right {
+    display: flex;
+    gap: 2.5rem;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    text-align: right;
+  }
+
+  .util-btn {
+    display: inline-block;
+    color: #666666;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    padding-bottom: 4px;
+    border-bottom: 2px solid transparent;
+  }
+
+  .util-btn:hover {
+    color: var(--primary) !important;
+    text-decoration: underline !important;
+    text-underline-offset: 6px;
+  }
+
+  @media (max-width: 768px) {
+    .barbers-utility-bar {
+      flex-direction: column;
+      gap: 2.5rem;
+      padding: 4rem 1.5rem;
+      text-align: center;
+    }
+    
+    .utility-links-right {
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+      width: 100%;
+      text-align: center;
+    }
+
+    .util-btn {
+      font-size: 1rem;
+      margin: 0 !important;
+      padding: 0.5rem 0;
+      width: 100%;
+      border-bottom: 1px solid rgba(0,0,0,0.05);
+    }
+
+    .util-btn:last-child {
+      border-bottom: none;
+    }
+
+    .utility-social-left {
+      justify-content: center;
+      width: 100%;
+      order: 2; /* Social icons at the bottom on mobile */
+    }
+  }
+</style>

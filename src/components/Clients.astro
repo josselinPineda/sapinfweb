@@ -1,0 +1,375 @@
+---
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+
+const categories = [
+  {
+    name: 'Salud y Farmacéutico',
+    files: [
+      '1-BETESDA.png', '2-Biosalud.jpeg.png', '3-cmg.png', '5-Ecofarma.png', 
+      '7-OFTS.png', 'MasterLab.png', 'med-plus-01.png', 'SIME.png','4-COBAN.png', 'CDM.png',
+      'Logos-03.png','Medrano.png','Yes.png'
+    ]
+  },
+  {
+    name: 'Agroindustria y Exportación',
+    files: [
+      'Agriland.png', 'AgroAlpha.png', 'Granjas.png', 
+      'Seajoy.png', 'CARIBEAN.png', 'Rivermar.png','Berthita.png', 'adicaap-01.png',
+      'cayo-blanco.png', 'la-pita.png','Logos-01.png','STB.png'
+    ]
+  },
+  {
+    name: 'Comercio ',
+    files: [
+      '8-Reymarket.png', 'ELIANA.png', 
+      'comercial-gabriela.png', 'cacho-sports.png','Invelpac-png.png',
+      'Logos-10.png', 'sfg.png','inversionesjireth.png'
+    ]
+  },
+  {
+    name: 'Alimentos y Restaurantes',
+    files: [
+      'Club-Pastelero.png', 'pollos-2-hermanos.png', 'repos-monjaras-01.png', 
+      'reposteria-monjaras-01.png', '6-Inv_Jireh.png','inversiones-lubinda-01.png',
+      'logolacteoslasierra.png', 'logolacteoseltablon.png', 'Logos-02.png','Logos-04.png',
+      'Logos-07.png','Logos-08.png'
+    ]
+  },
+  {
+    name: 'Servicios y Más',
+    files: [
+      '9-Serviprint.png', 'April-Movil.png', 'Gotita.png', 'CCISUR.png', 
+      'Unitel.png', 'copymax.png', 'coserfisa.png', 'sfg.png', 'ASEI.png'
+      , 'RFLORES Logo PNG.png', 'STB.png', 'fandi-01.png',
+      'logowikiservice.png','Flagos.png',"logogiannini'sphonestore.png",'Logos-05.png',
+      'Logos-06.png','Logos-11.png','Esperanza.png', 'Logos-09.png'
+    ]
+  }
+ 
+];
+
+const allImages = import.meta.glob<{ default: ImageMetadata }>('../assets/*.{png,jpg,jpeg,svg,webp}', { eager: true });
+
+const imageHash: Record<string, ImageMetadata> = {};
+for (const path in allImages) {
+  const filename = path.split('/').pop();
+  if (filename) {
+    imageHash[filename] = allImages[path].default;
+  }
+}
+
+const categorizedClients = categories.map(cat => ({
+  ...cat,
+  logos: cat.files.map(f => imageHash[f]).filter(Boolean)
+})).filter(cat => cat.logos.length > 0);
+---
+
+<section id="clientes" class="clients-section">
+  <div class="container-header">
+    <div class="section-header">
+      <div class="badge">
+        <span class="subtitle">Confianza y Resultados</span>
+      </div>
+      <h2>Empresas que confían en nuestro <span class="highlight">trabajo</span></h2>
+      <p class="section-desc">Avalados por empresas líderes que dividimos por rubros para mostrar nuestro amplio alcance.</p>
+    </div>
+  </div>
+
+  <div class="marquees-container">
+    {categorizedClients.map((category, index) => (
+      <div class="category-marquee-row" data-direction={index % 2 === 0 ? 'left' : 'right'}>
+        <div class="category-label">
+           <span>{category.name}</span>
+        </div>
+        
+        <div class="marquee-controls-wrapper">
+          <button class="nav-btn prev" aria-label="Anterior">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+          </button>
+          
+          <div class="marquee-viewport">
+            <div class="marquee-track">
+              {/* Duplicamos el contenido para el efecto infinito por JS */}
+              <div class="logos-group">
+                {category.logos.map((logo) => (
+                  <div class="client-card">
+                    <Image src={logo} alt={`Logo ${category.name}`} class="client-logo-img" />
+                  </div>
+                ))}
+              </div>
+              <div class="logos-group">
+                {category.logos.map((logo) => (
+                  <div class="client-card">
+                    <Image src={logo} alt={`Logo ${category.name}`} class="client-logo-img" />
+                  </div>
+                ))}
+              </div>
+              <div class="logos-group">
+                {category.logos.map((logo) => (
+                  <div class="client-card">
+                    <Image src={logo} alt={`Logo ${category.name}`} class="client-logo-img" />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <button class="nav-btn next" aria-label="Siguiente">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+          </button>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>
+
+<style>
+  .clients-section {
+    padding: 100px 0;
+    background: #ffffff;
+    overflow: hidden;
+  }
+
+  .container-header {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  .badge {
+    background: rgba(0, 102, 204, 0.08);
+    padding: 0.6rem 1.6rem;
+    border-radius: 99px;
+    margin-bottom: 1.5rem;
+    display: inline-block;
+  }
+
+  .subtitle {
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-weight: 800;
+    color: #0066cc;
+    font-size: 0.75rem;
+  }
+
+  h2 {
+    font-size: clamp(2.2rem, 5vw, 3.2rem);
+    font-weight: 900;
+    color: #0f172a;
+    line-height: 1.1;
+  }
+
+  .highlight { color: #0066cc; }
+
+  .section-desc {
+    color: #64748b;
+    font-size: 1.1rem;
+    max-width: 650px;
+    margin: 1.5rem auto 0;
+  }
+
+  .marquees-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin-top: 3rem;
+  }
+
+  .category-marquee-row {
+    width: 100%;
+    position: relative;
+  }
+
+  .category-label {
+    max-width: 1200px;
+    margin: 0 auto 15px;
+    padding: 0 1.5rem;
+  }
+
+  .category-label span {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+
+  .marquee-controls-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 0 20px;
+    width: 100%;
+  }
+
+  .marquee-viewport {
+    flex-grow: 1;
+    overflow: hidden;
+    position: relative;
+    padding: 10px 0;
+  }
+
+  /* Gradientes de desvanecimiento */
+  .marquee-viewport::before,
+  .marquee-viewport::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100px;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+  }
+
+  .marquee-viewport::before {
+    left: 0;
+    background: linear-gradient(to right, white 0%, transparent 100%);
+  }
+
+  .marquee-viewport::after {
+    right: 0;
+    background: linear-gradient(to left, white 0%, transparent 100%);
+  }
+
+  .marquee-track {
+    display: flex;
+    width: max-content;
+    gap: 40px;
+    will-change: transform;
+  }
+
+  .logos-group {
+    display: flex;
+    gap: 40px;
+    flex-shrink: 0;
+  }
+
+  .client-card {
+    width: 160px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    transition: all 0.3s ease;
+  }
+
+  .client-card:hover {
+    transform: scale(1.15);
+  }
+
+  .client-logo-img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+  }
+
+  /* Navigation Buttons */
+  .nav-btn {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    color: #64748b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  }
+
+  .nav-btn:hover {
+    background: #0066cc;
+    color: white;
+    border-color: #0066cc;
+    transform: scale(1.1);
+  }
+
+  @media (max-width: 768px) {
+    .nav-btn { display: none; }
+    .marquee-controls-wrapper { padding: 0 10px; gap: 0; }
+    .client-card { width: 140px; height: 75px; }
+    .marquee-viewport::before, .marquee-viewport::after { width: 50px; }
+  }
+</style>
+
+<script>
+  // Advanced Hybrid Marquee (Automatic + Manual Buttons)
+  class HybridMarquee {
+    constructor(row) {
+      this.row = row;
+      this.track = row.querySelector('.marquee-track');
+      this.viewport = row.querySelector('.marquee-viewport');
+      this.direction = row.dataset.direction === 'left' ? -1 : 1;
+      this.speed = 0.8; // Pixels per frame
+      this.offset = 0;
+      this.isPaused = false;
+      this.prevBtn = row.querySelector('.prev');
+      this.nextBtn = row.querySelector('.next');
+      
+      this.init();
+    }
+
+    init() {
+      // Calculate half track width
+      this.groupWidth = this.track.querySelector('.logos-group').offsetWidth + 40; // width + gap
+      
+      // Initial Position for right scroll
+      if (this.direction === 1) {
+        this.offset = -this.groupWidth;
+      }
+
+      this.animate();
+      this.bindEvents();
+    }
+
+    animate() {
+      if (!this.isPaused) {
+        this.offset += this.speed * this.direction;
+        
+        // Loop logic
+        if (Math.abs(this.offset) >= this.groupWidth) {
+          this.offset = 0;
+        } else if (this.offset > 0 && this.direction === 1) {
+           this.offset = -this.groupWidth;
+        }
+        
+        this.track.style.transform = `translateX(${this.offset}px)`;
+      }
+      requestAnimationFrame(() => this.animate());
+    }
+
+    bindEvents() {
+      this.viewport.addEventListener('mouseenter', () => this.isPaused = true);
+      this.viewport.addEventListener('mouseleave', () => this.isPaused = false);
+      
+      this.prevBtn.addEventListener('click', () => {
+        this.offset += 300; // Jump back
+        this.track.style.transition = 'transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1)';
+        setTimeout(() => this.track.style.transition = 'none', 500);
+      });
+
+      this.nextBtn.addEventListener('click', () => {
+        this.offset -= 300; // Jump forward
+        this.track.style.transition = 'transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1)';
+        setTimeout(() => this.track.style.transition = 'none', 500);
+      });
+    }
+  }
+
+  // Initialize all marquees
+  document.querySelectorAll('.category-marquee-row').forEach(row => {
+    new HybridMarquee(row);
+  });
+</script>

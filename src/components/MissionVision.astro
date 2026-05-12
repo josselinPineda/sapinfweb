@@ -1,0 +1,195 @@
+---
+import { Target, Eye } from 'lucide-astro';
+---
+
+<section id="proposito" class="mission-vision">
+  <div class="container relative">
+    <div class="mv-content">
+      
+      <div class="mv-header">
+        <div class="badge">
+          <span class="subtitle">Nuestra Esencia</span>
+        </div>
+        <h2>Propósito y <span class="highlight">Dirección</span></h2>
+      </div>
+      
+      <div class="mv-cards-grid">
+        <!-- Tarjeta Misión -->
+        <div class="mv-card">
+          <div class="icon-box mission-icon">
+            <Target size={32} />
+          </div>
+          <div class="card-content">
+            <h3>Misión</h3>
+            <p>Brindar productos y servicios de excelente calidad, utilizando tecnologías de punta en nuestros procesos, como servicios de consultoría, soporte, capacitación y soluciones informáticas, para contribuir a la mejor gestión en los negocios de nuestros clientes de pequeñas, medianas y grandes empresas.</p>
+          </div>
+        </div>
+        
+        <!-- Tarjeta Visión -->
+        <div class="mv-card">
+          <div class="icon-box vision-icon">
+            <Eye size={32} />
+          </div>
+          <div class="card-content">
+            <h3>Visión</h3>
+            <p>Lograr posicionarnos en el mercado como una empresa líder, sólida y comprometida con la sociedad, implementando soluciones informáticas para nuestros clientes de forma confiable, adaptadas a nuevas tendencias del mercado, logrando llegar al 2026 con un número considerable de clientes satisfechos y fieles a nuestra empresa.</p>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+<style>
+  .mission-vision {
+    padding: 6rem 0;
+    background: var(--bg-soft);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .mv-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 2rem;
+  }
+
+  .mv-header {
+    margin-bottom: 3rem;
+  }
+
+  /* Text & Headers */
+  .badge {
+    background: rgba(0, 102, 204, 0.15); 
+    padding: 0.5rem 1.5rem;
+    border-radius: 2rem;
+    margin-bottom: 2rem;
+    display: inline-block;
+    border: 1px solid rgba(0, 102, 204, 0.3);
+  }
+
+  .subtitle {
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-weight: 800;
+    color: var(--primary);
+    font-size: 0.85rem;
+  }
+
+  .mv-header h2 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 800;
+    margin: 0;
+    color: var(--text);
+    line-height: 1.1;
+  }
+
+  .highlight {
+    color: var(--primary);
+    position: relative;
+    display: inline-block;
+  }
+
+  .highlight::after {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    width: 100%;
+    height: 30%;
+    background: var(--accent);
+    opacity: 0.8;
+    z-index: -1;
+    border-radius: 4px;
+    transform: skewX(-15deg);
+  }
+
+  /* Cards Grid */
+  .mv-cards-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+
+  .mv-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 3rem 2.5rem;
+    background: var(--bg);
+    border-radius: 2rem;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.04);
+    border: 1px solid rgba(0, 102, 204, 0.08);
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
+    text-align: center;
+  }
+
+  .mv-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgba(0, 102, 204, 0.12);
+    border-color: var(--primary-light);
+  }
+
+  .icon-box {
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+  }
+
+  .mission-icon {
+    background: var(--primary);
+    color: white;
+  }
+
+  .vision-icon {
+    background: var(--accent);
+    color: var(--primary-dark);
+  }
+
+  .card-content h3 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--text);
+    margin-bottom: 1rem;
+  }
+
+  .card-content p {
+    font-size: 1rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  /* Responsiveness */
+  @media (max-width: 1024px) {
+    .mv-cards-grid {
+      gap: 2.5rem;
+    }
+    
+    .mv-card {
+      padding: 4rem 2.5rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .mv-cards-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .mission-vision {
+      padding: 7rem 0;
+    }
+
+    .mv-header {
+      margin-bottom: 4rem;
+    }
+  }
+</style>

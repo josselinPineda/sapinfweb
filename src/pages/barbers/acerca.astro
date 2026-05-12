@@ -1,0 +1,429 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+import { 
+  CheckCircle2,
+  Info,
+  Users,
+  Award,
+  ShieldCheck,
+  Zap,
+  Globe,
+  Facebook,
+  Instagram
+} from 'lucide-astro';
+
+const pageTitle = "Sobre Nosotros - SAPINF & Barber's";
+---
+
+<Layout title={pageTitle}>
+  <Navbar />
+  
+  <main class="acerca-page">
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <div class="badge">
+            <span class="subtitle">Desarrollado por SAPINF</span>
+          </div>
+          <h1 class="premium-title">Sobre <span class="highlight">Nosotros</span></h1>
+          <p class="hero-desc">
+            Detrás del desarrollo de Barber's se encuentra SAPINF, una de las empresas líderes en la región en el desarrollo de soluciones de software innovadoras y personalizadas.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Company Info Section -->
+    <section class="info-section">
+      <div class="container grid-container">
+        <div class="info-card-large shadow-premium">
+          <div class="info-header">
+            <Info size={32} class="accent-icon" />
+            <h2>Nuestra Misión con Barber's</h2>
+          </div>
+          <p class="info-text">
+            Con un enfoque en la excelencia tecnológica y el compromiso con sus clientes, SAPINF busca transformar y optimizar los procesos de negocio mediante herramientas digitales de alta calidad, impulsando el crecimiento y la eficiencia de las empresas que confían en sus soluciones.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why SAPINF Section -->
+    <section class="why-sapinf">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="badge">
+            <span class="subtitle">Excelencia Tecnológica</span>
+          </div>
+          <h2 class="title-why">¿Por qué <span class="highlight">SAPINF</span>?</h2>
+          <p class="section-desc">Nos diferenciamos por nuestro compromiso y experiencia en el sector tecnológico.</p>
+        </div>
+
+        <div class="benefits-grid">
+          <div class="benefit-card">
+            <div class="benefit-icon-box"><Zap size={28} /></div>
+            <h3>Acompañamiento Continuo</h3>
+            <p>Proporcionamos acompañamiento continuo durante y post implementación para asegurar su éxito.</p>
+          </div>
+
+          <div class="benefit-card">
+            <div class="benefit-icon-box"><Users size={28} /></div>
+            <h3>Experiencia Multisectorial</h3>
+            <p>Profesionales con experiencia en implementaciones de diferentes rubros.</p>
+          </div>
+
+          <div class="benefit-card">
+            <div class="benefit-icon-box"><Award size={28} /></div>
+            <h3>Soluciones a Medida</h3>
+            <p>Soluciones a la medida de nuestros clientes, adaptándonos a sus necesidades específicas.</p>
+          </div>
+
+          <div class="benefit-card">
+            <div class="benefit-icon-box"><ShieldCheck size={28} /></div>
+            <h3>Soporte Integral</h3>
+            <p>Ofrecemos soporte Remoto y presencial para resolver cualquier inconveniente rápidamente.</p>
+          </div>
+
+          <div class="benefit-card">
+            <div class="benefit-icon-box"><Globe size={28} /></div>
+            <h3>Trayectoria Comprobada</h3>
+            <p>Profesionales altamente calificados con más de 12 años de experiencia en el mercado.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <nav class="barbers-utility-bar">
+      <div class="utility-social-left">
+        <a href="https://www.facebook.com/people/Barbers-HN/61567177681618/?mibextid=ZbWKwL" target="_blank" rel="noopener noreferrer" class="social-icon">
+          <Facebook size={20} />
+        </a>
+        <a href="https://www.instagram.com/barbershn_?igsh=MWNmaXFhZGxhcXE3dA%3D%3D" target="_blank" rel="noopener noreferrer" class="social-icon">
+          <Instagram size={20} />
+        </a>
+      </div>
+      <div class="utility-links-right">
+        <a href="/barbers/acerca" class="util-btn">Acerca</a>
+        <a href="/barbers/privacidad" class="util-btn">Política de Privacidad</a>
+        <a href="/barbers/terminos" class="util-btn">Términos de uso</a>
+        <a href="/barbers/contacto" class="util-btn">Contacto</a>
+        <a href="/barbers/ayuda" class="util-btn">Ayuda</a>
+      </div>
+    </nav>
+  </main>
+  
+  <Footer />
+</Layout>
+
+<style>
+  .acerca-page {
+    padding-top: 80px;
+    background: #f1f5f9;
+    min-height: 100vh;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  .text-center {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Badge Style */
+  .badge {
+    background: #e1effe;
+    padding: 0.6rem 2rem;
+    border-radius: 9999px;
+    margin-bottom: 2rem;
+    display: inline-block;
+    border: 1px solid #bfdbfe;
+    color: var(--primary);
+    font-weight: 800;
+  }
+
+  .subtitle {
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 800;
+    color: var(--primary);
+    font-size: 0.8rem;
+  }
+
+  /* Hero Section */
+  .hero-section {
+    padding: 5rem 0 3rem 0;
+  }
+
+  .hero-container {
+    text-align: center;
+  }
+
+  .premium-title {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    font-weight: 900;
+    color: var(--text);
+    margin-bottom: 1.25rem;
+    line-height: 1.1;
+  }
+
+  .highlight {
+    color: var(--primary);
+  }
+
+  .hero-desc {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  /* Info Section */
+  .info-section {
+    padding: 4rem 0;
+  }
+
+  .info-card-large {
+    background: white;
+    padding: 4rem;
+    border-radius: 2.5rem;
+    border: 1px solid rgba(0, 102, 204, 0.08);
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.05);
+  }
+
+  .info-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .accent-icon {
+    color: var(--primary);
+  }
+
+  .info-header h2 {
+    font-size: 1.5rem;
+    color: var(--text);
+  }
+
+  .info-text {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.8;
+  }
+
+  /* Why SAPINF Section */
+  .why-sapinf {
+    padding: 6rem 0;
+  }
+
+  .title-why {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 900;
+    margin-bottom: 1rem;
+  }
+
+  .section-desc {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    margin-bottom: 4rem;
+  }
+
+  .benefits-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+
+  .benefit-card {
+    background: white;
+    padding: 3rem 2rem;
+    border-radius: 2rem;
+    border: 1px solid rgba(0, 102, 204, 0.05);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    width: calc(33.333% - 1.5rem);
+    min-width: 300px;
+    flex-grow: 1;
+    max-width: 380px;
+  }
+
+  .benefit-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+    border-color: var(--primary-light);
+  }
+
+  .benefit-icon-box {
+    width: 60px;
+    height: 60px;
+    background: #f1f5fa;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+    transition: all 0.3s ease;
+  }
+
+  .benefit-card:hover .benefit-icon-box {
+    background: var(--primary);
+    color: white;
+  }
+
+  .benefit-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    color: var(--text);
+  }
+
+  .benefit-card p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  /* Back Section */
+  .back-section {
+    padding: 4rem 0 8rem 0;
+  }
+
+  .btn-back {
+    display: inline-flex;
+    align-items: center;
+    padding: 1rem 3rem;
+    background: var(--text);
+    color: white;
+    border-radius: 9999px;
+    font-weight: 700;
+    transition: all 0.3s ease;
+  }
+
+  .btn-back:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    background: var(--primary);
+  }
+
+  @media (max-width: 768px) {
+    .info-card-large {
+      padding: 2rem;
+    }
+    
+    .benefits-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  /* Barber's Utility Bar (Submenu Minimalist) */
+  .barbers-utility-bar {
+    background: #f1f5f9;
+    padding: 3rem 4rem;
+    border-top: 1px solid rgba(0,0,0,0.05);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .utility-social-left {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+  }
+
+  .social-icon {
+    color: #666666;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+  }
+
+  .social-icon:hover {
+    color: var(--primary);
+    transform: translateY(-2px);
+  }
+
+  .utility-links-right {
+    display: flex;
+    gap: 2.5rem;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    text-align: right;
+  }
+
+  .util-btn {
+    display: inline-block;
+    color: #666666;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    padding-bottom: 4px;
+    border-bottom: 2px solid transparent;
+  }
+
+  .util-btn:hover {
+    color: var(--primary) !important;
+    text-decoration: underline !important;
+    text-underline-offset: 6px;
+  }
+
+  @media (max-width: 768px) {
+    .barbers-utility-bar {
+      flex-direction: column;
+      gap: 2.5rem;
+      padding: 4rem 1.5rem;
+      text-align: center;
+    }
+    
+    .utility-links-right {
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+      width: 100%;
+      text-align: center;
+    }
+
+    .util-btn {
+      font-size: 1rem;
+      margin: 0 !important;
+      padding: 0.5rem 0;
+      width: 100%;
+      border-bottom: 1px solid rgba(0,0,0,0.05);
+    }
+
+    .util-btn:last-child {
+      border-bottom: none;
+    }
+
+    .utility-social-left {
+      justify-content: center;
+      width: 100%;
+      order: 2; /* Social icons at the bottom on mobile */
+    }
+  }
+</style>

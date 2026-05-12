@@ -1,0 +1,477 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+import { 
+  FileText,
+  Scale,
+  Gavel,
+  ShieldAlert,
+  HelpCircle,
+  CheckCircle2,
+  Facebook,
+  Instagram
+} from 'lucide-astro';
+
+const pageTitle = "Términos de Uso - Barber's";
+---
+
+<Layout title={pageTitle}>
+  <Navbar />
+  
+  <main class="terminos-page">
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <div class="badge">
+            <span class="subtitle">Legalidad</span>
+          </div>
+          <h1 class="premium-title">Términos de <span class="highlight">Uso</span></h1>
+          <p class="hero-desc">
+            Reglas y condiciones para el acceso y uso de la plataforma Barber's, desarrollada por SAPINF.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="terms-content">
+      <div class="container">
+        <div class="content-wrapper shadow-premium">
+          <div class="intro-block">
+            <p>
+              Estos Términos de Uso regulan el acceso y uso de la aplicación Barber's (en adelante, "la Aplicación"), propiedad de SAPINF. Al utilizar la Aplicación, aceptas los términos y condiciones aquí descritos. Si no estás de acuerdo con estos términos, te recomendamos no utilizar la Aplicación.
+            </p>
+          </div>
+
+          <div class="terms-sections">
+            <!-- 1. Definiciones -->
+            <div class="term-item">
+              <div class="term-header">
+                <span class="term-num">1</span>
+                <h3>Definiciones</h3>
+              </div>
+              <ul class="nested-list">
+                <li><strong>Aplicación:</strong> La plataforma Barber's para la gestión de barberías.</li>
+                <li><strong>Usuario:</strong> Cualquier persona o entidad que utilice la plataforma.</li>
+                <li><strong>Barbería:</strong> Negocio registrado para la gestión de servicios.</li>
+                <li><strong>Contenido:</strong> Toda la información ingresada (datos, barberos, servicios).</li>
+              </ul>
+            </div>
+
+            <!-- 2. Registro y Acceso -->
+            <div class="term-item">
+              <div class="term-header">
+                <span class="term-num">2</span>
+                <h3>Registro y Acceso</h3>
+              </div>
+              <p>El usuario acepta utilizar la Aplicación únicamente para los fines establecidos. Queda prohibido:</p>
+              <ul class="nested-list">
+                <li><ShieldAlert size={14} /> Usar la app para actividades ilegales.</li>
+                <li><ShieldAlert size={14} /> Compartir información confidencial sin consentimiento.</li>
+                <li><ShieldAlert size={14} /> Ingeniería inversa o extraer el código fuente.</li>
+              </ul>
+            </div>
+
+            <!-- 3. Uso de la Aplicación -->
+            <div class="term-item">
+              <div class="term-header">
+                <span class="term-num">3</span>
+                <h3>Uso de la Aplicación</h3>
+              </div>
+              <p>Es necesario registrarse con información veraz. Es responsabilidad del usuario mantener la confidencialidad de sus credenciales y notificar cualquier uso no autorizado.</p>
+            </div>
+
+            <!-- 4. Propiedad Intelectual -->
+            <div class="term-item">
+              <div class="term-header">
+                <span class="term-num">4</span>
+                <h3>Propiedad Intelectual</h3>
+              </div>
+              <p>Todo el contenido y diseño son propiedad exclusiva de SAPINF. Solo se concede un derecho de uso limitado conforme a estos términos.</p>
+            </div>
+
+            <!-- 5. Privacidad -->
+            <div class="term-item">
+              <div class="term-header">
+                <span class="term-num">5</span>
+                <h3>Privacidad y Protección de Datos</h3>
+              </div>
+              <p>El uso implica el tratamiento de datos personales conforme a nuestra Política de Privacidad.</p>
+            </div>
+
+            <!-- 6. Responsabilidad -->
+            <div class="term-item">
+              <div class="term-header">
+                <span class="term-num">6</span>
+                <h3>Responsabilidad</h3>
+              </div>
+              <p>SAPINF no se hace responsable por errores en la app, uso indebido por parte del usuario o contenido ingresado por terceros.</p>
+            </div>
+
+            <!-- 7 y 8. Modificaciones y Suspensión -->
+            <div class="term-item">
+              <div class="term-header">
+                <span class="term-num">7</span>
+                <h3>Modificaciones y Suspensión</h3>
+              </div>
+              <p>SAPINF puede modificar estos términos o suspender el acceso en caso de incumplimiento. Las modificaciones entran en vigor inmediatamente tras su publicación.</p>
+            </div>
+
+            <!-- 9. Jurisdicción -->
+            <div class="term-item">
+              <div class="term-header">
+                <span class="term-num">8</span>
+                <h3>Jurisdicción</h3>
+              </div>
+              <p>Estos términos se rigen por las leyes del país sede de SAPINF y cualquier disputa se someterá a sus tribunales competentes.</p>
+            </div>
+          </div>
+
+          <!-- 10. Contacto -->
+          <div class="contact-block">
+            <div class="contact-header">
+              <HelpCircle size={24} class="accent-icon" />
+              <h3>Consultas Legales</h3>
+            </div>
+            <p>Para consultas o comentarios sobre estos Términos de Uso, contáctanos:</p>
+            <a href="mailto:soporte@sapinf.com" class="btn-email">
+              soporte@sapinf.com
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Submenu Section -->
+    <nav class="barbers-utility-bar">
+      <div class="utility-social-left">
+        <a href="https://www.facebook.com/people/Barbers-HN/61567177681618/?mibextid=ZbWKwL" target="_blank" rel="noopener noreferrer" class="social-icon">
+          <Facebook size={20} />
+        </a>
+        <a href="https://www.instagram.com/barbershn_?igsh=MWNmaXFhZGxhcXE3dA%3D%3D" target="_blank" rel="noopener noreferrer" class="social-icon">
+          <Instagram size={20} />
+        </a>
+      </div>
+      <div class="utility-links-right">
+        <a href="/barbers/acerca" class="util-btn">Acerca</a>
+        <a href="/barbers/privacidad" class="util-btn">Política de Privacidad</a>
+        <a href="/barbers/terminos" class="util-btn">Términos de uso</a>
+        <a href="/barbers/contacto" class="util-btn">Contacto</a>
+        <a href="/barbers/ayuda" class="util-btn">Ayuda</a>
+      </div>
+    </nav>
+  </main>
+  
+  <Footer />
+</Layout>
+
+<style>
+  .terminos-page {
+    padding-top: 80px;
+    background: #f1f5f9;
+    min-height: 100vh;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  /* Badge Style */
+  .badge {
+    background: #e1effe;
+    padding: 0.5rem 1.5rem;
+    border-radius: 9999px;
+    margin-bottom: 2rem;
+    display: inline-block;
+    border: 1px solid #bfdbfe;
+    color: var(--primary);
+    font-weight: 800;
+  }
+
+  .subtitle {
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 800;
+    color: var(--primary);
+    font-size: 0.75rem;
+  }
+
+  /* Hero Section */
+  .hero-section {
+    padding: 4rem 0 2rem 0;
+    text-align: center;
+  }
+
+  .premium-title {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    font-weight: 900;
+    color: var(--text);
+    margin-bottom: 1.25rem;
+    line-height: 1.1;
+  }
+
+  .highlight {
+    color: var(--primary);
+  }
+
+  .hero-desc {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  /* Content Section */
+  .terms-content {
+    padding: 3rem 0 6rem 0;
+  }
+
+  .content-wrapper {
+    background: white;
+    padding: 4rem;
+    border-radius: 2.5rem;
+    border: 1px solid rgba(0, 102, 204, 0.08);
+    max-width: 900px;
+    margin: 0 auto;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.05);
+  }
+
+  .intro-block {
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #eee;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: var(--text-muted);
+  }
+
+  .terms-sections {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .term-item {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .term-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .term-num {
+    background: var(--primary);
+    color: white;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    font-weight: 900;
+    flex-shrink: 0;
+  }
+
+  .term-header h3 {
+    font-size: 1.3rem;
+    color: var(--text);
+    margin: 0;
+  }
+
+  .term-item p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .nested-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .nested-list li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+  }
+
+  .nested-list li :global(svg) {
+    color: var(--primary);
+  }
+
+  .contact-block {
+    margin-top: 5rem;
+    background: #f8fafc;
+    padding: 2.5rem;
+    border-radius: 1.5rem;
+    text-align: center;
+  }
+
+  .contact-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .contact-header h3 {
+    margin: 0;
+    font-size: 1.2rem;
+  }
+
+  .contact-block p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+  }
+
+  .btn-email {
+    display: inline-block;
+    background: var(--primary);
+    color: white;
+    padding: 0.8rem 2rem;
+    border-radius: 9999px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+  }
+
+  .btn-email:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 102, 204, 0.2);
+    background: var(--primary-dark);
+  }
+
+  .accent-icon {
+    color: var(--primary);
+  }
+
+  /* Barber's Utility Bar */
+  .barbers-utility-bar {
+    background: #f1f5f9;
+    padding: 3rem 4rem;
+    border-top: 1px solid rgba(0,0,0,0.05);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .utility-social-left {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+  }
+
+  .social-icon {
+    color: #666666;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+  }
+
+  .social-icon:hover {
+    color: var(--primary);
+    transform: translateY(-2px);
+  }
+
+  .utility-links-right {
+    display: flex;
+    gap: 2.5rem;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    text-align: right;
+  }
+
+  .util-btn {
+    display: inline-block;
+    color: #666666;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    padding-bottom: 4px;
+    border-bottom: 2px solid transparent;
+  }
+
+  .util-btn:hover {
+    color: var(--primary) !important;
+    text-decoration: underline !important;
+    text-underline-offset: 6px;
+  }
+
+  @media (max-width: 768px) {
+    .terminos-page {
+      padding-top: 60px;
+    }
+    .hero-section {
+      padding: 3rem 0 1rem 0;
+    }
+    .content-wrapper {
+      padding: 2.5rem 1.5rem;
+      border-radius: 1.5rem;
+    }
+    .term-header {
+      justify-content: center;
+      text-align: center;
+    }
+    .term-item p {
+      text-align: center;
+    }
+    .nested-list li {
+      justify-content: center;
+      text-align: center;
+    }
+    .intro-block {
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+    .barbers-utility-bar {
+      flex-direction: column;
+      gap: 2.5rem;
+      padding: 4rem 1.5rem;
+      text-align: center;
+    }
+    .utility-links-right {
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+      width: 100%;
+      text-align: center;
+    }
+    .util-btn {
+      font-size: 1rem;
+      margin: 0 !important;
+      padding: 0.5rem 0;
+      width: 100%;
+      border-bottom: 1px solid rgba(0,0,0,0.05);
+    }
+    .util-btn:last-child {
+      border-bottom: none;
+    }
+    .utility-social-left {
+      justify-content: center;
+      width: 100%;
+      order: 2; /* Social icons at the bottom on mobile */
+    }
+  }
+</style>

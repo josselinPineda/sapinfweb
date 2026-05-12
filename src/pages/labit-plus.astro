@@ -1,0 +1,1070 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import { 
+  Monitor, 
+  Handshake, 
+  Cloud, 
+  Users, 
+  CheckCircle2, 
+  ShieldCheck, 
+  ArrowRight,
+  ClipboardList,
+  Search,
+  BarChart3,
+  Calendar,
+  Calculator,
+  MessageCircle,
+  Clock,
+  Zap,
+  Check
+} from 'lucide-astro';
+
+// Import assets
+import labitLogo from '../assets/labitplus.png';
+import labHero from '../assets/lab-fondo.jpg';
+import mapaImage from '../assets/mapa-01.png';
+
+const pageTitle = "LABITPLUS - Gestión de Laboratorios Clínicos";
+---
+
+<Layout title={pageTitle}>
+  <Navbar />
+  
+  <main class="labit-page">
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="badge">
+            <span class="subtitle">Laboratorio de Análisis Clínicos</span>
+          </div>
+          <div class="product-logo-container">
+            <img src={labitLogo.src} alt="LABITPLUS Logo" class="product-logo" />
+          </div>
+          <h1>¡Transforma tu laboratorio con&nbsp;<span style="color: var(--primary);">LABITPLUS!</span></h1>
+          <p class="hero-desc">
+            Software para la gestión de laboratorios de análisis clínicos desde el ingreso del paciente hasta la entrega de resultados. Mejora la eficiencia y precisión de tu laboratorio con tecnología de vanguardia.
+          </p>
+          <div class="hero-actions">
+            <a href="https://wa.me/50494583355?text=Hola,%20me%20interesa%20obtener%20más%20información%20sobre%20LABITPLUS" target="_blank" rel="noopener noreferrer" class="btn-primary-large">
+              <MessageCircle size={24} />
+              Solicitar cotización
+            </a>
+          </div>
+        </div>
+        
+        <div class="hero-visual">
+          <div class="image-wrapper">
+             <img src={labHero.src} alt="Labit Plus Dashboard" class="main-hero-image" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Key Benefits -->
+    <section class="benefits-section">
+      <div class="container">
+        <div class="benefits-grid">
+          <div class="benefit-card">
+            <div class="icon-box"><Monitor size={28} /></div>
+            <h3>Tecnología e innovación</h3>
+            <p>A tu medida, adaptándose a las necesidades específicas de tu laboratorio.</p>
+          </div>
+          <div class="benefit-card">
+            <div class="icon-box"><Zap size={28} /></div>
+            <h3>Rapidez y confianza</h3>
+            <p>Optimiza tiempos de entrega y garantiza resultados precisos.</p>
+          </div>
+          <div class="benefit-card">
+            <div class="icon-box"><Cloud size={28} /></div>
+            <h3>En línea</h3>
+            <p>Acceso en todo momento desde cualquier lugar con conexión.</p>
+          </div>
+          <div class="benefit-card">
+            <div class="icon-box"><Users size={28} /></div>
+            <h3>Sin límites</h3>
+            <p>Licencia para múltiples usuarios sin cargos adicionales por conexión.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Unique Features -->
+    <section class="features-section">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="badge">
+            <span class="subtitle">Características</span>
+          </div>
+          <h2>Únicas y <span class="highlight">adaptadas</span> a su medida</h2>
+        </div>
+
+        <div class="features-grid">
+          <div class="feature-card modern-card">
+            <div class="feature-icon"><CheckCircle2 size={32} /></div>
+            <h3>Eficacia</h3>
+            <p>Le ayudamos a obtener el resultado deseado en cada proceso de análisis.</p>
+          </div>
+          <div class="feature-card modern-card">
+            <div class="feature-icon"><Search size={32} /></div>
+            <h3>Control</h3>
+            <p>Le facilitamos la comprobación y trazabilidad de cada muestra clínica.</p>
+          </div>
+          <div class="feature-card modern-card">
+            <div class="feature-icon"><BarChart3 size={32} /></div>
+            <h3>Crecimiento</h3>
+            <p>Nuestro software escala junto a su negocio, ayudándole a incrementar servicios.</p>
+          </div>
+          <div class="feature-card modern-card">
+            <div class="feature-icon"><ShieldCheck size={32} /></div>
+            <h3>Solidez</h3>
+            <p>Garantiza una excelente fortaleza en sus procesos y seguridad de datos.</p>
+          </div>
+          <div class="feature-card modern-card">
+            <div class="feature-icon"><ClipboardList size={32} /></div>
+            <h3>Auditoría</h3>
+            <p>Audite como todo un profesional con registros detallados de cada acción.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Description Block -->
+    <section class="desc-block-section">
+       <div class="container desc-grid">
+          <div class="glass-desc-card">
+             <div class="desc-content">
+                <h3 class="desc-title">
+                  Descubre la forma más <span class="highlight">sencilla</span> de optimizar tu laboratorio clínico.
+                </h3>
+                <p>LABITPLUS es una herramienta tecnológica que se utiliza para mejorar la eficiencia y precisión del proceso de análisis de muestras biológicas de su laboratorio clínico, con características principales como.</p>
+                <p>Descubre cómo nuestro sistema revolucionará tus procesos, permitiendo a tus equipos maximizar la eficiencia y minimizar los costos. Con características de vanguardia y una interfaz intuitiva, nuestro sistema te brinda todas las herramientas necesarias para abordar tus necesidades más urgentes, sin requerir experiencia en programación y a un precio asequible.</p>
+                <p><strong>Simplifica tus operaciones y potencia el potencial de tu laboratorio clínico con nosotros.</strong></p>
+             </div>
+          </div>
+          <div class="video-container">
+             <iframe src="https://www.youtube.com/embed/hPtrVqeNqz8" title="LABITPLUS Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="promo-video"></iframe>
+          </div>
+       </div>
+    </section>
+
+    <!-- Plans Section -->
+    <section id="planes" class="plans-section">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="badge">
+            <span class="subtitle">Suscripción</span>
+          </div>
+          <h2>Tenemos un <span class="highlight">plan perfecto</span> para ti</h2>
+          <p class="section-desc">Selecciona la versión que mejor se adapte al volumen y necesidades de tu laboratorio.</p>
+        </div>
+
+        <div class="pricing-grid">
+          <!-- Básico -->
+          <div class="plan-card">
+            <div class="plan-header">
+              <h3>Básico</h3>
+              <p>Ideal para iniciar</p>
+            </div>
+            <div class="plan-features">
+              <ul class="feature-list">
+                <li><Check size={18} class="check-icon" /> Administración y facturación</li>
+                <li><Check size={18} class="check-icon" /> Control de pacientes y doctores</li>
+                <li><Check size={18} class="check-icon" /> Generación de órdenes y boletas</li>
+                <li><Check size={18} class="check-icon" /> Envío de resultados por WhatsApp</li>
+                <li><Check size={18} class="check-icon" /> Seguridad y control de acceso</li>
+              </ul>
+            </div>
+            <a href="https://wa.me/50494583355?text=Hola,%20me%20interesa%20obtener%20el%20Plan%20Básico%20de%20LABITPLUS" target="_blank" rel="noopener noreferrer" class="btn-primary-plan">
+              Contáctanos
+            </a>
+          </div>
+
+          <!-- Intermedio -->
+          <div class="plan-card highlighted">
+            <div class="plan-header">
+              <div class="popular-badge">Recomendado</div>
+              <h3>Intermedio</h3>
+              <p>Solución integral</p>
+            </div>
+            <div class="plan-features">
+              <ul class="feature-list">
+                <li><Check size={18} class="check-icon" /> <strong>Todo lo del plan Básico</strong></li>
+                <li><Check size={18} class="check-icon" /> Optimización de administración</li>
+                <li><Check size={18} class="check-icon" /> Control profesional de pacientes</li>
+                <li><Check size={18} class="check-icon" /> Resultados precisos y confiables</li>
+              </ul>
+            </div>
+            <a href="https://wa.me/50494583355?text=Hola,%20me%20interesa%20obtener%20el%20Plan%20Intermedio%20de%20LABITPLUS" target="_blank" rel="noopener noreferrer" class="btn-primary-plan">
+              Contáctanos
+            </a>
+          </div>
+
+          <!-- Full -->
+          <div class="plan-card">
+            <div class="plan-header">
+              <h3>Full</h3>
+              <p>Máximo profesionalismo</p>
+            </div>
+            <div class="plan-features">
+              <ul class="feature-list">
+                <li><Check size={18} class="check-icon" /> <strong>Todo lo del plan Intermedio</strong></li>
+                <li><Check size={18} class="check-icon" /> Facturación en múltiples monedas</li>
+                <li><Check size={18} class="check-icon" /> Órdenes de trabajo masivas</li>
+                <li><Check size={18} class="check-icon" /> Herramientas de alto nivel</li>
+              </ul>
+            </div>
+            <a href="https://wa.me/50494583355?text=Hola,%20me%20interesa%20obtener%20el%20Plan%20Full%20de%20LABITPLUS" target="_blank" rel="noopener noreferrer" class="btn-primary-plan">
+              Contáctanos
+            </a>
+          </div>
+        </div>
+
+        <!-- Comparison Table -->
+        <div class="comparison-container">
+           <div class="table-wrapper">
+              <table class="comparison-table">
+                 <thead>
+                    <tr>
+                       <th>Características</th>
+                       <th>Básico</th>
+                       <th>Intermedio</th>
+                       <th>Full</th>
+                    </tr>
+                 </thead>
+                 <tbody>
+                    <tr>
+                       <td>Administración de exámenes (Crear, editar, definir variables de evaluación)</td>
+                       <td><Check class="check" size={20} /></td>
+                       <td><Check class="check" size={20} /></td>
+                       <td><Check class="check" size={20} /></td>
+                    </tr>
+                    <tr>
+                       <td>Promociones por examen.</td>
+                       <td><Check class="check" size={20} /></td>
+                       <td><Check class="check" size={20} /></td>
+                       <td><Check class="check" size={20} /></td>
+                    </tr>
+                    <tr>
+                       <td>Promociones en combo de exámenes.</td>
+                       <td><Check class="check" size={20} /></td>
+                       <td><Check class="check" size={20} /></td>
+                       <td><Check class="check" size={20} /></td>
+                    </tr>
+                    <tr>
+                       <td>Configuración de CAI para la facturación.</td>
+                       <td><Check class="check" size={20} /></td>
+                       <td><Check class="check" size={20} /></td>
+                       <td><Check class="check" size={20} /></td>
+                    </tr>
+                    <tr>
+                       <td>Control de pacientes/clientes.</td>
+                       <td><Check class="check" size={20} /></td>
+                       <td><Check class="check" size={20} /></td>
+                       <td><Check class="check" size={20} /></td>
+                    </tr>
+                    <tr>
+                       <td>Control de Doctores.</td>
+                       <td><Check class="check" size={20} /></td>
+                       <td><Check class="check" size={20} /></td>
+                       <td><Check class="check" size={20} /></td>
+                    </tr>
+                    <tr>
+                       <td>Ordenes/ Boletas de trabajo.</td>
+                       <td><Check class="check" size={20} /></td>
+                       <td><Check class="check" size={20} /></td>
+                       <td><Check class="check" size={20} /></td>
+                    </tr>
+                    <tr>
+                       <td>Configuración de aliados o clínicas asociadas al laboratorio clínico.</td>
+                       <td><Check class="check" size={20} /></td>
+                       <td><Check class="check" size={20} /></td>
+                       <td><Check class="check" size={20} /></td>
+                    </tr>
+                    <tr>
+                       <td>Parametrización de precios por asociado.</td>
+                       <td><Check class="check" size={20} /></td>
+                       <td><Check class="check" size={20} /></td>
+                       <td><Check class="check" size={20} /></td>
+                    </tr>
+                    <tr>
+                       <td>Movimiento de caja (Apertura y cierre de caja).</td>
+                       <td><Check class="check" size={20} /></td>
+                       <td><Check class="check" size={20} /></td>
+                       <td><Check class="check" size={20} /></td>
+                    </tr>
+                    <tr>
+                       <td>Facturación.</td>
+                       <td><Check class="check" size={20} /></td>
+                       <td><Check class="check" size={20} /></td>
+                       <td><Check class="check" size={20} /></td>
+                    </tr>
+                    <tr>
+                       <td>Facturación en Multimonedas.</td>
+                       <td><Check class="check" size={20} /></td>
+                       <td><Check class="check" size={20} /></td>
+                       <td><Check class="check" size={20} /></td>
+                    </tr>
+                    <tr>
+                       <td>Ingreso de resultados de exámenes.</td>
+                       <td><Check class="check" size={20} /></td>
+                       <td><Check class="check" size={20} /></td>
+                       <td><Check class="check" size={20} /></td>
+                    </tr>
+                    <tr>
+                       <td>Impresión de resultados de exámenes.</td>
+                       <td><Check class="check" size={20} /></td>
+                       <td><Check class="check" size={20} /></td>
+                       <td><Check class="check" size={20} /></td>
+                    </tr>
+                    <tr>
+                       <td>Cotizaciones (Aprobación, generación de boletas, facturación, envío por whatsapp/correo. Plan mensual).</td>
+                       <td><Check class="check" size={20} /></td>
+                       <td><Check class="check" size={20} /></td>
+                       <td><Check class="check" size={20} /></td>
+                    </tr>
+                    <tr>
+                       <td>Envío de resultados por whatsapp/correo. Plan mensual.</td>
+                       <td><Check class="check" size={20} /></td>
+                       <td><Check class="check" size={20} /></td>
+                       <td><Check class="check" size={20} /></td>
+                    </tr>
+                    <tr>
+                       <td>Seguridad (Usuarios, Perfiles de usuarios, control de acceso).</td>
+                       <td><Check class="check" size={20} /></td>
+                       <td><Check class="check" size={20} /></td>
+                       <td><Check class="check" size={20} /></td>
+                    </tr>
+                    <tr>
+                       <td>Importación de archivos (Facturación, generación de órdenes de trabajo masivas).</td>
+                       <td>-</td>
+                       <td><Check class="check" size={20} /></td>
+                       <td><Check class="check" size={20} /></td>
+                    </tr>
+                    <tr>
+                       <td>Envío masivo de promociones a los pacientes/clientes. (Plan de whatsapp).</td>
+                       <td>-</td>
+                       <td><Check class="check" size={20} /></td>
+                       <td><Check class="check" size={20} /></td>
+                    </tr>
+                    <tr>
+                       <td>Impresión código de barras.</td>
+                       <td>-</td>
+                       <td><Check class="check" size={20} /></td>
+                       <td><Check class="check" size={20} /></td>
+                    </tr>
+                    <tr>
+                       <td>Cuentas por cobrar (Abonos, estado de cuentas).</td>
+                       <td>-</td>
+                       <td><Check class="check" size={20} /></td>
+                       <td><Check class="check" size={20} /></td>
+                    </tr>
+                    <tr>
+                       <td>Conexión con equipos.</td>
+                       <td>-</td>
+                       <td>-</td>
+                       <td><Check class="check" size={20} /></td>
+                    </tr>
+                    <tr>
+                       <td>Plataforma para pacientes (historial de resultados).</td>
+                       <td>-</td>
+                       <td>-</td>
+                       <td><Check class="check" size={20} /></td>
+                    </tr>
+                    <tr>
+                       <td>Usuarios Doctores.</td>
+                       <td>-</td>
+                       <td>-</td>
+                       <td><Check class="check" size={20} /></td>
+                    </tr>
+                    <tr>
+                       <td>Plataforma para Doctores (historial de resultados).</td>
+                       <td>-</td>
+                       <td>-</td>
+                       <td><Check class="check" size={20} /></td>
+                    </tr>
+                    <tr>
+                       <td>Diseño de página web del laboratorio.</td>
+                       <td>-</td>
+                       <td>-</td>
+                       <td><Check class="check" size={20} /></td>
+                    </tr>
+                    <tr>
+                       <td>Sistema Operativo</td>
+                       <td style="font-size:0.85rem">Windows XP, W7, W8, W10, Mac OS, Linux</td>
+                       <td style="font-size:0.85rem">Windows XP, W7, W8, W10, Mac OS, Linux</td>
+                       <td style="font-size:0.85rem">Windows XP, W7, W8, W10, Mac OS, Linux</td>
+                    </tr>
+                 </tbody>
+              </table>
+           </div>
+      </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+      <div class="container text-center">
+        <div class="section-header">
+          <div class="badge">
+            <span class="subtitle">Nuestra Presencia</span>
+          </div>
+          <h2>Laboratorios que confían en <span class="highlight">LABITPLUS</span></h2>
+          <p class="section-desc">Nos enorgullece poder llevar nuestra experiencia y conocimientos a diferentes partes del país y continuar ofreciendo soluciones innovadoras y de alta calidad a nuestros clientes. Nuestro compromiso con la excelencia y la satisfacción del cliente es lo que nos ha llevado a expandirnos y seguir creciendo en todo el país.</p>
+        </div>
+        
+        <div class="map-image-container">
+          <img src={mapaImage.src} alt="Mapa de laboratorios que usan LabIT Plus" class="map-image" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta">
+      <div class="container text-center">
+        <div class="cta-card glassmorphism-card">
+          <h2>¡Bienvenido al futuro de la gestión de laboratorios!</h2>
+          <p class="cta-desc">LABITPLUS ha sido diseñado específicamente para satisfacer las necesidades de los laboratorios modernos. Estamos emocionados de compartirlo contigo.</p>
+          <a href="https://wa.me/50494583355?text=Hola,%20me%20interesa%20obtener%20una%20cotización%20de%20LABITPLUS" target="_blank" rel="noopener noreferrer" class="btn-whatsapp">
+            <MessageCircle size={24} />
+            Contactar ahora
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  
+  <Footer />
+</Layout>
+
+<style>
+  .labit-page {
+    padding-top: 64px;
+    background: #f1f5f9;
+  }
+
+  /* Hero Section */
+  .hero-section {
+    padding: 2.5rem 0 5rem 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-section .container {
+    max-width: 1400px;
+  }
+
+  .hero-visual {
+    margin-top: -3rem;
+    position: relative;
+    z-index: 10;
+  }
+
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  @media (max-width: 968px) {
+    .hero-section { padding: 4rem 0; }
+    .hero-grid {
+      grid-template-columns: 1fr;
+      text-align: center;
+      gap: 2.5rem;
+    }
+    .hero-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .product-logo-container {
+      justify-content: center !important;
+    }
+    .product-logo {
+      margin: 0 auto !important;
+    }
+    h1, .hero-desc {
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .hero-actions {
+      justify-content: center;
+    }
+    .hero-visual {
+      margin-top: 0;
+    }
+  }
+
+  .product-logo-container {
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  @media (min-width: 992px) {
+    .product-logo-container {
+      justify-content: flex-start;
+    }
+  }
+
+  .product-logo {
+    max-width: 240px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
+  @media (min-width: 992px) {
+    .product-logo {
+      margin-left: 0;
+      margin-right: auto;
+    }
+  }
+
+  h1 {
+    font-size: clamp(2.2rem, 4vw, 3rem);
+    font-weight: 900;
+    color: var(--text);
+    margin-bottom: 2rem;
+    line-height: 1.1;
+    max-width: 800px;
+    text-align: left;
+  }
+
+  .hero-desc {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 2.5rem;
+    text-align: left;
+    max-width: 600px;
+  }
+
+  .hero-actions {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .btn-primary-large {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: var(--primary);
+    color: white;
+    padding: 1.25rem 2.5rem;
+    border-radius: 4rem;
+    font-weight: 800;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 20px rgba(0, 102, 204, 0.2);
+  }
+
+  .btn-primary-large:hover {
+    background: var(--primary-dark);
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(0, 102, 204, 0.3);
+  }
+
+  .image-wrapper {
+    position: relative;
+    border-radius: 2.5rem;
+    overflow: hidden;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.1);
+    border: 8px solid white;
+  }
+
+  .main-hero-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease;
+  }
+
+  /* Benefits */
+  .benefits-section {
+    padding: 2rem 0 5rem;
+  }
+
+  .benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+  }
+
+  .benefit-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 1.5rem;
+    border: 1px solid rgba(0,0,0,0.05);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.03);
+    transition: transform 0.3s ease;
+  }
+
+  .benefit-card:hover { transform: translateY(-5px); }
+
+  .icon-box {
+    width: 60px;
+    height: 60px;
+    background: rgba(0, 102, 204, 0.05);
+    color: var(--primary);
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    transition: all 0.3s ease;
+  }
+
+  .benefit-card:hover .icon-box,
+  .benefit-card:active .icon-box {
+    background: var(--primary);
+    color: white;
+    transform: scale(1.1);
+  }
+
+  .benefit-card h3 { font-size: 1.1rem; margin-bottom: 0.5rem; }
+  .benefit-card p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.4; }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .badge {
+    background: #e1effe;
+    padding: 0.6rem 2.5rem;
+    border-radius: 9999px;
+    margin-bottom: 2rem;
+    display: inline-block;
+    border: 1px solid #bfdbfe;
+    color: var(--primary);
+    font-weight: 800;
+  }
+
+  .subtitle {
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 800;
+    color: var(--primary);
+    font-size: 0.9rem;
+  }
+
+  h2 {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-weight: 900;
+    color: #111827;
+    line-height: 1.1;
+    margin-bottom: 2rem;
+  }
+
+  .highlight {
+    color: var(--primary);
+  }
+
+  .section-desc {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    max-width: 650px;
+    margin: 0 auto;
+    line-height: 1.6;
+    text-align: center;
+  }
+
+  /* Unique Features */
+  .features-section {
+    padding: 6rem 0;
+    background: transparent;
+  }
+
+  .features-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .modern-card {
+    flex: 0 0 calc(33.333% - 1.35rem);
+    max-width: calc(33.333% - 1.35rem);
+    padding: 2.5rem;
+    border-radius: 2rem;
+    background: #f8fafc;
+    border: 1px solid rgba(0, 102, 204, 0.1);
+    transition: all 0.3s ease;
+  }
+
+  .modern-card:hover {
+    background: white;
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+  }
+
+  @media (max-width: 991px) {
+    .modern-card {
+      flex: 0 0 calc(50% - 1rem);
+      max-width: calc(50% - 1rem);
+    }
+  }
+
+  @media (max-width: 600px) {
+    .modern-card {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+  }
+
+  .feature-icon { 
+    width: 60px;
+    height: 60px;
+    background: rgba(0, 102, 204, 0.05);
+    color: var(--primary); 
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem; 
+    transition: all 0.3s ease; 
+  }
+
+  .modern-card:hover .feature-icon,
+  .modern-card:active .feature-icon {
+    background: var(--primary);
+    color: white;
+    transform: scale(1.1);
+  }
+
+  /* Desc Block */
+  .desc-block-section {
+    padding: 6rem 0;
+    background: #f1f5f9;
+  }
+
+  .desc-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+
+  @media (min-width: 992px) {
+    .desc-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .desc-block-section {
+      padding: 4rem 0;
+    }
+    .glass-desc-card {
+      padding: 1.5rem;
+    }
+    .desc-title {
+      font-size: 1.75rem;
+    }
+  }
+
+  .video-container {
+    width: 100%;
+    border-radius: 2rem;
+    overflow: hidden;
+    box-shadow: 0 40px 80px rgba(0, 102, 204, 0.15);
+    background: white;
+    border: 8px solid white;
+    transition: transform 0.3s ease;
+  }
+  
+  .video-container:hover {
+    transform: translateY(-5px) scale(1.02);
+  }
+
+  .promo-video {
+    width: 100%;
+    aspect-ratio: 16/9;
+    display: block;
+    border: none;
+    border-radius: 1.2rem;
+  }
+
+  .glass-desc-card {
+    background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+    padding: 3rem;
+    border-radius: 2rem;
+    border: 1px solid rgba(0, 102, 204, 0.1);
+    border-left: 6px solid var(--primary);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.06);
+  }
+
+  .desc-title {
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: #111827;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+  }
+
+  .desc-content p { font-size: 1.15rem; color: var(--text-muted); margin-bottom: 1.5rem; line-height: 1.7; }
+  .desc-content p:last-child { margin-bottom: 0; }
+  .desc-content strong { color: var(--text); font-weight: 800; }
+
+  /* Plans */
+  .plans-section { padding: 6rem 0; background: transparent; }
+
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+  }
+
+  .plan-card {
+    padding: 3rem 2rem;
+    border-radius: 2.5rem;
+    background: #ffffff;
+    border: 1px solid rgba(0,0,0,0.05);
+    border-top: 6px solid #94a3b8;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+  }
+
+  .plan-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  }
+
+  .plan-card.highlighted {
+    border-top: 6px solid var(--primary);
+    transform: scale(1.05);
+    box-shadow: 0 30px 60px rgba(0, 102, 204, 0.12);
+    z-index: 2;
+  }
+
+  .plan-card.highlighted:hover {
+    transform: scale(1.05) translateY(-8px);
+    box-shadow: 0 40px 80px rgba(0, 102, 204, 0.18);
+  }
+
+  .plan-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #e2e8f0;
+    padding-bottom: 1.5rem;
+  }
+
+  .plan-header h3 { font-size: 2rem; margin-bottom: 0.5rem; color: var(--primary-dark); font-weight: 800; }
+  .plan-header p { color: var(--text-muted); font-size: 1.1rem; }
+  
+  .popular-badge {
+    background: var(--primary);
+    color: white;
+    padding: 0.5rem 1.2rem;
+    border-radius: 2rem;
+    font-size: 0.85rem;
+    display: inline-block;
+    margin-bottom: 1rem;
+    font-weight: 700;
+  }
+
+  .plan-features {
+    flex-grow: 1;
+    margin-bottom: 2rem;
+  }
+
+  .feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .feature-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    color: var(--text);
+    line-height: 1.5;
+  }
+
+  .check-icon {
+    color: #22c55e;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .btn-primary-plan {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 1.25rem;
+    border-radius: 3rem;
+    font-weight: 800;
+    font-size: 1.05rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    background: var(--primary);
+    color: white;
+    box-shadow: 0 8px 20px rgba(0, 102, 204, 0.2);
+  }
+
+  .btn-primary-plan:hover {
+    background: var(--primary-dark);
+    box-shadow: 0 12px 25px rgba(0, 102, 204, 0.3);
+    transform: translateY(-3px);
+  }
+
+  /* Table */
+  .comparison-container { 
+    overflow-x: auto; 
+    margin: 4rem auto 0; 
+    max-width: 1150px; 
+    background: white;
+    border-radius: 2rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    padding: 2.5rem;
+    border: 1px solid rgba(0, 102, 204, 0.05);
+  }
+  .comparison-table { width: 100%; border-collapse: collapse; min-width: 600px; font-size: 0.95rem; line-height: 1.3; }
+  .comparison-table th, .comparison-table td { padding: 0.5rem 0.8rem; border-bottom: 1px solid #f1f5f9; text-align: center; }
+  .comparison-table th { background: transparent; font-weight: 800; color: var(--primary-dark); padding-bottom: 1rem; font-size: 1.1rem; }
+  .comparison-table td:first-child { text-align: left; font-weight: 600; color: #475569; width: 45%; }
+  .check { color: #22c55e; }
+
+  /* Map Section */
+  .map-section {
+    padding: 6rem 0;
+    background: transparent;
+  }
+
+  .map-image-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    border-radius: 2.5rem;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 102, 204, 0.08);
+    background: white;
+    padding: 3rem;
+    border: 1px solid rgba(0, 102, 204, 0.05);
+  }
+
+  .map-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+    mix-blend-mode: multiply;
+  }
+
+  /* Final CTA */
+  .final-cta {
+    padding: 2rem 2rem 8rem;
+    background: #f1f5f9;
+  }
+
+  .glassmorphism-card {
+    background: #ffffff;
+    padding: 4rem 2rem;
+    border-radius: 2.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 102, 204, 0.1);
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  @media (max-width: 768px) {
+    .glassmorphism-card {
+      padding: 3rem 1.5rem;
+      text-align: center;
+      align-items: center;
+    }
+    .final-cta h2 {
+      font-size: 2rem;
+    }
+  }
+
+  .final-cta h2 { font-size: 2.5rem; margin-bottom: 1.5rem; font-weight: 900; }
+  .cta-desc { font-size: 1.2rem; margin: 0 0 2rem 0; color: var(--text-muted); max-width: 700px; }
+
+  .btn-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    background: #25D366;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 3rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    max-width: 100%;
+  }
+
+  @media (max-width: 480px) {
+    .btn-whatsapp {
+      padding: 1rem 1.5rem;
+      width: 100%;
+    }
+  }
+
+  .badge {
+    background: #e1effe;
+    padding: 0.5rem 1.5rem;
+    border-radius: 2rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    display: inline-block;
+    border: 1px solid #bfdbfe;
+    color: var(--primary);
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media (max-width: 991px) {
+    .mockup-grid {
+      grid-template-columns: 1fr;
+      text-align: center;
+      gap: 3rem;
+    }
+    
+    .mockup-text {
+      padding-top: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    
+    .mockup-media {
+      order: -1;
+      margin-bottom: 3rem;
+    }
+    
+    .mockup-title, .mockup-desc {
+      text-align: center;
+    }
+    .desc-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .hero-grid { grid-template-columns: 1fr; text-align: center; }
+    .product-logo-container { justify-content: center; }
+    .hero-visual { order: -1; margin-bottom: 3rem; }
+    .plan-card.highlighted { transform: scale(1); }
+  }
+</style>

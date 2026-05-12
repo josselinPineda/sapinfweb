@@ -1,0 +1,26 @@
+---
+import mapaImg from '../assets/mapa.png';
+---
+
+<section class="map-banner">
+  <img src={mapaImg.src} alt="Mapa de cobertura" class="map-image" />
+</section>
+
+<style>
+  .map-banner {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 5rem 1rem; /* Espaciado arriba y abajo */
+    background: var(--bg-soft); /* Fondo suave opcional para destacar */
+  }
+
+  .map-image {
+    width: 100%;
+    max-width: 1300px; /* Incrementado para que se vea más ancho */
+    height: auto;
+    object-fit: contain;
+    border-radius: 2rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1); /* Sombra sutil para que se vea premium */
+  }
+</style>

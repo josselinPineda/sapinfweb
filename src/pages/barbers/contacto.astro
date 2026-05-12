@@ -1,0 +1,541 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+import { 
+  Mail,
+  Phone,
+  MessageCircle,
+  MapPin,
+  Send,
+  User,
+  AtSign,
+  Facebook,
+  Instagram
+} from 'lucide-astro';
+
+import contactImage from '../../assets/contactanos.png';
+
+const pageTitle = "Contáctanos - Barber's";
+---
+
+<Layout title={pageTitle}>
+  <Navbar />
+  
+  <main class="contacto-page">
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <div class="badge">
+            <span class="subtitle">Atención Personalizada</span>
+          </div>
+          <h1 class="premium-title">Contác<span class="highlight">tanos</span></h1>
+          <p class="hero-desc">
+            Nosotros te ayudamos a resolver cualquier inquietud o duda ¡Estaremos encantados de ayudarte!
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Contact Section -->
+    <section class="contact-main">
+      <div class="container">
+        <div class="contact-grid">
+          <!-- Image/Visual Side -->
+          <div class="visual-container">
+            <div class="image-box shadow-premium">
+              <img src={contactImage.src} alt="Contáctanos SAPINF" class="contact-img" />
+            </div>
+            <div class="quick-info">
+              <div class="info-card-email shadow-premium">
+                 <Mail size={24} />
+                 <div class="email-info-content">
+                    <h4>Escríbenos directamente</h4>
+                    <p>Nuestro equipo responde en menos de 24 horas.</p>
+                    <a href="mailto:soporte@sapinf.com" class="btn-email-call">
+                      soporte@sapinf.com
+                    </a>
+                 </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Form Side -->
+          <div class="form-container shadow-premium">
+            <div class="form-header">
+              <h3>Datos de contacto</h3>
+              <p>Por favor complete los siguientes campos solicitados para poder contactarnos contigo.</p>
+            </div>
+            
+            <form class="contact-form" id="barbersContactForm">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="nombre">Nombre</label>
+                  <div class="input-wrapper">
+                    <User size={18} class="input-icon" />
+                    <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre" required />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="apellido">Apellido</label>
+                  <div class="input-wrapper">
+                    <User size={18} class="input-icon" />
+                    <input type="text" id="apellido" name="apellido" placeholder="Escribe tu apellido" required />
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="email">Correo electrónico</label>
+                <div class="input-wrapper">
+                  <AtSign size={18} class="input-icon" />
+                  <input type="email" id="email" name="email" placeholder="Escribe tu e-mail" required />
+                </div>
+                <span class="input-hint">Ej.: abc@xyz.com</span>
+              </div>
+
+              <div class="form-group">
+                <label for="telefono">Número de teléfono</label>
+                <div class="phone-input-container">
+                  <div class="phone-prefix">+504</div>
+                  <div class="input-wrapper flex-grow">
+                    <Phone size={18} class="input-icon" />
+                    <input type="tel" id="telefono" name="telefono" placeholder="00000000" required />
+                  </div>
+                </div>
+                <span class="input-hint">Indique su número de teléfono para contactarnos por medio de WhatsApp.</span>
+              </div>
+
+              <div class="form-group">
+                <label for="mensaje">Mensaje</label>
+                <div class="input-wrapper align-top">
+                  <MessageCircle size={18} class="input-icon mt-2" />
+                  <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu mensaje" required></textarea>
+                </div>
+                <span class="input-hint">Envíanos tus consultas o comentarios y te responderemos pronto.</span>
+              </div>
+
+              <button type="submit" class="btn-submit">
+                <span>Enviar</span>
+                <Send size={18} />
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Submenu Section -->
+    <nav class="barbers-utility-bar">
+      <div class="utility-social-left">
+        <a href="https://www.facebook.com/people/Barbers-HN/61567177681618/?mibextid=ZbWKwL" target="_blank" rel="noopener noreferrer" class="social-icon">
+          <Facebook size={20} />
+        </a>
+        <a href="https://www.instagram.com/barbershn_?igsh=MWNmaXFhZGxhcXE3dA%3D%3D" target="_blank" rel="noopener noreferrer" class="social-icon">
+          <Instagram size={20} />
+        </a>
+      </div>
+      <div class="utility-links-right">
+        <a href="/barbers/acerca" class="util-btn">Acerca</a>
+        <a href="/barbers/privacidad" class="util-btn">Política de Privacidad</a>
+        <a href="/barbers/terminos" class="util-btn">Términos de uso</a>
+        <a href="/barbers/contacto" class="util-btn">Contacto</a>
+        <a href="/barbers/ayuda" class="util-btn">Ayuda</a>
+      </div>
+    </nav>
+  </main>
+  
+  <Footer />
+</Layout>
+
+<style>
+  .contacto-page {
+    padding-top: 80px;
+    background: #f1f5f9;
+    min-height: 100vh;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  /* Badge Style */
+  .badge {
+    background: #e1effe;
+    padding: 0.5rem 1.5rem;
+    border-radius: 9999px;
+    margin-bottom: 2rem;
+    display: inline-block;
+    border: 1px solid #bfdbfe;
+    color: var(--primary);
+    font-weight: 800;
+  }
+
+  .subtitle {
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 800;
+    color: var(--primary);
+    font-size: 0.75rem;
+  }
+
+  /* Hero Section */
+  .hero-section {
+    padding: 4rem 0 2rem 0;
+    text-align: center;
+  }
+
+  .premium-title {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    font-weight: 900;
+    color: var(--text);
+    margin-bottom: 1.25rem;
+    line-height: 1.1;
+  }
+
+  .highlight { color: var(--primary); }
+
+  .hero-desc {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  /* Main Contact Section */
+  .contact-main {
+    padding: 3rem 0 6rem 0;
+  }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+
+  @media (max-width: 991px) {
+    .contact-grid {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+    .form-container {
+      padding: 2rem 1.5rem;
+    }
+  }
+
+  .form-container {
+    background: white;
+    padding: 3rem;
+    border-radius: 2.5rem;
+    border: 1px solid rgba(0, 102, 204, 0.08);
+  }
+
+  .form-header { margin-bottom: 2.5rem; }
+  .form-header h3 { font-size: 1.5rem; margin-bottom: 0.75rem; color: var(--text); }
+  .form-header p { font-size: 0.9rem; color: var(--text-muted); }
+
+  .contact-form { display: flex; flex-direction: column; gap: 1.5rem; }
+
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+
+  @media (max-width: 600px) {
+    .form-row {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+  }
+
+  .form-group { display: flex; flex-direction: column; gap: 0.5rem; }
+
+  label { font-size: 0.85rem; font-weight: 700; color: var(--text); margin-left: 0.5rem; }
+
+  .input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  .input-icon {
+    position: absolute;
+    left: 1.25rem;
+    color: var(--primary);
+    opacity: 0.6;
+  }
+
+  .mt-2 { margin-top: 0.75rem; }
+  .align-top { align-items: flex-start; }
+
+  input, textarea {
+    width: 100%;
+    padding: 0.9rem 1rem 0.9rem 3rem;
+    border-radius: 1rem;
+    border: 1.5px solid #eee;
+    background: #f8fafc;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    font-family: inherit;
+  }
+
+  input:focus, textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+    background: white;
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.05);
+  }
+
+  .phone-input-container {
+    display: flex;
+    gap: 0.75rem;
+  }
+
+  .phone-prefix {
+    background: #f1f5f9;
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    border-radius: 1rem;
+    font-weight: 800;
+    color: var(--primary);
+    font-size: 0.9rem;
+    border: 1.5px solid #eee;
+  }
+
+  .flex-grow { flex-grow: 1; }
+
+  .input-hint { font-size: 0.75rem; color: var(--text-muted); margin-left: 0.5rem; }
+
+  .btn-submit {
+    margin-top: 1rem;
+    background: var(--primary);
+    color: white;
+    padding: 1rem;
+    border-radius: 1rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .btn-submit:hover {
+    background: var(--primary-dark);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(37, 99, 235, 0.2);
+  }
+
+  /* Visual side */
+  .visual-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .image-box {
+    border-radius: 2.5rem;
+    overflow: hidden;
+    background: white;
+    border: 1px solid rgba(0,0,0,0.05);
+  }
+
+  .contact-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+  }
+
+  .quick-info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .info-card-email {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    border: 1px solid rgba(0, 102, 204, 0.05);
+  }
+
+  .info-card-email :global(svg) {
+    color: var(--primary);
+    background: #f1f5f9;
+    padding: 1rem;
+    width: 60px;
+    height: 60px;
+    border-radius: 1rem;
+    flex-shrink: 0;
+  }
+
+  .email-info-content h4 { font-size: 1.1rem; margin-bottom: 0.5rem; color: var(--text); }
+  .email-info-content p { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.5rem; }
+
+  .btn-email-call {
+    display: inline-block;
+    background: var(--primary);
+    color: white;
+    padding: 0.8rem 2rem;
+    border-radius: 9999px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+  }
+
+  .btn-email-call:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(37, 99, 235, 0.2);
+  }
+
+  /* Utility Bar */
+  .barbers-utility-bar {
+    background: #f1f5f9;
+    padding: 3rem 4rem;
+    border-top: 1px solid rgba(0,0,0,0.05);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .utility-social-left {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+  }
+
+  .social-icon {
+    color: #666666;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+  }
+
+  .social-icon:hover {
+    color: var(--primary);
+    transform: translateY(-2px);
+  }
+
+  .utility-links-right {
+    display: flex;
+    gap: 2.5rem;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    text-align: right;
+  }
+
+  .util-btn {
+    display: inline-block;
+    color: #666666;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    padding-bottom: 4px;
+    border-bottom: 2px solid transparent;
+  }
+
+  .util-btn:hover {
+    color: var(--primary) !important;
+    text-decoration: underline !important;
+    text-underline-offset: 6px;
+  }
+
+  @media (max-width: 991px) {
+    .contact-grid { grid-template-columns: 1fr; }
+  }
+
+  @media (max-width: 768px) {
+    .contacto-page {
+      padding-top: 60px;
+    }
+    .hero-section {
+      padding: 3rem 0 1rem 0;
+    }
+    .form-container {
+      padding: 2.5rem 1.5rem;
+      border-radius: 1.5rem;
+      text-align: center;
+    }
+    .form-header {
+      margin-bottom: 2rem;
+    }
+    .info-card-email {
+      flex-direction: column;
+      text-align: center;
+      padding: 2rem 1.5rem;
+      gap: 1.5rem;
+    }
+    .contact-main {
+      padding: 2rem 0 5rem 0;
+    }
+    .barbers-utility-bar {
+      flex-direction: column;
+      gap: 2.5rem;
+      padding: 4rem 1.5rem;
+      text-align: center;
+    }
+    .utility-links-right {
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+      width: 100%;
+      text-align: center;
+    }
+    .util-btn {
+      font-size: 1rem;
+      margin: 0 !important;
+      padding: 0.5rem 0;
+      width: 100%;
+      border-bottom: 1px solid rgba(0,0,0,0.05);
+    }
+    .util-btn:last-child {
+      border-bottom: none;
+    }
+    .utility-social-left {
+      justify-content: center;
+      width: 100%;
+      order: 2; /* Social icons at the bottom on mobile */
+    }
+  }
+</style>
+
+<script>
+  const form = document.getElementById('barbersContactForm') as HTMLFormElement;
+  
+  if (form) {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      
+      const formData = new FormData(form);
+      const nombre = formData.get('nombre');
+      const apellido = formData.get('apellido');
+      const email = formData.get('email');
+      const telefono = formData.get('telefono');
+      const mensaje = formData.get('mensaje');
+      
+      const whatsappNumber = "50494583355";
+      const text = `Hola SAPINF, me gustaría contactar con ustedes desde la web de Barber's.%0A%0A` +
+                   `*Nombre:* ${nombre} ${apellido}%0A` +
+                   `*Email:* ${email}%0A` +
+                   `*Teléfono:* +504 ${telefono}%0A` +
+                   `*Mensaje:* ${mensaje}`;
+      
+      const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${text}`;
+      
+      window.open(whatsappUrl, '_blank');
+    });
+  }
+</script>

@@ -1,0 +1,514 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+import { 
+  HelpCircle,
+  PlayCircle,
+  MessageCircle,
+  ChevronDown,
+  BookOpen,
+  Mail,
+  Zap,
+  Youtube,
+  Facebook,
+  Instagram
+} from 'lucide-astro';
+
+const pageTitle = "Centro de Ayuda - Barber's";
+
+const faqs = [
+  {
+    question: "¿Qué es Barber's?",
+    answer: "Barber's es una aplicación integral diseñada para la gestión eficiente de barberías. Permite almacenar datos de clientes, manejar facturas, controlar cortes de cabello, gestionar productos y servicios, llevar un balance detallado y visualizar gráficos interactivos para tomar decisiones informadas."
+  },
+  {
+    question: "¿En qué plataformas está disponible Barber's?",
+    answer: "Actualmente, Barber's está disponible para Android en Google Play Store. La versión para iOS está en desarrollo y puedes registrarte para pre-registro en nuestra página web."
+  },
+  {
+    question: "¿Cómo puedo comenzar a usar Barber's?",
+    answer: "Descarga la aplicación desde Google Play Store, crea tu cuenta y comienza a configurar tu barbería ingresando la información de tus servicios, productos y empleados. Nuestra interfaz intuitiva te guiará en el proceso."
+  },
+  {
+    question: "¿Qué funcionalidades principales ofrece Barber's?",
+    answer: "Barber's ofrece gestión de clientes, control de inventario, facturación, registro detallado de servicios, reportes financieros, gráficos interactivos para análisis de datos, gestión de empleados y mucho más."
+  },
+  {
+    question: "¿Necesito conexión a internet para usar la app?",
+    answer: "Para aprovechar todas las funcionalidades de Barber's y mantener tus datos sincronizados en la nube, se recomienda contar con conexión a internet. Sin embargo, algunas funciones básicas pueden estar disponibles sin conexión."
+  },
+  {
+    question: "¿Cómo puedo obtener soporte técnico?",
+    answer: "Puedes contactarnos a través de nuestro formulario de contacto en la sección de Contacto, por el chat en vivo disponible en nuestra web, o enviando un correo electrónico. Nuestro equipo de soporte estará encantado de ayudarte."
+  },
+  {
+    question: "¿Mis datos están seguros?",
+    answer: "Sí, la seguridad de tus datos es nuestra prioridad. Implementamos las mejores prácticas de seguridad y encriptación para proteger toda la información de tu barbería y tus clientes."
+  }
+];
+---
+
+<Layout title={pageTitle}>
+  <Navbar />
+  
+  <main class="ayuda-page">
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <div class="badge">
+            <span class="subtitle">Centro de Soporte</span>
+          </div>
+          <h1 class="premium-title">¿Cómo podemos <span class="highlight">ayudarte</span>?</h1>
+          <p class="hero-desc">
+            Encuentra respuestas rápidas y tutoriales para dominar Barber's como un experto.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+      <div class="container">
+        <div class="section-header text-center">
+          <h2 class="section-title">Preguntas Frecuentes</h2>
+          <p class="section-desc">Resolvemos tus dudas más comunes al instante.</p>
+        </div>
+
+        <div class="faq-accordion shadow-premium">
+          {faqs.map((faq, index) => (
+            <div class="faq-card">
+              <div class="faq-question">
+                <h3>{faq.question}</h3>
+                <ChevronDown size={20} class="chevron" />
+              </div>
+              <div class="faq-answer">
+                <p>{faq.answer}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Video Tutorials Section -->
+    <section class="tutorials-section">
+      <div class="container">
+        <div class="tutorial-card-large shadow-premium">
+          <div class="tutorial-content">
+            <div class="badge-mini"><PlayCircle size={16} /> Tutoriales</div>
+            <h2>Tutoriales en Video</h2>
+            <p>Aprende a sacar el máximo provecho de Barber's con nuestra serie de tutoriales paso a paso.</p>
+            <a href="https://youtube.com/playlist?list=PL_v_tu_video_playlist" target="_blank" rel="noopener noreferrer" class="btn-playlist">
+              <Youtube size={20} />
+              <span>Ver Playlist de Tutoriales</span>
+            </a>
+          </div>
+          <div class="tutorial-visual">
+             <div class="video-preview-box">
+                <PlayCircle size={64} class="play-icon-abs" />
+             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact CTA Section -->
+    <section class="support-cta">
+      <div class="container">
+        <div class="cta-box shadow-premium">
+          <div class="cta-icon-box"><Zap size={40} /></div>
+          <h2>¿No encontraste lo que buscabas?</h2>
+          <p>Nuestro equipo de soporte está listo para ayudarte con cualquier duda técnica o comercial.</p>
+          <div class="cta-actions">
+            <a href="https://wa.me/50494583355" target="_blank" class="btn-whatsapp">
+              <MessageCircle size={20} />
+              contactanos
+            </a>
+            <a href="mailto:soporte@sapinf.com" class="btn-outline-help">
+              <Mail size={20} />
+              Envía un correo
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Submenu Section -->
+    <nav class="barbers-utility-bar">
+      <div class="utility-social-left">
+        <a href="https://www.facebook.com/people/Barbers-HN/61567177681618/?mibextid=ZbWKwL" target="_blank" rel="noopener noreferrer" class="social-icon">
+          <Facebook size={20} />
+        </a>
+        <a href="https://www.instagram.com/barbershn_?igsh=MWNmaXFhZGxhcXE3dA%3D%3D" target="_blank" rel="noopener noreferrer" class="social-icon">
+          <Instagram size={20} />
+        </a>
+      </div>
+      <div class="utility-links-right">
+        <a href="/barbers/acerca" class="util-btn">Acerca</a>
+        <a href="/barbers/privacidad" class="util-btn">Política de Privacidad</a>
+        <a href="/barbers/terminos" class="util-btn">Términos de uso</a>
+        <a href="/barbers/contacto" class="util-btn">Contacto</a>
+        <a href="/barbers/ayuda" class="util-btn">Ayuda</a>
+      </div>
+    </nav>
+  </main>
+  
+  <Footer />
+</Layout>
+
+<style>
+  .ayuda-page {
+    padding-top: 80px;
+    background: #f1f5f9;
+    min-height: 100vh;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  .text-center { text-align: center; }
+
+  /* Badge Style */
+  .badge {
+    background: #e1effe;
+    padding: 0.5rem 1.5rem;
+    border-radius: 9999px;
+    margin-bottom: 2rem;
+    display: inline-block;
+    border: 1px solid #bfdbfe;
+    color: var(--primary);
+    font-weight: 800;
+  }
+
+  .subtitle {
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 800;
+    color: var(--primary);
+    font-size: 0.75rem;
+  }
+
+  /* Hero Section */
+  .hero-section {
+    padding: 4rem 0 2rem 0;
+    text-align: center;
+  }
+
+  .premium-title {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    font-weight: 900;
+    color: var(--text);
+    margin-bottom: 1.25rem;
+    line-height: 1.1;
+  }
+
+  .highlight { color: var(--primary); }
+
+  .hero-desc {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  /* FAQ Section */
+  .faq-section { padding: 4rem 0; }
+  
+  .section-title { font-size: 1.8rem; margin-bottom: 1rem; color: var(--text); }
+  .section-desc { font-size: 0.95rem; color: var(--text-muted); margin-bottom: 3rem; }
+
+  .faq-accordion {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 2rem;
+    overflow: hidden;
+    border: 1px solid rgba(0, 102, 204, 0.08);
+  }
+
+  .faq-card {
+    border-bottom: 1px solid #eee;
+    padding: 2rem;
+    transition: background 0.3s ease;
+  }
+
+  .faq-card:last-child { border-bottom: none; }
+
+  .faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    gap: 1.5rem;
+  }
+
+  .faq-question h3 {
+    margin: 0;
+    font-size: 1.05rem;
+    color: var(--text);
+    font-weight: 700;
+  }
+
+  .chevron { color: var(--text-muted); transition: transform 0.3s ease; }
+
+  .faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 0;
+  }
+
+  .faq-card.active .faq-answer {
+    max-height: 500px;
+    margin-top: 1.5rem;
+    padding-bottom: 1rem;
+    opacity: 1;
+  }
+
+  .faq-card.active .chevron {
+    transform: rotate(180deg);
+    color: var(--primary);
+  }
+
+  .faq-card.active {
+    background: #f8fafc;
+  }
+
+  /* Tutorials Section */
+  .tutorials-section { padding: 4rem 0; }
+
+  .tutorial-card-large {
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    border-radius: 2.5rem;
+    padding: 4rem;
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 4rem;
+    align-items: center;
+    color: white;
+  }
+
+  .badge-mini {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(255,255,255,0.1);
+    padding: 0.4rem 1rem;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+  }
+
+  .tutorial-content h2 { font-size: 2.2rem; margin-bottom: 1.5rem; }
+  .tutorial-content p { font-size: 1rem; color: rgba(255,255,255,0.7); margin-bottom: 2.5rem; line-height: 1.7; }
+
+  .btn-playlist {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: #ef4444; /* YouTube Red */
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    font-weight: 700;
+    transition: all 0.3s ease;
+  }
+
+  .btn-playlist:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(239, 68, 68, 0.3); }
+
+  .video-preview-box {
+    aspect-ratio: 16/9;
+    background: rgba(255,255,255,0.05);
+    border-radius: 1.5rem;
+    border: 1px solid rgba(255,255,255,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .play-icon-abs { color: rgba(255,255,255,0.3); transition: transform 0.3s ease, color 0.3s ease; }
+  .tutorial-card-large:hover .play-icon-abs { transform: scale(1.1); color: white; }
+
+  /* Support CTA */
+  .support-cta { padding: 6rem 0; }
+
+  .cta-box {
+    background: white;
+    padding: 5rem 3rem;
+    border-radius: 3rem;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+    border: 1px solid rgba(37, 99, 235, 0.1);
+  }
+
+  .cta-icon-box {
+    width: 80px;
+    height: 80px;
+    background: #e1effe;
+    color: var(--primary);
+    border-radius: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 2.5rem;
+  }
+
+  .cta-box h2 { font-size: 2rem; margin-bottom: 1rem; color: var(--text); }
+  .cta-box p { font-size: 1rem; color: var(--text-muted); margin-bottom: 3rem; max-width: 500px; margin-left: auto; margin-right: auto; }
+
+  .cta-actions { display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; }
+
+  .btn-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: #25d366;
+    color: white;
+    padding: 1rem 2.5rem;
+    border-radius: 1rem;
+    font-weight: 700;
+    transition: all 0.3s ease;
+  }
+
+  .btn-whatsapp:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(37, 211, 102, 0.2); }
+
+  .btn-outline-help {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: transparent;
+    border: 2px solid var(--primary);
+    color: var(--primary);
+    padding: 1rem 2.5rem;
+    border-radius: 1rem;
+    font-weight: 700;
+    transition: all 0.3s ease;
+  }
+
+  .btn-outline-help:hover { background: var(--primary); color: white; transform: translateY(-3px); }
+
+  /* Barber's Utility Bar */
+  .barbers-utility-bar {
+    background: #f1f5f9;
+    padding: 3rem 4rem;
+    border-top: 1px solid rgba(0,0,0,0.05);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .utility-social-left {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+  }
+
+  .social-icon {
+    color: #666666;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+  }
+
+  .social-icon:hover {
+    color: var(--primary);
+    transform: translateY(-2px);
+  }
+
+  .utility-links-right {
+    display: flex;
+    gap: 2.5rem;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    text-align: right;
+  }
+
+  .util-btn {
+    display: inline-block;
+    color: #666666;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    padding-bottom: 4px;
+    border-bottom: 2px solid transparent;
+  }
+
+  .util-btn:hover {
+    color: var(--primary) !important;
+    text-decoration: underline !important;
+    text-underline-offset: 6px;
+  }
+
+  @media (max-width: 991px) {
+    .tutorial-card-large { grid-template-columns: 1fr; gap: 2rem; padding: 2.5rem; text-align: center; }
+    .tutorial-content h2 { font-size: 1.8rem; }
+    .btn-playlist { justify-content: center; width: 100%; }
+  }
+
+  @media (max-width: 768px) {
+    .barbers-utility-bar {
+      flex-direction: column;
+      gap: 2.5rem;
+      padding: 4rem 1.5rem;
+      text-align: center;
+    }
+    
+    .utility-links-right {
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+      width: 100%;
+      text-align: center;
+    }
+
+    .util-btn {
+      font-size: 1rem;
+      margin: 0 !important;
+      padding: 0.5rem 0;
+      width: 100%;
+      border-bottom: 1px solid rgba(0,0,0,0.05);
+    }
+
+    .util-btn:last-child {
+      border-bottom: none;
+    }
+
+    .utility-social-left {
+      justify-content: center;
+      width: 100%;
+      order: 2; /* Social icons at the bottom on mobile */
+    }
+  }
+</style>
+
+<script>
+  const faqCards = document.querySelectorAll('.faq-card');
+  
+  faqCards.forEach(card => {
+    const question = card.querySelector('.faq-question');
+    if (question) {
+      question.addEventListener('click', () => {
+        // Opcional: Cerrar otros antes de abrir este
+        faqCards.forEach(otherCard => {
+          if (otherCard !== card) otherCard.classList.remove('active');
+        });
+        
+        card.classList.toggle('active');
+      });
+    }
+  });
+</script>
